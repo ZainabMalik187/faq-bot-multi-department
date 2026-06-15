@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PEL Knowledge Bot</title>
+  <style>
+    body { font-family: sans-serif; max-width: 500px; margin: 60px auto; text-align: center; }
+    #status { margin-top: 20px; padding: 12px; border-radius: 6px; font-weight: bold; }
+    .ok { background: #d1fae5; color: #065f46; }
+    .err { background: #fee2e2; color: #991b1b; }
+  </style>
+</head>
+<body>
+  <h1>PEL Multi-Department Knowledge Bot</h1>
+  <p>Frontend → Backend connection test</p>
+  <div id="status">Checking backend...</div>
+
+  <script>
+    // Change this to your deployed backend URL once on Render.
+    const BACKEND_URL = "http://localhost:8000";
+
+    fetch(BACKEND_URL + "/health")
+      .then(res => res.json())
+      .then(data => {
+        const el = document.getElementById("status");
+        el.textContent = "Backend says: " + JSON.stringify(data);
+        el.className = "ok";
+      })
+      .catch(err => {
+        const el = document.getElementById("status");
+        el.textContent = "Could not reach backend: " + err.message;
+        el.className = "err";
+      });
+  </script>
+</body>
+</html>
