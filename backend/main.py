@@ -24,7 +24,7 @@ def ask(q: str = ""):
     """
     Placeholder endpoint for the chat query flow.
     Varoon will replace this with the real LlamaIndex RAG pipeline,
-    and Ramshah's PostgreSQL FAQ lookup.
+    and PostgreSQL FAQ lookup.
     """
     return {
         "question": q,
