@@ -23,7 +23,7 @@ def health():
 def ask(q: str = ""):
     """
     Placeholder endpoint for the chat query flow.
-    Varoon will replace this with the real LlamaIndex RAG pipeline,
+    Replace this with the real LlamaIndex RAG pipeline,
     and PostgreSQL FAQ lookup.
     """
     return {
