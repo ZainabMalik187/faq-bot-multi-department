@@ -289,10 +289,22 @@ View FAQs
         </div>
 
         <div class="chat-input d-flex gap-2 mt-3">
-            <input id="chatInput" class="form-control form-control-sm" placeholder="Ask a question about this department...">
-            <button id="chatSend" class="btn btn-primary btn-sm">Send</button>
-        </div>
+    <input id="chatInput" class="form-control form-control-sm"
+        placeholder="Ask a question about this department...">
+
+    <!-- 🎤 Mic Button -->
+    <button id="micBtn" class="btn btn-outline-secondary btn-sm">
+        🎤
+    </button>
+
+    <button id="chatSend" class="btn btn-primary btn-sm">Send</button>
+</div>
+
+<!-- optional status -->
+<small id="micStatus" class="text-muted d-block mt-1"></small>
     </div>
+
+
 </aside>
 
 <style>
@@ -699,6 +711,70 @@ document.getElementById('chatInput').addEventListener('keydown', function(e){
     }
 });
 </script>
+<script>
+const chatInput = document.getElementById("chatInput");
+const micBtn = document.getElementById("micBtn");
+const micStatus = document.getElementById("micStatus");
 
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+let recognition;
+let isListening = false;
+
+if (SpeechRecognition) {
+    recognition = new SpeechRecognition();
+    recognition.lang = "en-US";
+    recognition.interimResults = false;
+    recognition.continuous = false;
+} else {
+    micBtn.disabled = true;
+    micStatus.innerText = "Mic not supported in this browser";
+}
+
+//  Click mic
+micBtn.addEventListener("click", () => {
+    if (!recognition) return;
+
+    if (!isListening) {
+        recognition.start();
+        isListening = true;
+        micBtn.classList.add("btn-danger");
+        micBtn.innerText = "⏹";
+        micStatus.innerText = "Listening...";
+    } else {
+        recognition.stop();
+        isListening = false;
+        resetMic();
+    }
+});
+
+//  Convert speech → text
+recognition.onresult = (event) => {
+    const transcript = event.results[0][0].transcript;
+
+
+    chatInput.value += (chatInput.value ? " " : "") + transcript;
+
+    micStatus.innerText = "Done ✔";
+};
+
+recognition.onerror = (e) => {
+    console.log(e);
+    micStatus.innerText = "Mic error";
+    resetMic();
+};
+
+
+recognition.onend = () => {
+    isListening = false;
+    resetMic();
+};
+
+function resetMic() {
+    micBtn.classList.remove("btn-danger");
+    micBtn.innerText = "🎤";
+    micStatus.innerText = "";
+}
+</script>
 </body>
 </html>
