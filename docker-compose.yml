@@ -1,38 +1,56 @@
-version: "3.9"
-
 services:
-
-  db:
-    image: postgres:15
-    restart: always
+  postgres:
+    image: postgres:15-alpine
+    container_name: faq-bot-db
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: secret
-      POSTGRES_DB: faqbot
+      POSTGRES_USER: ${POSTGRES_USER:-faqbot}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-faqbot_password}
+      POSTGRES_DB: ${POSTGRES_DB:-faqbot_db}
     ports:
       - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - faq-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U admin"]
-      interval: 5s
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-faqbot}"]
+      interval: 10s
       timeout: 5s
       retries: 5
 
   backend:
-    build: ./backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: faq-bot-backend
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-faqbot}:${POSTGRES_PASSWORD:-faqbot_password}@postgres:5432/${POSTGRES_DB:-faqbot_db}
     ports:
       - "8000:8000"
-    env_file: .env
     depends_on:
-      db:
+      postgres:
         condition: service_healthy
+    networks:
+      - faq-network
+    restart: unless-stopped
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: faq-bot-frontend
     ports:
-      - "3000:3000"
-    env_file: .env
+      - "80:80"
     depends_on:
       - backend
+    networks:
+      - faq-network
+    restart: unless-stopped
 
 volumes:
-  pgdata:
+  postgres_data:
+
+networks:
+  faq-network:
+    driver: bridge

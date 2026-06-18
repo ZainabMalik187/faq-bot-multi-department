@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PEL FAQ Portal</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#000000; 
+    --secondary:#848a93;
+    --muted:#303438;
+}
+
+body{
+    font-family: 'Segoe UI', POPPINS, Helvetica, Arial, sans-serif;
+    background: #ffffff;
+    color: #000d15;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    transition: background .3s ease, color .3s ease;
+}
+
+.navbar{
+    background: linear-gradient(90deg,var(--primary),var(--secondary));
+    padding:0.9rem 0;
+    transition: padding .35s ease, background .35s ease, box-shadow .35s ease;
+    box-shadow: 0 6px 20px rgba(4, 22, 62, 0.06);
+    min-height:72px;
+}
+
+.navbar-brand{
+    color: #fff !important;
+    font-family: 'Segoe UI', montserrat, Helvetica, Arial, sans-serif;
+    font-size:1.25rem;
+    letter-spacing:.3px;
+}
+
+.nav-link{
+    color: rgba(255,255,255,0.95) !important;
+    font-weight:500;
+    font-size:1rem;
+    FONT-FAMILY: 'Segoe UI', montserrat, Helvetica, Arial, sans-serif;
+    padding: .5rem .7rem;
+    transition: color .2s ease, transform .18s ease;
+}
+
+.nav-link:hover{
+    color: #e9f2ff !important;
+    transform: translateY(-2px);
+}
+.navbar-brand:hover {
+  text-shadow: 0 0 25px rgba(18, 14, 3, 0.5);
+}
+
+.navbar-nav .nav-link {
+  color: var(white) !important;
+  margin: 0 1rem;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary) !important;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2.5px;
+  bottom: -8px;
+  left: 0;
+  background: linear-gradient(90deg, transparent 0%, var(--primary) 50%, transparent 100%);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(31, 24, 1, 0.3);
+}
+
+.navbar-nav .nav-link:hover::after {
+    color: var(--primary) !important;
+  width: 100%;
+}
+
+.hero{
+    background: linear-gradient(180deg, rgba(3, 20, 50, 0.06), rgba(4, 29, 66, 0.04)),
+    url('pel bg.jpg') no-repeat;
+    background-size: cover;
+    background-position:center;
+    min-height:72vh;
+    display:flex;
+    align-items:center;
+    color: #000000;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    font-weight:700;
+}
+
+.section-title{
+    color:var(--primary);
+    font-weight:700;
+    margin-bottom:24px;
+}
+
+.department-card{
+    transition: transform .28s cubic-bezier(.2,.9,.2,1), box-shadow .28s;
+    border: none;
+    border-radius:12px;
+}
+
+.department-card:hover{
+    transform:translateY(-10px);
+    box-shadow: 0 12px 30px rgba(11,99,255,0.08);
+}
+
+.about-section{
+    background:#fbfdff;
+}
+
+footer{
+    background:var(--secondary);
+    color:white;
+    text-align:center;
+    padding:18px 12px;
+}
+
+.btn-primary{
+    background:var(--primary) !important;
+    border-color: var(--secondary) !important;
+    
+    transition: transform .15s ease, box-shadow .18s ease, background .15s ease;
+}
+.btn-primary:hover{
+    background:var(--primary) !important;
+    box-shadow: 0 10px 30px rgba(15, 0, 0, 0.14);
+    transform: translateY(-3px);
+}
+
+.btn-outline-light{
+    border-color: rgba(255,255,255,0.85);
+    color: rgba(255,255,255,0.95);
+}
+
+.accordion-button{
+    transition: box-shadow .18s ease, transform .12s ease;
+}
+.accordion-button:focus{
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<div class="container">
+<a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+  <img src="pel logo.png" alt="PEL Logo" width="60" height="60" class="me-2">
+  PEL FAQS Portal
+</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#home"><b>Home</b></a></li>
+<li class="nav-item"><a class="nav-link" href="#departments"><b>Departments</b></a></li>
+<li class="nav-item"><a class="nav-link" href="#faqs"><b>FAQs</b></a></li>
+<li class="nav-item"><a class="nav-link" href="#about"><b>About Us</b></a></li>
+
+</div>
+</div>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="hero" color= #041a29>
+<div class="container text-center">
+<h1>PEL - Pak Elektron Limited</h1>
+<p class="lead mb-4"><b>Do you have a question about PEL?</b>
+</p>
+
+<a href="#departments" class="btn btn-primary btn-lg">
+Explore Departments
+</a>
+
+<a href="#faqs" class="btn btn-outline-light btn-lg">
+View FAQs
+</a>
+</div>
+</section>
+
+<!-- Departments -->
+<section id="departments" class="py-5">
+<div class="container">
+<h2 class="text-center section-title">Departments</h2>
+
+<div class="row g-4">
+
+<div class="col-md-3">
+<div class="card department-card shadow">
+<div class="card-body text-center">
+    <img src="hr dept.jpg" alt="HR Image" width="90%" height="85%" class="mb-3 rectangle-img">
+<h4>HR</h4>
+<p>Employee policies and recruitment.</p>
+<button class="btn btn-primary dept-btn" data-dept="hr">
+View FAQs
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card department-card shadow">
+<div class="card-body text-center">
+    <img src="sales dept.png" alt="HR Image" width="90%" height="85%" class="mb-3 rectangle-img">
+<h4>Sales</h4>
+<p>Orders, pricing and promotions.</p>
+<button class="btn btn-primary dept-btn" data-dept="sales">
+View FAQs
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card department-card shadow">
+<div class="card-body text-center">
+    <img src="finance dept.jpg" alt="HR Image" width="90%" height="85%" class="mb-3 rectangle-img">
+<h4>Finance</h4>
+<p>Billing, invoices and payment queries.</p>
+<button class="btn btn-primary dept-btn" data-dept="finance">
+View FAQs
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card department-card shadow">
+<div class="card-body text-center">
+    <img src="support dept.jpg" alt="HR Image" width="90%" height="85%" class="mb-3 rectangle-img">
+<h4>Customer Support</h4>
+<p>Customer service assistance.</p>
+<button class="btn btn-primary dept-btn" data-dept="support">
+View FAQs
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card department-card shadow">
+<div class="card-body text-center">
+    <img src="it dept.jpg" alt="HR Image" width="90%" height="85%" class="mb-3 rectangle-img">
+<h4>IT</h4>
+<p>Technical help and systems.</p>
+<button class="btn btn-primary dept-btn" data-dept="it">
+View FAQs
+</button>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Department Panel -->
+<aside id="deptPanel" class="dept-panel d-none" aria-hidden="true">
+    <div class="dept-header d-flex align-items-center justify-content-between px-3 py-2 border-bottom">
+        <div>
+            <h5 id="deptPanelTitle" class="m-0">Department</h5>
+            <small id="deptPanelSubtitle" class="text-muted">Department-specific FAQs</small>
+        </div>
+        <button id="deptClose" class="btn btn-sm btn-outline-secondary">Close</button>
+    </div>
+
+    <div class="dept-body p-3">
+        <div id="faqList" class="mb-3"></div>
+
+        <div class="chat-window border rounded p-2 bg-white" style="height:260px;overflow:auto;">
+            <div id="chatMessages" class="d-flex flex-column gap-2"></div>
+        </div>
+
+        <div class="chat-input d-flex gap-2 mt-3">
+    <input id="chatInput" class="form-control form-control-sm"
+        placeholder="Ask a question about this department...">
+
+    <!-- 🎤 Mic Button -->
+    <button id="micBtn" class="btn btn-outline-secondary btn-sm">
+        🎤
+    </button>
+
+    <button id="chatSend" class="btn btn-primary btn-sm">Send</button>
+</div>
+
+<!-- optional status -->
+<small id="micStatus" class="text-muted d-block mt-1"></small>
+    </div>
+
+
+</aside>
+
+<style>
+.dept-panel{
+    position:fixed;
+    right:18px;
+    top:80px;
+    width:360px;
+    max-width:92vw;
+    background: #f8fbff;
+    border-radius:12px;
+    box-shadow: 0 20px 50px rgba(6,30,85,0.12);
+    z-index:1050;
+    transition: transform .28s cubic-bezier(.2,.9,.2,1), opacity .2s;
+}
+.dept-panel.d-none{ display:none; }
+.dept-header h5{ color:var(--primary); }
+.chat-window .bot{ align-self:flex-start; background:#eef6ff; padding:8px 10px; border-radius:10px; max-width:88%; }
+.chat-window .user{ align-self:flex-end; background:#e9ecef; padding:8px 10px; border-radius:10px; max-width:88%; }
+</style>
+
+<!-- Direct FAQs -->
+<section id="faqs" class="py-5 bg-light">
+<div class="container">
+
+<h2 class="text-center section-title">
+Frequently Asked Questions
+</h2>
+
+<div class="accordion" id="faqAccordion">
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+How can I track my product order?
+</button>
+</h2>
+<div id="faq1" class="accordion-collapse collapse show">
+<div class="accordion-body">
+You can track your order through your customer dashboard or by contacting Sales.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+How do I reset my employee account password?
+</button>
+</h2>
+<div id="faq2" class="accordion-collapse collapse">
+<div class="accordion-body">
+Use the password reset feature or contact the IT department.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">
+How can I apply for a job at PEL?
+</button>
+</h2>
+<div id="faq3" class="accordion-collapse collapse">
+<div class="accordion-body">
+Visit the careers section or contact the HR department.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
+What are the operational hours for the PEL customer care helpline?
+</button>
+</h2>
+<div id="faq4" class="accordion-collapse collapse">
+<div class="accordion-body">
+The central telephone customer care helpline is fully active from 9:00 AM to 5:00 PM.
+ Representatives are available from Monday through Friday, excluding official public holidays.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">
+How long does it take for a technician to visit my home after lodging a complaint?
+</button>
+</h2>
+<div id="faq5" class="accordion-collapse collapse">
+<div class="accordion-body">
+Standard home service complaints are attended to within 24 to 48 working hours from the time the ticket is officially logged.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq6">
+ What documents do I need to present to claim a product warranty?
+</button>
+</h2>
+<div id="faq6" class="accordion-collapse collapse">
+<div class="accordion-body">
+You must present the original stamped warranty card along with a valid copy of the purchase invoice from an authorized dealer.
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</section>
+
+<!-- About us -->
+<style>
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-image {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  color: var(--secondary);
+  overflow: hidden;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+</style>
+ <section id="about" class="about-section">
+    <div class="container">
+      <h2 class="section-title mb-5" align="center">About PEL</h2>
+      
+      <div class="about-content">
+        <div class="about-image"><img src="pel about.jpg" alt="About Whispers" width="90%" height="90%"></div>
+
+        
+        <div class="about-text">
+          <h2>Powering lives with innovation, quality, and trust for generations.</h2>
+          <p>
+            Pak Elektron Limited (PEL) is one of Pakistan’s leading manufacturers of home appliances and electrical equipment, serving customers for over six decades.
+          PEL was founded in 1956 through technical collaboration with AEG. In 1978, PEL was acquired by Saigol Group and was taken public a decade later. 
+          Over the years, PEL has formed alliances with several international giants, including General Electric, Fujitsu, and Hitachi.
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+ <style>
+footer {
+  background: linear-gradient(135deg, rgba(18, 21, 40, 0.95) 0%, rgba(10, 14, 39, 0.98) 100%);
+  border-top: 2px solid var(--primary);
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.3);
+  padding: 3rem 0 1rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section p,
+.footer-section a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+</style>
+ <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About PEL</h4>
+          <p>Powering lives with innovation, quality, and trust for generations.</p>
+          <p>Headquartered in Lahore, the publicly traded company is renowned for its widespread consumer footprint and operates two distinct cores divisions: </p>
+          <p>Appliances Division</p>
+          <p>Power Division</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#departments">Departments</a>
+          <a href="#about">About Us</a>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p>Main Office & Factory(UNIT 1) - +92-042-359-20151-59</p>
+          <p>Factory(UNIT 2) - +92-42-35935207-21</p>
+          <p>Regional Office - +92-21-322-00951-4</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026  |This site is owned by Pak Elektron Limited</p>
+      </div>
+    </div>
+  </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Department panel & chatbot Javascript -->
+<script>
+
+const API_BASE_URL = "http://localhost:8000/api/chat";
+
+const faqData = {
+    hr: [
+        {q: "How can I apply for a job?", a: "Visit our Careers page or email hr@pel.example to submit your application."},
+        {q: "What are employee leave policies?", a: "Employees are entitled to annual leave, sick leave and public holidays. Contact HR for details."},
+        {q: "How do I update personal information?", a: "You can update your personal information via the employee portal or inform HR to make changes."}
+    ],
+    sales: [
+        {q: "How can I place an order?", a: "Orders can be placed through our sales portal or by contacting the Sales team."},
+        {q: "What payment methods are accepted?", a: "We accept credit cards, bank transfers and approved purchase orders."},
+        {q: "Can I get a bulk purchase discount?", a: "Bulk discounts are available for large orders — contact Sales for a quote."}
+    ],
+    finance: [
+        {q: "Where can I view consumer financing or installment plans available for PEL products?", a: "Open the Retail Finance folder on the shared network drive to see current installment plans with partner banks."},
+        {q: "Can I get a refund if I am unsatisfied with my appliance performance?", a: "Refund policies are governed by the specific terms of the purchasing dealer; PEL only offers repair or component replacements under warranty."},
+        {q: "What payment methods are available?", a: "We accept payments through: Bank transfer, Online banking / mobile apps, Cash deposit at designated banks, and Authorized payment centers"}
+    ],
+    support: [
+        {q: "How do I claim warranty?", a: "Submit your invoice and product details to Support and we'll guide you through warranty claim."},
+        {q: "How can I contact customer support?", a: "Reach out via support@pel.example or call our hotline during business hours."},
+        {q: "What is the product replacement policy?", a: "Replacement depends on warranty terms and product condition. Support will advise after inspection."}
+    ],
+    it: [
+        {q: "How do I reset my password?", a: "Use the password reset tool or contact IT with your employee ID."},
+        {q: "How can I access company systems remotely?", a: "Remote access is via VPN — request access from IT if you don't already have it."},
+        {q: "Who should I contact for technical issues?", a: "Email it@pel.example or open a ticket on the IT portal."}
+    ]
+};
+
+
+async function getAnswer(dept, message) {
+
+    try {
+        const res = await fetch(`${API_BASE_URL}/api/chat`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                department: dept,
+                message: message
+            })
+        });
+
+        if (!res.ok) throw new Error("Backend error");
+
+        return await res.json();
+
+    } catch (err) {
+        return {
+            answer: "System unavailable. Please try later.",
+            source: "error"
+        };
+    }
+}
+
+
+function openDeptPanel(dept){
+    const panel = document.getElementById('deptPanel');
+    const title = document.getElementById('deptPanelTitle');
+    const subtitle = document.getElementById('deptPanelSubtitle');
+    const faqList = document.getElementById('faqList');
+    const chat = document.getElementById('chatMessages');
+
+    if(!dept || !faqData[dept]) return;
+
+    title.textContent = dept.toUpperCase();
+    subtitle.textContent = dept + ' • Frequently Asked Questions';
+
+    // Render FAQ list
+    let html = '<div class="list-group">';
+    faqData[dept].forEach(item=>{
+        html += `<button type="button" class="list-group-item list-group-item-action small faq-item">${item.q}</button>`;
+    });
+    html += '</div>';
+    faqList.innerHTML = html;
+
+    chat.innerHTML = '<div class="bot p-2">Hi — ask a question or click a FAQ below.</div>';
+    panel.classList.remove('d-none');
+    panel.setAttribute('aria-hidden','false');
+}
+
+function closeDeptPanel(){
+    const panel = document.getElementById('deptPanel');
+    panel.classList.add('d-none');
+    panel.setAttribute('aria-hidden','true');
+}
+
+function botReply(dept, message){
+    const msgs = faqData[dept];
+    if(!msgs) return 'Sorry, I don\'t have information on that.';
+    const text = message.toLowerCase();
+   
+    for(const item of msgs){
+        if(item.q.toLowerCase().includes(text) || text.split(' ').some(w=> item.q.toLowerCase().includes(w) && w.length>3)){
+            return item.a;
+        }
+    }
+    
+    return 'I couldn\'t find an exact match. Here\'s a helpful item: ' + msgs[0].a;
+}
+
+
+document.querySelectorAll('.dept-btn').forEach(btn=>{
+    btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const dept = btn.dataset.dept;
+        openDeptPanel(dept);
+        document.getElementById('deptPanel').dataset.currentDept = dept;
+    });
+});
+
+document.getElementById('deptClose').addEventListener('click', closeDeptPanel);
+
+
+document.addEventListener('click', function(e){
+    if(e.target && e.target.classList.contains('faq-item')){
+        e.preventDefault();
+        const text = e.target.textContent;
+        const chat = document.getElementById('chatMessages');
+        const dept = document.getElementById('deptPanel').dataset.currentDept;
+        const userDiv = document.createElement('div'); userDiv.className='user p-2'; userDiv.textContent = text;
+        chat.appendChild(userDiv);
+        const botDiv = document.createElement('div'); botDiv.className='bot p-2'; botDiv.textContent = botReply(dept, text);
+        chat.appendChild(botDiv);
+        chat.parentElement.scrollTop = chat.parentElement.scrollHeight;
+    }
+});
+
+
+document.getElementById('chatSend').addEventListener('click', ()=>{
+    const input = document.getElementById('chatInput');
+    const text = input.value.trim();
+    if(!text) return;
+    const chat = document.getElementById('chatMessages');
+    const dept = document.getElementById('deptPanel').dataset.currentDept;
+    const userDiv = document.createElement('div'); userDiv.className='user p-2'; userDiv.textContent = text;
+    chat.appendChild(userDiv);
+    const botDiv = document.createElement('div'); botDiv.className='bot p-2'; botDiv.textContent = botReply(dept, text);
+    chat.appendChild(botDiv);
+    input.value='';
+
+    const chatWindow = chat.parentElement;
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+});
+
+
+document.getElementById('chatInput').addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){
+        e.preventDefault();
+        document.getElementById('chatSend').click();
+    }
+});
+</script>
+<script>
+const chatInput = document.getElementById("chatInput");
+const micBtn = document.getElementById("micBtn");
+const micStatus = document.getElementById("micStatus");
+
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+let recognition;
+let isListening = false;
+
+if (SpeechRecognition) {
+    recognition = new SpeechRecognition();
+    recognition.lang = "en-US";
+    recognition.interimResults = false;
+    recognition.continuous = false;
+} else {
+    micBtn.disabled = true;
+    micStatus.innerText = "Mic not supported in this browser";
+}
+
+//  Click mic
+micBtn.addEventListener("click", () => {
+    if (!recognition) return;
+
+    if (!isListening) {
+        recognition.start();
+        isListening = true;
+        micBtn.classList.add("btn-danger");
+        micBtn.innerText = "⏹";
+        micStatus.innerText = "Listening...";
+    } else {
+        recognition.stop();
+        isListening = false;
+        resetMic();
+    }
+});
+
+//  Convert speech → text
+recognition.onresult = (event) => {
+    const transcript = event.results[0][0].transcript;
+
+
+    chatInput.value += (chatInput.value ? " " : "") + transcript;
+
+    micStatus.innerText = "Done ✔";
+};
+
+recognition.onerror = (e) => {
+    console.log(e);
+    micStatus.innerText = "Mic error";
+    resetMic();
+};
+
+
+recognition.onend = () => {
+    isListening = false;
+    resetMic();
+};
+
+function resetMic() {
+    micBtn.classList.remove("btn-danger");
+    micBtn.innerText = "🎤";
+    micStatus.innerText = "";
+}
+</script>
+</body>
+</html>
