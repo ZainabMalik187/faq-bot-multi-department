@@ -1,21 +1,18 @@
+from dotenv import load_dotenv
+load_dotenv()  # backend/.env load karo
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
+from Router import chats # Import karo
 
-app = FastAPI(title="FAQ Bot Multi-Department")
 
+app = FastAPI()
+
+# Frontend se connect karne k liye
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    allow_origins=["*"],  
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-@app.get("/api/health")
-def health_check():
-    return {"status": "ok"}
-
-@app.get("/api/departments")
-def get_departments():
-    return {"departments": ["Sales", "Support", "Engineering"]}
+# Router add karo
+app.include_router(chats.router)
