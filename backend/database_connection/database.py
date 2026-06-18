@@ -1,7 +1,8 @@
+import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-DATABASE_URL = "postgresql://postgres:2006@192.168.61.250:5432/FAQ_Bot_DB"
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://admin:secret@postgres:5432/faqbot")
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
