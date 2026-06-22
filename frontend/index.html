@@ -96,7 +96,7 @@ body{
 }
 
 .hero h1{
-    font-size:3.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight:700;
 }
 
@@ -319,6 +319,13 @@ View FAQs
     box-shadow: 0 20px 50px rgba(6,30,85,0.12);
     z-index:1050;
     transition: transform .28s cubic-bezier(.2,.9,.2,1), opacity .2s;
+    @media (max-width: 768px) {
+  .dept-panel {
+    width: 95vw;
+    right: 10px;
+    left: 10px;
+  }
+}
 }
 .dept-panel.d-none{ display:none; }
 .dept-header h5{ color:var(--primary); }
@@ -426,7 +433,12 @@ You must present the original stamped warranty card along with a valid copy of t
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
 }
 
 .about-image {
