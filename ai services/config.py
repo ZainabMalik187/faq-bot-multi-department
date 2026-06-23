@@ -2,7 +2,7 @@
 config.py — Centralised credentials and configuration.
 
 All sensitive values are loaded from environment variables.
-Update this file to add new API keys or model settings.
+Update this file to to add new API keys or model settings.
 """
 
 import os
