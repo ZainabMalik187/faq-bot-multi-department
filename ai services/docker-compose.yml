@@ -1,0 +1,58 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: faq-bot-db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: faqbot
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/01_schema.sql:/docker-entrypoint-initdb.d/01_schema.sql
+      - ./database/02_seed.sql:/docker-entrypoint-initdb.d/02_seed.sql
+    networks:
+      - faq-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: faq-bot-backend
+    environment:
+      DATABASE_URL: postgresql://admin:secret@postgres:5432/faqbot
+      GROQ_API_KEY: ${GROQ_API_KEY}
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - faq-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: faq-bot-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - faq-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  faq-network:
+    driver: bridge
