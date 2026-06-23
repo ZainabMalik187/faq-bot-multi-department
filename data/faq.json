@@ -1,0 +1,3128 @@
+[
+  {
+    "id": "it-001",
+    "department": "IT Support",
+    "question": "How do i connect to the corporate wifi ?",
+    "answer": "Connect to the 'PEL-Secure' network and log in using your normal office email password. Do not share it with guests."
+  },
+  {
+    "id": "it-002",
+    "department": "IT Support",
+    "question": "What is the corporate Wi-Fi password and how do I connect?",
+    "answer": "Connect to the 'PEL-Secure' network and log in using your normal office email password. Do not share it with guests."
+  },
+  {
+    "id": "it-003",
+    "department": "IT Support",
+    "question": "How do I request access to the internal ERP or PostgreSQL database?",
+    "answer": "Ask your manager for approval, then open the IT Helpdesk website and submit an access request ticket."
+  },
+  {
+    "id": "it-004",
+    "department": "IT Support",
+    "question": "My laptop screen is blank but the power light is on. What should I do?",
+    "answer": "Hold down the power button for 15 seconds until the light goes off, wait a bit, plug in the charger, and turn it back on."
+  },
+  {
+    "id": "it-005",
+    "department": "IT Support",
+    "question": "How can I set up the company email on my mobile phone?",
+    "answer": "Download the Outlook app from your phone app store, sign in with your office email, and confirm the security prompt."
+  },
+  {
+    "id": "it-006",
+    "department": "IT Support",
+    "question": "How do I connect to the office printer?",
+    "answer": "Go to Windows Settings, click 'Printers & Scanners,' click 'Add a device,' and select the printer named after your floor."
+  },
+  {
+    "id": "it-007",
+    "department": "IT Support",
+    "question": "What should I do if I suspect a phishing email in my inbox?",
+    "answer": "Do not click any links or download anything. Just click the 'Report Phishing' button at the top of your Outlook app."
+  },
+  {
+    "id": "it-008",
+    "department": "IT Support",
+    "question": "How do I request a new laptop or hardware replacement?",
+    "answer": "Tell your department manager to submit a hardware request ticket for you on the internal IT portal."
+  },
+  {
+    "id": "it-009",
+    "department": "IT Support",
+    "question": "Why is my VPN connection failing when working from home?",
+    "answer": "Check your home internet first, then restart the VPN app and make sure you approve the login code on your phone right away."
+  },
+  {
+    "id": "it-010",
+    "department": "IT Support",
+    "question": "How do I recover a deleted file from the shared network drive?",
+    "answer": "Right-click inside the folder where the file used to be, click 'Properties,' go to 'Previous Versions,' and click 'Restore.'"
+  },
+  {
+    "id": "it-011",
+    "department": "IT Support",
+    "question": "Forgot password",
+    "answer": "Click the 'Forgot Password' link on the login screen and follow the steps to reset it."
+  },
+  {
+    "id": "it-012",
+    "department": "IT Support",
+    "question": "Cannot connect to Wi-Fi",
+    "answer": "Turn your device Wi-Fi off and on again. If you are at home, unplug your internet router for 10 seconds and plug it back in."
+  },
+  {
+    "id": "it-013",
+    "department": "IT Support",
+    "question": "Software installation failure",
+    "answer": "Close all running apps, restart your computer, and try running the installation file again as an administrator."
+  },
+  {
+    "id": "it-014",
+    "department": "IT Support",
+    "question": "Unable to access email",
+    "answer": "Check if your internet is working, close the email app completely, reopen it, and type your password carefully."
+  },
+  {
+    "id": "it-015",
+    "department": "IT Support",
+    "question": "Blue screen error",
+    "answer": "Restart your computer. If the error stays, write down the error code on the screen and bring the laptop to the IT desk."
+  },
+  {
+    "id": "it-016",
+    "department": "IT Support",
+    "question": "Printer not responding",
+    "answer": "Unplug the printer cable from your computer, wait 5 seconds, plug it back in, and make sure the printer is turned on."
+  },
+  {
+    "id": "it-017",
+    "department": "IT Support",
+    "question": "Slow system performance",
+    "answer": "Restart your computer to close hidden background apps, and empty your Recycle Bin to free up space."
+  },
+  {
+    "id": "it-018",
+    "department": "IT Support",
+    "question": "How do I open a blocked website?",
+    "answer": "If you need it for official company work, send a message to the IT Helpdesk to request website access."
+  },
+  {
+    "id": "it-019",
+    "department": "IT Support",
+    "question": "Where can I find my employee ID?",
+    "answer": "Look at the front of your plastic company ID badge; your unique ID number is printed right below your name."
+  },
+  {
+    "id": "it-020",
+    "department": "IT Support",
+    "question": "My computer mouse is not tracking or moving",
+    "answer": "Unplug the mouse wire from the computer, wait 5 seconds, plug it into a different USB slot, and try moving it again."
+  },
+  {
+    "id": "it-021",
+    "department": "IT Support",
+    "question": "How do I log out of the system?",
+    "answer": "Click your profile picture or name in the top corner of the screen and click the 'Sign Out' or 'Log Out' button."
+  },
+  {
+    "id": "it-022",
+    "department": "IT Support",
+    "question": "The office scanner is jammed with paper",
+    "answer": "Open the main top door of the scanner, gently pull the stuck paper straight out using both hands, and close the door."
+  },
+  {
+    "id": "it-023",
+    "department": "IT Support",
+    "question": "What should I do if my laptop gets wet?",
+    "answer": "Turn it off immediately, pull out the charger cable, do not try to turn it back on, and run it straight to the IT room."
+  },
+  {
+    "id": "it-024",
+    "department": "IT Support",
+    "question": "How do I share a large file with a colleague?",
+    "answer": "Upload the file to your company Google Drive, right-click it, click 'Share,' type your colleague email, and click send."
+  },
+  {
+    "id": "it-025",
+    "department": "IT Support",
+    "question": "My corporate laptop is running very hot",
+    "answer": "Move the laptop off your lap or bed onto a flat desk so air can flow underneath, and restart it to cool it down."
+  },
+  {
+    "id": "it-026",
+    "department": "IT Support",
+    "question": "How often do I need to change my login password?",
+    "answer": "For safety reasons, the system will pop up and ask you to create a completely new password every 90 days."
+  },
+  {
+    "id": "it-027",
+    "department": "IT Support",
+    "question": "Can I install personal software or games on my office laptop?",
+    "answer": "No, personal apps and video games are completely blocked by company security to keep the network safe from viruses."
+  },
+  {
+    "id": "it-028",
+    "department": "IT Support",
+    "question": "How do I connect my laptop to the meeting room projector?",
+    "answer": "Plug the HDMI cable from the table into your laptop, then hold the Windows Key and press P, and choose 'Duplicate' on your screen."
+  },
+  {
+    "id": "it-029",
+    "department": "IT Support",
+    "question": "My keyboard keys are sticking or not typing",
+    "answer": "Turn the keyboard upside down and shake it gently, or use a can of compressed air to blow any dirt out from under the keys."
+  },
+  {
+    "id": "it-030",
+    "department": "IT Support",
+    "question": "What should I do if my cloud storage is full?",
+    "answer": "Go to your Google Drive, empty the Trash folder, delete old files you do not need, or ask IT for more storage space."
+  },
+  {
+    "id": "it-031",
+    "department": "IT Support",
+    "question": "How do I request a temporary loaner laptop?",
+    "answer": "Bring your broken laptop to the IT office and sign your name on the sheet to borrow a temporary laptop for the week."
+  },
+  {
+    "id": "it-032",
+    "department": "IT Support",
+    "question": "How do I connect my wireless office mouse?",
+    "answer": "Turn on the power switch under the mouse and make sure the small plastic USB plug is pushed all the way into your laptop side."
+  },
+  {
+    "id": "it-033",
+    "department": "IT Support",
+    "question": "How do I request a software license for Adobe or MS Office?",
+    "answer": "Open the IT asset portal, select the software you need, and submit it for manager approval."
+  },
+  {
+    "id": "it-034",
+    "department": "IT Support",
+    "question": "My account is locked out. How do I unlock it?",
+    "answer": "Wait 15 minutes for the system to auto-unlock, or call the IT helpdesk extension to unlock it instantly."
+  },
+  {
+    "id": "it-035",
+    "department": "IT Support",
+    "question": "How do I book a video conference meeting room?",
+    "answer": "Open your Outlook Calendar, create a new event, and add the specific meeting room name as a participant."
+  },
+  {
+    "id": "it-036",
+    "department": "IT Support",
+    "question": "How do I update my details on the HR employee portal?",
+    "answer": "Log into the HRIS portal using your regular employee login, click 'My Profile,' and edit your details."
+  },
+  {
+    "id": "it-037",
+    "department": "IT Support",
+    "question": "The office phone on my desk has no dial tone",
+    "answer": "Check if the network cable at the back of the phone is plugged in tightly, or restart the phone by unplugging its power."
+  },
+  {
+    "id": "it-038",
+    "department": "IT Support",
+    "question": "How do I access company files securely from my personal laptop?",
+    "answer": "You must install the official company VPN client and use your multi-factor code to log in."
+  },
+  {
+    "id": "it-039",
+    "department": "IT Support",
+    "question": "How do I connect to the guest Wi-Fi network?",
+    "answer": "Select the 'PEL-Guest' network and ask the front reception desk for today's temporary guest password."
+  },
+  {
+    "id": "it-040",
+    "department": "IT Support",
+    "question": "I accidentally spilt tea on my computer keyboard",
+    "answer": "Unplug it from the computer immediately, flip it upside down to drain, and request a replacement if keys stop working."
+  },
+  {
+    "id": "it-041",
+    "department": "IT Support",
+    "question": "How do I check my remaining balance of annual leaves?",
+    "answer": "Log into the company HR portal and click on the 'Leave Tracker' tab on your main dashboard."
+  },
+  {
+    "id": "it-042",
+    "department": "IT Support",
+    "question": "My email inbox is full and I cannot receive new messages",
+    "answer": "Delete large file attachments from your Sent Items folder and permanently empty your Outlook Deleted Items folder."
+  },
+  {
+    "id": "it-043",
+    "department": "IT Support",
+    "question": "How do I submit my monthly expense reimbursement report?",
+    "answer": "Fill out the digital form on the Finance portal, attach scanned pictures of your receipts, and click submit."
+  },
+  {
+    "id": "it-044",
+    "department": "IT Support",
+    "question": "How do I report a broken light or AC issue in my office room?",
+    "answer": "Do not contact IT; instead, log a ticket under the 'Facilities and Maintenance' category on the employee portal."
+  },
+  {
+    "id": "it-045",
+    "department": "IT Support",
+    "question": "My screen resolution looks blurry. How do I fix it?",
+    "answer": "Right-click on your empty desktop screen, choose 'Display Settings,' and change the resolution to the 'Recommended' match."
+  },
+  {
+    "id": "it-046",
+    "department": "IT Support",
+    "question": "How do I change the default language in Microsoft Teams?",
+    "answer": "Open Teams settings, go to the 'General' tab, scroll down to Language, select your preference, and restart the app."
+  },
+  {
+    "id": "it-047",
+    "department": "IT Support",
+    "question": "Where can I download the official PEL corporate PPT presentation template?",
+    "answer": "Go to the internal company SharePoint homepage and click on the 'Marketing & Branding Assets' folder."
+  },
+  {
+    "id": "it-048",
+    "department": "IT Support",
+    "question": "How do I set up an 'Out of Office' automatic email reply?",
+    "answer": "In Outlook, go to File, click 'Automatic Replies,' type your vacation message, set the dates, and click Save."
+  },
+  {
+    "id": "it-049",
+    "department": "IT Support",
+    "question": "My computer time and date are incorrect",
+    "answer": "Click the clock in the bottom right corner, choose 'Date and time settings,' and turn on 'Set time automatically.'"
+  },
+  {
+    "id": "it-050",
+    "department": "IT Support",
+    "question": "How do I block spam phone calls on my office desk phone?",
+    "answer": "Press the 'Block' or 'DND' button on your phone screen while the unwanted number is actively ringing."
+  },
+  {
+    "id": "it-051",
+    "department": "IT Support",
+    "question": "My laptop battery drains very quickly",
+    "answer": "Lower your screen brightness, close unused tabs, and bring it to IT if it still dies in under an hour."
+  },
+  {
+    "id": "it-052",
+    "department": "IT Support",
+    "question": "How do I pick up files I sent to the office printer?",
+    "answer": "Walk to the printer, tap your physical employee ID card on the scanner card reader, and select 'Print All'."
+  },
+  {
+    "id": "it-053",
+    "department": "IT Support",
+    "question": "How do I add my digital signature to a PDF document?",
+    "answer": "Open the file in Adobe Reader, click 'Fill & Sign,' choose 'Place Signature,' and type or draw your name."
+  },
+  {
+    "id": "it-054",
+    "department": "IT Support",
+    "question": "My laptop audio or microphone is not working",
+    "answer": "Click the speaker icon in the bottom right corner, click the arrow, and select your correct headset or speakers."
+  },
+  {
+    "id": "it-055",
+    "department": "IT Support",
+    "question": "How do I download Microsoft Teams or Zoom on my work computer?",
+    "answer": "Open the internal company Software Center app on your desktop and click install next to the software."
+  },
+  {
+    "id": "it-056",
+    "department": "IT Support",
+    "question": "I forgot the password to my HR portal account",
+    "answer": "Click the 'Forgot Password' link on the HRIS login page or email hr-support@pel.com.pk for a reset link."
+  },
+  {
+    "id": "it-057",
+    "department": "IT Support",
+    "question": "How do I lock my computer screen when walking away?",
+    "answer": "Press the Windows Key and the letter L at the same time on your keyboard to instantly lock it."
+  },
+  {
+    "id": "it-058",
+    "department": "IT Support",
+    "question": "How do I request a dual monitor or a keyboard for my desk?",
+    "answer": "Have your department head submit a desk accessory request ticket on the internal portal."
+  },
+  {
+    "id": "it-059",
+    "department": "IT Support",
+    "question": "Can I connect my personal phone to the employee Wi-Fi?",
+    "answer": "No, the secure employee Wi-Fi is strictly reserved for official company laptops and devices."
+  },
+  {
+    "id": "it-060",
+    "department": "IT Support",
+    "question": "My webcam is showing a black screen during a video call",
+    "answer": "Check if the physical plastic slider privacy cover over your laptop camera lens is pushed open."
+  },
+  {
+    "id": "it-061",
+    "department": "IT Support",
+    "question": "How do I stop an app from freezing my entire laptop?",
+    "answer": "Press Ctrl + Shift + Esc to open Task Manager, click on the frozen app, and click the 'End Task' button."
+  },
+  {
+    "id": "it-062",
+    "department": "IT Support",
+    "question": "My external hard drive or USB flash drive is not showing up",
+    "answer": "Unplug it, restart your laptop, and plug it back into a different USB port on your machine."
+  },
+  {
+    "id": "it-063",
+    "department": "IT Support",
+    "question": "How do I pin an app to my desktop taskbar?",
+    "answer": "Search for the app in the Windows Start Menu, right-click it, and select 'Pin to taskbar'."
+  },
+  {
+    "id": "it-064",
+    "department": "IT Support",
+    "question": "The text on my screen is too small to read",
+    "answer": "Hold down the Ctrl key and scroll up with your mouse wheel to zoom in on your screen."
+  },
+  {
+    "id": "it-065",
+    "department": "IT Support",
+    "question": "How do I change my default internet browser to Google Chrome?",
+    "answer": "Go to Windows Settings, search for 'Default Apps,' click on Web Browser, and choose Google Chrome."
+  },
+  {
+    "id": "it-066",
+    "department": "IT Support",
+    "question": "I received a security popup asking for an administrative login",
+    "answer": "Do not type anything; close the popup and open an IT ticket because only IT staff have admin rights."
+  },
+  {
+    "id": "it-067",
+    "department": "IT Support",
+    "question": "How do I share my desktop screen during a Teams meeting?",
+    "answer": "Click the 'Share' button with an upward arrow next to the leave button in your meeting window."
+  },
+  {
+    "id": "it-068",
+    "department": "IT Support",
+    "question": "My computer screen orientation is upside down",
+    "answer": "Press Ctrl + Alt + Up Arrow together on your keyboard to instantly flip the screen back to normal."
+  },
+  {
+    "id": "it-069",
+    "department": "IT Support",
+    "question": "How do I check if my Windows operating system is up to date?",
+    "answer": "Go to Settings, click 'Update & Security,' and click the 'Check for updates' button."
+  },
+  {
+    "id": "it-070",
+    "department": "IT Support",
+    "question": "What do I do if my office desk phone screen is frozen?",
+    "answer": "Unplug the network internet cable from the back of the phone, wait 10 seconds, and plug it back in."
+  },
+  {
+    "id": "it-071",
+    "department": "IT Support",
+    "question": "How do I request an IT asset and email account for a new joiner?",
+    "answer": "Open the HR portal, click 'New Hire Onboarding,' select the required hardware bundle, and submit the form."
+  },
+  {
+    "id": "it-072",
+    "department": "IT Support",
+    "question": "A new employee started today but cannot log into their laptop. What should I do?",
+    "answer": "Have them connect the laptop to the office internet cable and log in using the temporary password sent to their manager."
+  },
+  {
+    "id": "it-073",
+    "department": "IT Support",
+    "question": "How do I request a temporary account for an external contractor or intern?",
+    "answer": "Submit a 'Contractor Access Request' ticket on the IT portal with their contract end date and manager approval."
+  },
+  {
+    "id": "it-074",
+    "department": "IT Support",
+    "question": "What is the procedure for returning IT assets when an employee leaves?",
+    "answer": "Bring their laptop, charger, and access card to the IT room on their final working day to sign the clearance form."
+  },
+  {
+    "id": "it-075",
+    "department": "IT Support",
+    "question": "How do I request the deletion or suspension of a departing employee accounts?",
+    "answer": "Submit an 'Employee Offboarding' ticket on the IT portal to schedule account suspension on their final day."
+  },
+  {
+    "id": "it-076",
+    "department": "IT Support",
+    "question": "How do I back up the files on my local desktop?",
+    "answer": "Move all your important files into your official company OneDrive or Google Drive folder, which backs up automatically."
+  },
+  {
+    "id": "it-077",
+    "department": "IT Support",
+    "question": "Can I request an external hard drive for local data storage?",
+    "answer": "Yes, if you handle large media files, submit a hardware request ticket with a business reason approved by your manager."
+  },
+  {
+    "id": "it-078",
+    "department": "IT Support",
+    "question": "What happens to my files if my laptop suddenly crashes?",
+    "answer": "Any files saved inside your company OneDrive or Google Drive are safe and can be recovered on your replacement laptop."
+  },
+  {
+    "id": "it-079",
+    "department": "IT Support",
+    "question": "How do I restore an older version of a file I am working on in OneDrive?",
+    "answer": "Right-click the file in your OneDrive folder, select 'Version history,' look at the dates, and click 'Restore' next to the one you want."
+  },
+  {
+    "id": "it-080",
+    "department": "IT Support",
+    "question": "How do I request a backup of a shared team folder before making big changes?",
+    "answer": "Open a general IT support ticket listing the folder path and the exact time you want the backup snapshot taken."
+  },
+  {
+    "id": "sales-001",
+    "department": "Sales",
+    "question": "How do I add a new dealership or retail lead into the CRM?",
+    "answer": "Log into the CRM dashboard, click 'Create Lead,' and fill in the dealer details under Home Appliances or Power Division."
+  },
+  {
+    "id": "sales-002",
+    "department": "Sales",
+    "question": "Where can I view my monthly sales targets for PEL refrigerators and ACs?",
+    "answer": "Open the sales portal and click 'My Performance Dashboard' right at the top to see your product target progress bars."
+  },
+  {
+    "id": "sales-003",
+    "department": "Sales",
+    "question": "How do I request a special discount approval for a bulk institutional order?",
+    "answer": "Go to the deal page in the CRM, click 'Request Approval,' type your requested discount rate, and it will alert your manager."
+  },
+  {
+    "id": "sales-004",
+    "department": "Sales",
+    "question": "How can I check if a retail dealer is already assigned to another sales officer?",
+    "answer": "Type the dealer name or NTN tax number into the global CRM search bar to make sure no one else is actively managing them."
+  },
+  {
+    "id": "sales-005",
+    "department": "Sales",
+    "question": "How do I generate a formal corporate price quotation for PEL power transformers?",
+    "answer": "Go to the sales portal, click 'Templates,' select 'Power Division Quote,' fill in the transformer capacities, and download the PDF."
+  },
+  {
+    "id": "sales-006",
+    "department": "Sales",
+    "question": "The CRM app is showing an 'API connection timeout' error during client onboarding. What should I do?",
+    "answer": "Refresh your web browser. If that does not work, log out of your sales account, clear your browser history, and log back in."
+  },
+  {
+    "id": "sales-007",
+    "department": "Sales",
+    "question": "How do I mark a dealership order as officially completed and won?",
+    "answer": "Open the specific deal pipeline page, click the status menu at the top, and change it from 'In Progress' to 'Closed Won.'"
+  },
+  {
+    "id": "sales-008",
+    "department": "Sales",
+    "question": "Where can I find the latest official dealer price list for PEL appliances?",
+    "answer": "Open the company shared drive, go to the 'Sales Enablement' folder, and look for the file named 'PEL_Appliance_Price_List_2026.pdf'."
+  },
+  {
+    "id": "sales-009",
+    "department": "Sales",
+    "question": "How do I log a customer or distributor factory-visit discussion in the system?",
+    "answer": "Open the client profile in the app, click the 'Log Call/Meeting' button, type a quick summary of what you discussed, and click save."
+  },
+  {
+    "id": "sales-010",
+    "department": "Sales",
+    "question": "What should I do if a corporate client requests an official NDA for a custom engineering project?",
+    "answer": "Download the standard PEL NDA template from the sales shared drive, fill in the client details, and email it to them to sign."
+  },
+  {
+    "id": "sales-011",
+    "department": "Sales",
+    "question": "How do I transfer ownership of a distributor account to a colleague in another territory?",
+    "answer": "Open the distributor profile page, click on the 'Account Owner' box, choose your colleague name, and click save."
+  },
+  {
+    "id": "sales-012",
+    "department": "Sales",
+    "question": "How do I access the PEL sales portal when working out in the field?",
+    "answer": "Make sure your corporate VPN app is connected on your laptop or mobile phone, then open your browser and go to the sales link."
+  },
+  {
+    "id": "sales-013",
+    "department": "Sales",
+    "question": "Where can I download the official PEL corporate presentation and pitch deck?",
+    "answer": "Go to the company SharePoint homepage, click on the 'Marketing & Branding Assets' folder, and download the PowerPoint file."
+  },
+  {
+    "id": "sales-014",
+    "department": "Sales",
+    "question": "How do I submit my monthly travel and dealer entertainment expense reports?",
+    "answer": "Fill out the digital form on the Finance portal, upload clear photos of your fuel or hotel receipts, and click submit."
+  },
+  {
+    "id": "sales-015",
+    "department": "Sales",
+    "question": "What should I do if a dealer complains about receiving incorrect promotional SMS alerts?",
+    "answer": "Open their CRM profile, scroll down to notification settings, and uncheck the boxes for marketing communication."
+  },
+  {
+    "id": "sales-016",
+    "department": "Sales",
+    "question": "How do I schedule an automated follow-up reminder for an inactive retail account?",
+    "answer": "Inside the client profile, click 'Tasks,' pick a date for your follow-up, and turn on the 'System Reminder' switch."
+  },
+  {
+    "id": "sales-017",
+    "department": "Sales",
+    "question": "Where can I see the schedule for upcoming product training sessions on new inverter AC models?",
+    "answer": "Check the 'Sales Announcement' billboard on the company intranet or look for an email invite from the Product Marketing team."
+  },
+  {
+    "id": "sales-018",
+    "department": "Sales",
+    "question": "How do I request a new company SIM card or mobile credit allowance for market visits?",
+    "answer": "Open the employee portal, go to the 'Logistics & Fleet' section, fill out the request form, and send it to your department head."
+  },
+  {
+    "id": "sales-019",
+    "department": "Sales",
+    "question": "How can I get access to premium LinkedIn Sales Navigator for B2B corporate sales?",
+    "answer": "Ask your regional sales lead to open a software license request ticket for you on the internal IT portal."
+  },
+  {
+    "id": "sales-020",
+    "department": "Sales",
+    "question": "What do I do if a client asks for customized electrical specifications for a distribution transformer?",
+    "answer": "Do not promise anything immediately; log a technical feasibility ticket for the Power Division Engineering team to review first."
+  },
+  {
+    "id": "sales-021",
+    "department": "Sales",
+    "question": "Where can I find the warranty terms for PEL deep freezers?",
+    "answer": "Open the Sales Enablement folder on the shared drive and look for the document titled 'PEL_Warranty_Policies_2026.pdf'."
+  },
+  {
+    "id": "sales-022",
+    "department": "Sales",
+    "question": "How do I check the current factory stock levels for inverter refrigerators?",
+    "answer": "Log into the company stock management portal and type in the model series code to see how many units are available."
+  },
+  {
+    "id": "sales-023",
+    "department": "Sales",
+    "question": "What should I do if a retail dealer requests a credit limit extension?",
+    "answer": "Fill out the Dealer Credit Extension form on the portal, attach their last 3 months of payment records, and submit it to Finance."
+  },
+  {
+    "id": "sales-024",
+    "department": "Sales",
+    "question": "How do I report a delay in a appliance shipment to a Lahore dealership?",
+    "answer": "Open a logistics ticket on the portal, select 'Shipment Delay,' type the bilti or invoice number, and hit send."
+  },
+  {
+    "id": "sales-025",
+    "department": "Sales",
+    "question": "Where do I find the technical datasheet for PEL switchgears?",
+    "answer": "Go to the Power Division web portal, click on 'Product Catalog,' and select the switchgear model to download its PDF."
+  },
+  {
+    "id": "sales-026",
+    "department": "Sales",
+    "question": "How can I submit a dealer request for co-funded shop signboard branding?",
+    "answer": "Fill out the Marketing Request Form on the sales portal and upload a well-lit photo of the dealer shop front with clear dimensions."
+  },
+  {
+    "id": "sales-027",
+    "department": "Sales",
+    "question": "A dealer received a refrigerator with transport damage. How do I log this?",
+    "answer": "Take clear photos of the damaged unit, open the dealer CRM page, click 'Log Claim,' and upload the photos within 24 hours."
+  },
+  {
+    "id": "sales-028",
+    "department": "Sales",
+    "question": "How do I register a brand new retail dealer into our commercial network?",
+    "answer": "Collect a copy of their CNIC, NTN tax certificate, and bank details, then upload them to the 'New Dealer Onboarding' form in the CRM."
+  },
+  {
+    "id": "sales-029",
+    "department": "Sales",
+    "question": "Where can I check the active sales incentive scheme for this quarter?",
+    "answer": "Look at the pinned announcements on the Sales portal homepage or open the file titled 'Sales_Incentive_Q2_2026.xlsx' on the shared drive."
+  },
+  {
+    "id": "sales-030",
+    "department": "Sales",
+    "question": "How do I issue an official booking order for institutional bulk sales?",
+    "answer": "Go to the sales order portal, select 'Institutional Booking,' type the company NTN, and input the agreed product quantities."
+  },
+  {
+    "id": "sales-031",
+    "department": "Sales",
+    "question": "What is the process to request a price match for a competitor appliance promotion?",
+    "answer": "Submit a competitor pricing alert ticket to the Product team and attach a photo or clipping of the competitor advertisement."
+  },
+  {
+    "id": "sales-032",
+    "department": "Sales",
+    "question": "How do I update the delivery address for an active dealer order?",
+    "answer": "If the order has not been dispatched yet, open the order invoice in your portal and click 'Edit Shipping Address.'"
+  },
+  {
+    "id": "sales-033",
+    "department": "Sales",
+    "question": "Where can I access the contact list for all regional PEL sales heads?",
+    "answer": "Go to the company directory on the intranet homepage and filter your search view by the 'Sales Leadership' department."
+  },
+  {
+    "id": "sales-034",
+    "department": "Sales",
+    "question": "How do I log a successful corporate presentation meeting in the CRM?",
+    "answer": "Open the corporate client page in the CRM, click 'Add Activity,' choose 'Meeting,' and type a brief summary of how it went."
+  },
+  {
+    "id": "sales-035",
+    "department": "Sales",
+    "question": "What do I do if a dealer account is blocked due to overdue payments?",
+    "answer": "Contact the Finance Credit Control team to see if the dealer payment has cleared so they can unblock the account."
+  },
+  {
+    "id": "sales-036",
+    "department": "Sales",
+    "question": "How do I request PEL promotional brochures or banners for a dealer shop?",
+    "answer": "Submit an asset request form to the Marketing Operations team specifying exactly how many brochures and banners you need."
+  },
+  {
+    "id": "sales-037",
+    "department": "Sales",
+    "question": "Where can I see the energy efficiency ratings for our latest AC models?",
+    "answer": "Look up the specific AC model number in the shared product catalog folder or check the official PEL consumer website."
+  },
+  {
+    "id": "sales-038",
+    "department": "Sales",
+    "question": "How do I invite a major corporate client to a PEL factory tour?",
+    "answer": "Email a tour request to the Plant Operations and PR team with the client company profile and your proposed dates."
+  },
+  {
+    "id": "sales-039",
+    "department": "Sales",
+    "question": "What is the standard lead time for manufacturing a custom PEL power transformer?",
+    "answer": "The standard factory build time is 6 to 8 weeks after the design is finalized and the advanced payment is received."
+  },
+  {
+    "id": "sales-040",
+    "department": "Sales",
+    "question": "How do I track my team collective sales performance against the regional target?",
+    "answer": "Log into the Sales BI Report portal and select your designated region to see live target tracking graphs."
+  },
+  {
+    "id": "sales-041",
+    "department": "Sales",
+    "question": "How do I request a product replacement sample for a corporate display showroom?",
+    "answer": "Submit a 'Showroom Display Request' ticket on the portal with manager approval to ship a unit out from the warehouse."
+  },
+  {
+    "id": "sales-042",
+    "department": "Sales",
+    "question": "What should I do if a dealer complains about missing items in their delivery?",
+    "answer": "Check the signed delivery paper, open a dispute ticket under 'Logistics Discrepancy' on the portal, and alert warehouse staff."
+  },
+  {
+    "id": "sales-043",
+    "department": "Sales",
+    "question": "Where do I find the active GST and tax breakdown for appliance invoices?",
+    "answer": "All current tax rates apply automatically, but you can view a full item breakdown on any generated quote PDF."
+  },
+  {
+    "id": "sales-044",
+    "department": "Sales",
+    "question": "How do I schedule an online product training session for a new dealer staff?",
+    "answer": "Create a Microsoft Teams meeting invite, add the dealer email address, and label it with the 'Sales Training' calendar tag."
+  },
+  {
+    "id": "sales-045",
+    "department": "Sales",
+    "question": "Can I offer an extended warranty to a corporate client during negotiations?",
+    "answer": "You cannot promise this on your own; extended warranties require written approval from the Service and Quality Department."
+  },
+  {
+    "id": "sales-046",
+    "department": "Sales",
+    "question": "How do I update a dealer phone number or email address in the system?",
+    "answer": "Open the dealer profile in the CRM, click the 'Edit Details' button, change the contact fields, and click save."
+  },
+  {
+    "id": "sales-047",
+    "department": "Sales",
+    "question": "Where can I download the PEL logo files for a joint marketing banner?",
+    "answer": "Go to the SharePoint site, open the 'Brand Guidelines' folder, and download the high-resolution logo image package."
+  },
+  {
+    "id": "sales-048",
+    "department": "Sales",
+    "question": "What should I do if a client asks for a formal tender bid submission?",
+    "answer": "Forward the tender documents to the Corporate Sales and Legal teams immediately to begin compiling the official bid packet."
+  },
+  {
+    "id": "sales-049",
+    "department": "Sales",
+    "question": "How do I check the scheduled delivery date for a pending dealer order?",
+    "answer": "Open the 'Order Tracking' tab in the ERP system and paste the unique order number to view the live shipping status."
+  },
+  {
+    "id": "sales-050",
+    "department": "Sales",
+    "question": "How do I request a legal contract review for a new distributor agreement?",
+    "answer": "Email your draft agreement text to legal-review@pel.com.pk along with a brief summary of the business terms."
+  },
+  {
+    "id": "sales-051",
+    "department": "Sales",
+    "question": "Where can I find the historical sales data for my territory from last year?",
+    "answer": "Open the Sales BI dashboard, click 'Historical Reports,' choose 2025, and filter the view by your territory name."
+  },
+  {
+    "id": "sales-052",
+    "department": "Sales",
+    "question": "How do I log a dealer request to participate in the annual PEL dealer convention?",
+    "answer": "Submit the dealer name and their active sales metrics using the 'Convention Nomination' form on the sales portal."
+  },
+  {
+    "id": "sales-053",
+    "department": "Sales",
+    "question": "What do I do if a corporate client requests an inspection certificate for a transformer?",
+    "answer": "Open a support ticket with the Power Division Quality Assurance team, referencing the transformer unique serial number."
+  },
+  {
+    "id": "sales-054",
+    "department": "Sales",
+    "question": "How do I request a correction for a wrong price printed on a dealer invoice?",
+    "answer": "Do not deliver the items; open an 'Invoice Correction Request' ticket with billing to re-generate the correct bill."
+  },
+  {
+    "id": "sales-055",
+    "department": "Sales",
+    "question": "Where can I view consumer financing or installment plans available for PEL products?",
+    "answer": "Open the 'Retail Finance' folder on the shared network drive to see current installment plans with partner banks."
+  },
+  {
+    "id": "sales-056",
+    "department": "Sales",
+    "question": "How do I register customer feedback regarding a refrigerator design issue?",
+    "answer": "Submit a feedback entry in the CRM under 'Product Improvement' so it automatically routes to the factory R&D team."
+  },
+  {
+    "id": "sales-057",
+    "department": "Sales",
+    "question": "How do I request an advanced payment confirmation from the finance team?",
+    "answer": "Upload a clear photo of the dealer bank deposit slip or a screenshot of the online transfer to the Finance verification portal."
+  },
+  {
+    "id": "sales-058",
+    "department": "Sales",
+    "question": "What is the procedure if a distributor wants to terminate their contract?",
+    "answer": "Forward their official written termination letter to your regional sales head and the legal department within 24 hours."
+  },
+  {
+    "id": "sales-059",
+    "department": "Sales",
+    "question": "Where can I find the list of authorized PEL service centers nationwide?",
+    "answer": "Go to the Customer Care section on the internal directory or download the 'PEL_Authorized_Service_Centers.pdf' file."
+  },
+  {
+    "id": "sales-060",
+    "department": "Sales",
+    "question": "How do I apply a promotional voucher code to a retail order?",
+    "answer": "Type the active voucher code into the 'Promo Code' box on the order checkout screen before finalizing the checkout."
+  },
+  {
+    "id": "sales-061",
+    "department": "Sales",
+    "question": "How do I request technical sales support for a complex corporate HVAC deal?",
+    "answer": "Submit a technical assistance request to the Commercial Air Conditioning engineering team using the online portal."
+  },
+  {
+    "id": "sales-062",
+    "department": "Sales",
+    "question": "What do I do if a dealer payment cheque bounces?",
+    "answer": "Tell the Credit Control team immediately, freeze the dealer order placement tool in the CRM, and call the dealer."
+  },
+  {
+    "id": "sales-063",
+    "department": "Sales",
+    "question": "Where can I see the launch dates for upcoming home appliance models?",
+    "answer": "Check the 'Product Roadmap' calendar page located on the Marketing Department intranet space."
+  },
+  {
+    "id": "sales-064",
+    "department": "Sales",
+    "question": "How do I check if a specific corporate client has an active credit line?",
+    "answer": "Search for the client corporate profile page in the ERP system and check the 'Credit Status' indicator light panel."
+  },
+  {
+    "id": "sales-065",
+    "department": "Sales",
+    "question": "How do I request safety equipment or vests for a client factory visit?",
+    "answer": "Submit a request to the Administration and HSE department portal 48 hours before the scheduled plant visit."
+  },
+  {
+    "id": "sales-066",
+    "department": "Sales",
+    "question": "What should I do if a dealer claims they received the wrong color refrigerators?",
+    "answer": "Log a claim under 'Wrong Product Delivered,' attach photos of the product box labels, and request a stock swap."
+  },
+  {
+    "id": "sales-067",
+    "department": "Sales",
+    "question": "Where can I find the template for a standard PEL sales agent agreement?",
+    "answer": "Go to the Legal & Compliance folder on the shared drive and download the 'Sales_Agent_Template.docx' file."
+  },
+  {
+    "id": "sales-068",
+    "department": "Sales",
+    "question": "How do I request a performance report for a specific retail outlet?",
+    "answer": "Go to the Sales BI portal, click 'Retailer Analytics,' and type in the unique outlet shop code."
+  },
+  {
+    "id": "sales-069",
+    "department": "Sales",
+    "question": "How do I submit an idea for a regional sales promotion or scheme?",
+    "answer": "Draft a brief proposal using the scheme template and email it to your regional sales manager for review."
+  },
+  {
+    "id": "sales-070",
+    "department": "Sales",
+    "question": "What do I do if a dealer asks to return slow-moving inventory stock?",
+    "answer": "Submit an official 'Inventory Return Request' to your sales head for evaluation based on company policy."
+  },
+  {
+    "id": "sales-071",
+    "department": "Sales",
+    "question": "Where can I view the production schedule for the appliance factory?",
+    "answer": "Check the 'Production Planning' dashboard link pinned on the corporate operations channel."
+  },
+  {
+    "id": "sales-072",
+    "department": "Sales",
+    "question": "How do I request a replacement sales target document if I cannot find mine?",
+    "answer": "Send a short message to the Sales Operations team to re-send your official target sheet via email."
+  },
+  {
+    "id": "sales-073",
+    "department": "Sales",
+    "question": "What should I do if a client asks for customized product packaging?",
+    "answer": "Log a ticket under 'Custom Packaging Request' for the Marketing and Production design teams to evaluate the costs."
+  },
+  {
+    "id": "sales-074",
+    "department": "Sales",
+    "question": "How do I register an upcoming corporate sales meeting in my team calendar?",
+    "answer": "Open your Outlook Calendar, click 'New Event,' fill in the client meeting details, and invite your team members."
+  },
+  {
+    "id": "sales-075",
+    "department": "Sales",
+    "question": "Where can I find the technical user manual for a PEL inverter refrigerator?",
+    "answer": "Go to the product page on the internal knowledge base website and click the 'Downloads' tab to get the user manual."
+  },
+  {
+    "id": "sales-076",
+    "department": "Sales",
+    "question": "How do I verify if a dealer bank guarantee document is valid?",
+    "answer": "Bring the original physical document straight to the Finance and Legal desk for formal bank verification."
+  },
+  {
+    "id": "sales-077",
+    "department": "Sales",
+    "question": "What do I do if a client complains about a slow response from the installation team?",
+    "answer": "Open an urgent service ticket in the Customer Care portal and escalate it to the regional technical service supervisor."
+  },
+  {
+    "id": "sales-078",
+    "department": "Sales",
+    "question": "How do I request an upgrade or bug fix for my sales tablet or app?",
+    "answer": "Open a standard IT ticket on the general portal under the 'Mobile Sales App Troubleshooting' category."
+  },
+  {
+    "id": "sales-079",
+    "department": "Sales",
+    "question": "Where can I view the total sales commissions I earned last month?",
+    "answer": "Log into the HR payroll portal and click on the 'Commissions & Incentives' tab on your main dashboard."
+  },
+  {
+    "id": "sales-080",
+    "department": "Sales",
+    "question": "How do I check if a specific area or city is open for new dealership allocation?",
+    "answer": "Open the 'Territory Map' on the sales portal to check if the area is currently marked as open or saturated."
+  },
+  {
+    "id": "sales-081",
+    "department": "Sales",
+    "question": "How do I check upcoming WAPDA or DISCO tender deadlines for the Power Division?",
+    "answer": "Open the sales intranet, click 'Tender Tracking,' and view the active bidding calendar for LESCO, FESCO, and others."
+  },
+  {
+    "id": "sales-082",
+    "department": "Sales",
+    "question": "What documents are required to submit a technical bid for grid switchgears?",
+    "answer": "Attach the PEL ISO certificates, product type-test reports, supply history records, and the signed technical sheet."
+  },
+  {
+    "id": "sales-083",
+    "department": "Sales",
+    "question": "How do I request a Bid Evaluation Report copy for a closed government tender?",
+    "answer": "Submit an official request ticket to the Tenders Coordination desk with the specific tender notice reference number."
+  },
+  {
+    "id": "sales-084",
+    "department": "Sales",
+    "question": "What should I do if a utility company requests an extension on a transformer delivery schedule?",
+    "answer": "Forward the official corporate letter from the procurement officer to the Head of Power Division Supply Chain within 12 hours."
+  },
+  {
+    "id": "sales-085",
+    "department": "Sales",
+    "question": "Where can I find the standard Earnest Money or Bid Security deposit bank templates?",
+    "answer": "Go to the shared Legal & Finance folder and download the 'PEL_Bid_Security_Bank_Guarantee_Form.docx' template."
+  },
+  {
+    "id": "sales-086",
+    "department": "Sales",
+    "question": "What is the maximum allowed credit period for a Category-A appliance dealer?",
+    "answer": "The standard policy allows a maximum of 30 credit days from the date of invoice, unless a director approves an extension."
+  },
+  {
+    "id": "sales-087",
+    "department": "Sales",
+    "question": "How do I log a Post-Dated Cheque (PDC) received from a distributor?",
+    "answer": "Log the cheque details on the sales portal under 'Log PDC,' then drop the physical cheque in the regional cash box."
+  },
+  {
+    "id": "sales-088",
+    "department": "Sales",
+    "question": "The system automatically blocked a dealer due to an expired Bank Guarantee. How do I request a temporary unlock?",
+    "answer": "Your Regional Sales Head must submit a formal Credit Block Bypass Form with a commitment letter from the dealer to Finance."
+  },
+  {
+    "id": "sales-089",
+    "department": "Sales",
+    "question": "How do I verify the current outstanding balance and aging report of a dealership?",
+    "answer": "Log into the sales ERP portal, search the unique Dealer Account Code, and open the 'Aged Receivables Ledger' tab."
+  },
+  {
+    "id": "sales-090",
+    "department": "Sales",
+    "question": "What do I do if a dealer requests to pay an outstanding invoice through an online bank transfer?",
+    "answer": "Provide them with the official PEL corporate IBAN number, and instruct them to email the transfer receipt to recovery@pel.com.pk."
+  },
+  {
+    "id": "hr-001",
+    "department": "HR",
+    "question": "How do I log my daily attendance at the factory or office?",
+    "answer": "Swipe your physical employee ID card or use the fingerprint scanner at the main gate when entering and leaving."
+  },
+  {
+    "id": "hr-002",
+    "department": "HR",
+    "question": "What should I do if I forgot to swipe my attendance card yesterday?",
+    "answer": "Go to 'Attendance Regularization' on the HR portal, type your actual work hours, and submit it for approval."
+  },
+  {
+    "id": "hr-003",
+    "department": "HR",
+    "question": "How many annual casual leaves am I allowed to take each year?",
+    "answer": "All permanent employees get 10 casual leaves and 8 medical leaves at the start of every calendar year."
+  },
+  {
+    "id": "hr-004",
+    "department": "HR",
+    "question": "Where can I find the list of panel hospitals covered under the PEL health plan?",
+    "answer": "Go to the HR section on the company intranet and download the 'PEL_Panel_Hospitals_2026.pdf' document."
+  },
+  {
+    "id": "hr-005",
+    "department": "HR",
+    "question": "How do I add my newborn child or spouse to the company medical insurance?",
+    "answer": "Email copies of the birth or marriage certificate along with a filled insurance form to hr-benefits@pel.com.pk."
+  },
+  {
+    "id": "hr-006",
+    "department": "HR",
+    "question": "When does the annual employee performance evaluation cycle begin?",
+    "answer": "The appraisal cycle starts in November. You will fill out a self-assessment form online before your manager interview."
+  },
+  {
+    "id": "hr-007",
+    "department": "HR",
+    "question": "How can I download my official salary slip for the previous month?",
+    "answer": "Log into the HRIS employee portal, click on the 'Payroll & Finance' tab, and select 'Download Pay Slip.'"
+  },
+  {
+    "id": "hr-008",
+    "department": "HR",
+    "question": "What is the standard notice period if a permanent employee decides to resign?",
+    "answer": "You must give a 1-month written notice or pay 1 month of gross salary back to the company if you leave early."
+  },
+  {
+    "id": "hr-009",
+    "department": "HR",
+    "question": "How do I apply for maternity or paternity leave?",
+    "answer": "Submit a request ticket on the HR portal under 'Special Leaves' and upload a medical certificate 4 weeks in advance."
+  },
+  {
+    "id": "hr-010",
+    "department": "HR",
+    "question": "Where can I check the official schedule for upcoming company holidays?",
+    "answer": "The annual holiday calendar is pinned to the intranet homepage and emailed to everyone every January."
+  },
+  {
+    "id": "hr-011",
+    "department": "HR",
+    "question": "How do I request an official employment verification letter for a bank loan?",
+    "answer": "Open a ticket under 'HR Services' on the portal, select 'Employment Letter,' and check the box if you need your salary shown."
+  },
+  {
+    "id": "hr-012",
+    "department": "HR",
+    "question": "What should I do if there is an incorrect deduction on my monthly pay slip?",
+    "answer": "Email your employee ID and a screenshot of the error directly to payroll-queries@pel.com.pk for a review."
+  },
+  {
+    "id": "hr-013",
+    "department": "HR",
+    "question": "How can I apply for an internal job transfer or open position within PEL?",
+    "answer": "Go to the 'Internal Careers' tab on the intranet, check if you meet the requirements, and submit your CV."
+  },
+  {
+    "id": "hr-014",
+    "department": "HR",
+    "question": "What is the maximum number of unused leaves I can carry forward to next year?",
+    "answer": "You can carry over up to 10 earned leaves. Unused casual and medical leaves will automatically expire on December 31st."
+  },
+  {
+    "id": "hr-015",
+    "department": "HR",
+    "question": "How do I report an incident of workplace harassment or unfair behavior?",
+    "answer": "Email the HR Ethics Committee at ethics-hotline@pel.com.pk or drop a written note into the secure complaint box."
+  },
+  {
+    "id": "hr-016",
+    "department": "HR",
+    "question": "What is the official office dress code policy for corporate staff?",
+    "answer": "Business casual from Monday to Thursday (collared shirts, trousers) and smart casual on Fridays (jeans and polos allowed)."
+  },
+  {
+    "id": "hr-017",
+    "department": "HR",
+    "question": "How do I update my home address or emergency contact phone number?",
+    "answer": "Log into the HRIS portal, click 'Edit Personal Information,' type your new contact details, and click save."
+  },
+  {
+    "id": "hr-018",
+    "department": "HR",
+    "question": "Are interns eligible for paid leaves during their internship contract?",
+    "answer": "Interns get 1 casual leave for each month of work, which must be approved in advance by their supervisor."
+  },
+  {
+    "id": "hr-019",
+    "department": "HR",
+    "question": "How can I request a duplicate physical employee ID card if I lost mine?",
+    "answer": "Submit a 'Replacement ID Card' ticket on the portal and visit the HR admin desk to get a new card printed."
+  },
+  {
+    "id": "hr-020",
+    "department": "HR",
+    "question": "What happens if I arrive late to the office three times in a single month?",
+    "answer": "Every three late arrivals past the 15-minute grace period will result in a deduction of half a day's casual leave."
+  },
+  {
+    "id": "hr-021",
+    "department": "HR",
+    "question": "Where can I find the official rules regarding the employee provident fund?",
+    "answer": "Open the HR policy folder on the shared drive and open the document titled 'PEL_Provident_Fund_Rules.pdf'."
+  },
+  {
+    "id": "hr-022",
+    "department": "HR",
+    "question": "How do I sign up for the company pick-and-drop shuttle service?",
+    "answer": "Fill out the Transport Requisition Form on the logistics portal, and HR will confirm if there is an open seat on your route."
+  },
+  {
+    "id": "hr-023",
+    "department": "HR",
+    "question": "What should I do if I need to extend my medical leave due to hospitalization?",
+    "answer": "Inform your department head immediately, and upload your hospital admission certificate to the HR portal within 48 hours."
+  },
+  {
+    "id": "hr-024",
+    "department": "HR",
+    "question": "How can I check the status of my annual leave encashment payout?",
+    "answer": "Leave cashouts are processed automatically with the January salary and will show up as a line item on your January pay slip."
+  },
+  {
+    "id": "hr-025",
+    "department": "HR",
+    "question": "Where can I get information about the PEL employee children scholarship program?",
+    "answer": "Contact the HR Benefits Desk or download the 'Employee_Welfare_Scholarship_Guidelines.pdf' from the intranet."
+  },
+  {
+    "id": "hr-026",
+    "department": "HR",
+    "question": "How do I schedule an exit interview before my final day at the company?",
+    "answer": "Once your resignation is accepted, an HR team member will email you an calendar invite for a formal exit interview."
+  },
+  {
+    "id": "hr-027",
+    "department": "HR",
+    "question": "What documents do I need to submit to complete my final clearance process?",
+    "answer": "Get signatures on the physical clearance form from IT, Finance, Logistics, and your manager, then bring it to HR."
+  },
+  {
+    "id": "hr-028",
+    "department": "HR",
+    "question": "How do I claim a medical expense reimbursement for an outdoor treatment (OPD)?",
+    "answer": "Fill out the Insurance Claim Form, attach the original doctor prescription and pharmacy bills, and bring them to HR."
+  },
+  {
+    "id": "hr-029",
+    "department": "HR",
+    "question": "Where do I find the training modules for the mandatory employee compliance course?",
+    "answer": "Log into the PEL Learning Management System (LMS) portal using your standard login and check 'My Mandatory Courses.'"
+  },
+  {
+    "id": "hr-030",
+    "department": "HR",
+    "question": "Can I take a casual leave immediately before or after a public holiday?",
+    "answer": "Combining leaves with public holidays requires written approval from your Department Head to avoid low staffing levels."
+  },
+  {
+    "id": "hr-031",
+    "department": "HR",
+    "question": "How do I request a permanent change in my factory shift timing?",
+    "answer": "Submit a Shift Transfer Request Form signed by your floor supervisor to HR operations before the 25th of the month."
+  },
+  {
+    "id": "hr-032",
+    "department": "HR",
+    "question": "Where can I collect my annual EOBI registration card?",
+    "answer": "Bring a copy of your CNIC to the HR Helpdesk to collect your Employees Old-Age Benefits Institution card."
+  },
+  {
+    "id": "hr-033",
+    "department": "HR",
+    "question": "How do I claim medical coverage under the provincial social security system (PESSI)?",
+    "answer": "Collect a secured medical slip (Form B-5) from the HR Admin office before visiting an authorized social security hospital."
+  },
+  {
+    "id": "hr-034",
+    "department": "HR",
+    "question": "What is the standard policy for night shift allowances at the plant?",
+    "answer": "Employees working the night shift (10:00 PM to 6:00 AM) get a fixed daily premium cash allowance added to their pay."
+  },
+  {
+    "id": "hr-035",
+    "department": "HR",
+    "question": "How do I check if my probation period has been successfully completed?",
+    "answer": "HR will email you an official Confirmation Letter once your manager submits a good 3-month performance review."
+  },
+  {
+    "id": "hr-036",
+    "department": "HR",
+    "question": "What should I do if my physical employee ID card stops working at the biometric gates?",
+    "answer": "Bring your faulty card to the HR Admin room so they can re-program it or print a new card if it is broken."
+  },
+  {
+    "id": "hr-037",
+    "department": "HR",
+    "question": "How do I apply for an advance salary loan for an urgent personal emergency?",
+    "answer": "Log into the HR portal, click 'Salary Advance Request,' select an amount within your limit, and type your reason."
+  },
+  {
+    "id": "hr-038",
+    "department": "HR",
+    "question": "Where can I find the official rules regarding the calculation of company gratuity?",
+    "answer": "Open the HR Policy Manual on the shared network drive and look for the chapter titled 'Statutory Gratuity Regulations.'"
+  },
+  {
+    "id": "hr-039",
+    "department": "HR",
+    "question": "What is the procedure to report a major workplace safety or HSE violation?",
+    "answer": "Tell the on-duty floor warden immediately or file an report online through the HSE portal under 'Unsafe Conditions.'"
+  },
+  {
+    "id": "hr-040",
+    "department": "HR",
+    "question": "How do I register my updated educational degrees or certifications in my employee profile?",
+    "answer": "Email a clear scan of your HEC-verified degree or certificate to hr-records@pel.com.pk to update your master profile."
+  },
+  {
+    "id": "hr-041",
+    "department": "HR",
+    "question": "Are factory workers entitled to double wages for working on official public holidays?",
+    "answer": "Yes, factory staff required to work on official holidays receive a holiday allowance at double their standard pay rate."
+  },
+  {
+    "id": "hr-042",
+    "department": "HR",
+    "question": "How do I opt out of the voluntary company provident fund scheme?",
+    "answer": "The fund is mandatory for management staff, but factory workers can submit an opt-out form during onboarding."
+  },
+  {
+    "id": "hr-043",
+    "department": "HR",
+    "question": "Where can I get a copy of the official employee code of conduct booklet?",
+    "answer": "Download it from the 'New Joiner Toolkit' on SharePoint or collect a printed booklet from the HR onboarding desk."
+  },
+  {
+    "id": "hr-044",
+    "department": "HR",
+    "question": "How long does it take to receive the final settlement check after resigning?",
+    "answer": "Your final settlement check and fund payouts are ready within 30 to 45 working days after submitting a signed clearance form."
+  },
+  {
+    "id": "hr-045",
+    "department": "HR",
+    "question": "What happens if I forget to log out at the biometric machine at the end of my shift?",
+    "answer": "Your attendance will show an error. Submit an Attendance Regularization request online to avoid a salary deduction."
+  },
+  {
+    "id": "hr-046",
+    "department": "HR",
+    "question": "How do I recommend a friend for an open job vacancy at PEL?",
+    "answer": "Email their updated resume to referrals@pel.com.pk along with the specific job code and your employee ID details."
+  },
+  {
+    "id": "hr-047",
+    "department": "HR",
+    "question": "What is the standard protocol if an employee falls ill while inside the factory premises?",
+    "answer": "Go straight to the on-site Factory First-Aid Clinic; the medical officer will treat you or arrange an ambulance if serious."
+  },
+  {
+    "id": "hr-048",
+    "department": "HR",
+    "question": "How can I check how many earned leaves I have left for this year?",
+    "answer": "Log into the HRIS application dashboard and look at the live status charts under the 'My Leave Balances' section."
+  },
+  {
+    "id": "hr-049",
+    "department": "HR",
+    "question": "How do I sign up for the annual company sports gala or team building events?",
+    "answer": "Click the registration link in the official HR announcement email or sign up at your regional sales office front desk."
+  },
+  {
+    "id": "hr-050",
+    "department": "HR",
+    "question": "What is the company policy regarding pursuing higher education while working at PEL?",
+    "answer": "You must submit a formal NOC (No Objection Certificate) request to HR before starting any evening or weekend classes."
+  },
+  {
+    "id": "hr-051",
+    "department": "HR",
+    "question": "How do I request a temporary extension on my internship contract?",
+    "answer": "Your department manager must email a justification request to the HR Talent team 1 week before your contract ends."
+  },
+  {
+    "id": "hr-052",
+    "department": "HR",
+    "question": "What should I do if I lose a medical bill that I needed to submit for reimbursement?",
+    "answer": "Get a stamped duplicate copy of the receipt from the hospital pharmacy before turning your claim in to HR."
+  },
+  {
+    "id": "hr-053",
+    "department": "HR",
+    "question": "Where do I find the appraisal form for non-management or technical factory staff?",
+    "answer": "Collect a physical blue evaluation sheet from the factory floor supervisor office or the plant HR desk."
+  },
+  {
+    "id": "hr-054",
+    "department": "HR",
+    "question": "How do I check the balance of my provident fund accumulation?",
+    "answer": "Log into the Finance portal and open the 'PF Statement' page to view your total savings and company matching balances."
+  },
+  {
+    "id": "hr-055",
+    "department": "HR",
+    "question": "What is the grace period allowed for morning arrival at the head office?",
+    "answer": "Office hours start at 9:00 AM, and you are allowed a 15-minute grace period. Arriving after 9:15 AM marks you as late."
+  },
+  {
+    "id": "hr-056",
+    "department": "HR",
+    "question": "How do I apply for a prolonged leave without pay for overseas travel or family reasons?",
+    "answer": "Submit a written request to your department head; long leaves without pay require special approval from the HR Director."
+  },
+  {
+    "id": "hr-057",
+    "department": "HR",
+    "question": "Where can I get information regarding the CBA labor union election schedules?",
+    "answer": "All official labor union and Collective Bargaining Agent schedules are posted on the central factory gate noticeboards."
+  },
+  {
+    "id": "hr-058",
+    "department": "HR",
+    "question": "How do I activate my corporate health insurance digital card on my phone?",
+    "answer": "Download our partner insurance mobile app and log in using your employee ID and your corporate email address."
+  },
+  {
+    "id": "hr-059",
+    "department": "HR",
+    "question": "What happens to my leaves if I am transferred to a different regional office?",
+    "answer": "Your entire leave history and saved balances will move with you to your new branch database automatically."
+  },
+  {
+    "id": "hr-060",
+    "department": "HR",
+    "question": "How do I report an error or misspelled name on my printed employee ID badge?",
+    "answer": "Bring the incorrect card back to the HR desk and fill out a quick 'Badge Correction Slip' to print a new one."
+  },
+  {
+    "id": "hr-061",
+    "department": "HR",
+    "question": "Can I take half-day leaves at PEL?",
+    "answer": "Yes, you can apply for a half-day leave (morning or afternoon session) directly using the dropdown menu on the leave portal."
+  },
+  {
+    "id": "hr-062",
+    "department": "HR",
+    "question": "How do I sign up for the company desktop soft-skills training programs?",
+    "answer": "Go to the LMS training calendar tab, click on an open workshop slot, and click the 'Request Enrollment' button."
+  },
+  {
+    "id": "hr-063",
+    "department": "HR",
+    "question": "What documents do I provide if my spouse needs emergency admission at a panel hospital?",
+    "answer": "Show your physical PEL employee ID card along with your spouse's CNIC at the hospital desk for a cashless admission."
+  },
+  {
+    "id": "hr-064",
+    "department": "HR",
+    "question": "How do I register a complaint regarding the quality of food at the factory canteen?",
+    "answer": "Drop a written feedback form into the Canteen Management suggestion box located next to the main kitchen exit."
+  },
+  {
+    "id": "hr-065",
+    "department": "HR",
+    "question": "What is the policy for bereavement or compassion leaves?",
+    "answer": "Employees are given 3 consecutive paid days off in the unfortunate event of losing an immediate family member."
+  },
+  {
+    "id": "hr-066",
+    "department": "HR",
+    "question": "How do I request a formal salary certificate with the company official seal?",
+    "answer": "Open an HR service ticket online, select 'Salary Certificate with Seal,' and pick it up from HR within 48 hours."
+  },
+  {
+    "id": "hr-067",
+    "department": "HR",
+    "question": "What should I do if I am called for mandatory jury duty or legal witness tracking?",
+    "answer": "Submit a copy of the official court summons to HR so they can log your time away as approved official duty leaves."
+  },
+  {
+    "id": "hr-068",
+    "department": "HR",
+    "question": "How are annual increments calculated at PEL?",
+    "answer": "Salary raises are based on a mix of your final annual performance review rating and current company salary bands."
+  },
+  {
+    "id": "hr-069",
+    "department": "HR",
+    "question": "Where can I check the route mapping for the employee transport buses?",
+    "answer": "Open the SharePoint portal, click the Logistics icon, and view the full route mapping PDFs for morning and evening buses."
+  },
+  {
+    "id": "hr-070",
+    "department": "HR",
+    "question": "How do I reset my security password for the online payroll portal?",
+    "answer": "Click 'Forgot Password' on the payroll login screen or open a support ticket with it-helpdesk@pel.com.pk."
+  },
+  {
+    "id": "hr-071",
+    "department": "HR",
+    "question": "What should I do if my child needs an education verification letter for school admission?",
+    "answer": "Submit a request via the HR portal under 'Bonafide Certificate' and mention your child's full name and school details."
+  },
+  {
+    "id": "hr-072",
+    "department": "HR",
+    "question": "Are seasonal or temporary workers eligible for the health insurance panel scheme?",
+    "answer": "No, the comprehensive panel health insurance plan is reserved strictly for permanent, full-time employees."
+  },
+  {
+    "id": "hr-073",
+    "department": "HR",
+    "question": "How do I apply for a transfer from the Lahore office to the Karachi regional office?",
+    "answer": "Apply through the Internal Job Posting portal if a job is open, or submit a mutual transfer form signed by both branch heads."
+  },
+  {
+    "id": "hr-074",
+    "department": "HR",
+    "question": "What do I do if I miss my scheduled annual medical check-up at the factory clinic?",
+    "answer": "Contact the clinic reception desk within 5 working days to be rescheduled into an open morning time slot."
+  },
+  {
+    "id": "hr-075",
+    "department": "HR",
+    "question": "How can I access the historical archive of my past performance appraisal scores?",
+    "answer": "Open your employee profile page on the HRIS database and click on the 'Historical Performance Evaluations' tab."
+  },
+  {
+    "id": "hr-076",
+    "department": "HR",
+    "question": "What is the maximum age limit for employment at PEL under standard retirement rules?",
+    "answer": "The standard superannuation or retirement age for all corporate and factory employees at PEL is 60 years."
+  },
+  {
+    "id": "hr-077",
+    "department": "HR",
+    "question": "How do I report that a colleague has been absent without notice for more than 3 days?",
+    "answer": "Your line manager must notify the HR operations team via email immediately so they can issue a formal inquiry query."
+  },
+  {
+    "id": "hr-078",
+    "department": "HR",
+    "question": "Can I get a cash advance against my accrued earned leaves balance?",
+    "answer": "Leave cashouts are only processed automatically once a year in January and cannot be paid out as an advance mid-year."
+  },
+  {
+    "id": "hr-079",
+    "department": "HR",
+    "question": "How do I activate my corporate discount at designated electronic outlets or fitness gyms?",
+    "answer": "Show your valid physical or digital PEL employee ID badge at the checkout counter of any partner business."
+  },
+  {
+    "id": "hr-080",
+    "department": "HR",
+    "question": "Where do I submit my final company asset return list when transferring departments?",
+    "answer": "You do not need a full clearance form for an internal transfer; IT will update your digital asset registry tags online."
+  },
+  {
+    "id": "hr-081",
+    "department": "HR",
+    "question": "What is the duration of the PEL Graduate Apprentice Trainee (GAT) program?",
+    "answer": "The standard GAT training program lasts for exactly 1 year, after which a final evaluation is done for a permanent job placement."
+  },
+  {
+    "id": "hr-082",
+    "department": "HR",
+    "question": "How is overtime (OT) payment calculated for factory technical staff?",
+    "answer": "Overtime is tracked hourly via the biometric machines and must be approved by your floor manager before payroll runs."
+  },
+  {
+    "id": "hr-083",
+    "department": "HR",
+    "question": "What should I do if I am injured on the factory floor while on duty?",
+    "answer": "Go immediately to the on-site factory clinic and make sure your supervisor logs an incident report within 24 hours for compensation tracking."
+  },
+  {
+    "id": "hr-084",
+    "department": "HR",
+    "question": "Are employees entitled to cash rewards for completing long service milestones?",
+    "answer": "Yes, PEL rewards staff completing 10, 20, and 30 years of continuous service with certificates and cash rewards at the annual gala."
+  },
+  {
+    "id": "hr-085",
+    "department": "HR",
+    "question": "How do I apply for a child education stipend under the Workers Welfare Fund (WWF)?",
+    "answer": "Collect the WWF stipend form from the HR Admin office, attach your child's school fee receipts, and submit it for processing."
+  },
+  {
+    "id": "hr-086",
+    "department": "HR",
+    "question": "Can a factory worker request a double shift due to seasonal production loads?",
+    "answer": "Double shifts are heavily restricted for safety; they require a written request from the Production Head and HR clearance."
+  },
+  {
+    "id": "hr-087",
+    "department": "HR",
+    "question": "Where can I check if my job description (JD) has been updated in the system?",
+    "answer": "Log into the HRIS employee portal, go to the 'My Profile' tab, and select 'Job Description' to see your active role details."
+  },
+  {
+    "id": "hr-088",
+    "department": "HR",
+    "question": "What is the policy regarding casual leaves during the initial probation period?",
+    "answer": "Employees on probation cannot use casual leaves, but emergency time off can be given with approval from the Department Head."
+  },
+  {
+    "id": "hr-089",
+    "department": "HR",
+    "question": "How do I request a formal experience certificate after leaving the company?",
+    "answer": "Once your final clearance form is signed and turned in, the HR desk will issue your experience letter within 7 working days."
+  },
+  {
+    "id": "hr-090",
+    "department": "HR",
+    "question": "What do I do if my local social security card (PESSI) has spelling mistakes?",
+    "answer": "Bring a copy of your CNIC and 2 passport photos to the HR Benefits desk to start a data correction request with the PESSI office."
+  },
+  {
+    "id": "finance-001",
+    "department": "Finance",
+    "question": "How long does it take to process a vendor payment invoice?",
+    "answer": "Standard vendor invoices take 30 working days to process from the date they are formally verified and entered into the system."
+  },
+  {
+    "id": "finance-002",
+    "department": "Finance",
+    "question": "What documents are required to clear a pending supplier payment?",
+    "answer": "You must submit the original commercial invoice, the purchase order copy, and the signed Goods Received Note from the warehouse."
+  },
+  {
+    "id": "finance-003",
+    "department": "Finance",
+    "question": "Where can I find the latest active withholding tax (WHT) rates for filers?",
+    "answer": "Open the Finance shared folder and open the document titled 'FBR_Active_Tax_Rates_2026.pdf' for the current fiscal rules."
+  },
+  {
+    "id": "finance-004",
+    "department": "Finance",
+    "question": "How do I request a budget increase for a specific department project?",
+    "answer": "Your department head must submit a formal Budget Revision Form to the Corporate Finance team with a clear cost-benefit analysis."
+  },
+  {
+    "id": "finance-005",
+    "department": "Finance",
+    "question": "What is the maximum limit for a single petty cash reimbursement?",
+    "answer": "The absolute maximum limit for any single petty cash transaction is Rs. 5,000; anything higher must go through a bank check."
+  },
+  {
+    "id": "finance-006",
+    "department": "Finance",
+    "question": "How do I submit my weekly petty cash expense log for approval?",
+    "answer": "Fill out the Excel log template, attach all physical receipts sequentially, and hand it over to the finance desk every Friday afternoon."
+  },
+  {
+    "id": "finance-007",
+    "department": "Finance",
+    "question": "What should I do if a client overpays an invoice amount by mistake?",
+    "answer": "Log the excess amount under 'Customer Advance Accruals' and notify the recovery officer to issue a credit note or a formal refund check."
+  },
+  {
+    "id": "finance-008",
+    "department": "Finance",
+    "question": "Where can I get a copy of the company official tax filer certificate?",
+    "answer": "Send a short request email to tax-compliance@pel.com.pk, and the legal tax team will reply with our active NTN certificate."
+  },
+  {
+    "id": "finance-009",
+    "department": "Finance",
+    "question": "How is a Letter of Credit (LC) opened for importing factory raw materials?",
+    "answer": "Submit the verified proforma invoice and the approved import requisition sheet to the Treasury Desk to initiate bank processing."
+  },
+  {
+    "id": "finance-010",
+    "department": "Finance",
+    "question": "How do I track the active margin or retirement status of an import LC?",
+    "answer": "Log into the Trade Finance portal, click on 'Active LCs,' and enter the specific bank reference code to view the ledger."
+  },
+  {
+    "id": "finance-011",
+    "department": "Finance",
+    "question": "What should I do if an external vendor submits a invoice with a wrong NTN number?",
+    "answer": "Do not enter it into the system; send the invoice back to the vendor and request a corrected copy with valid tax details."
+  },
+  {
+    "id": "finance-012",
+    "department": "Finance",
+    "question": "When do the standard internal financial audits take place?",
+    "answer": "Internal financial audits are carried out quarterly, while the comprehensive external statutory audit begins every year in July."
+  },
+  {
+    "id": "finance-013",
+    "department": "Finance",
+    "question": "How can I check the remaining balance on my department annual budget?",
+    "answer": "Log into the ERP system, navigate to the 'Cost Center Analysis' tab, and input your specific department budget code."
+  },
+  {
+    "id": "finance-014",
+    "department": "Finance",
+    "question": "What is the procedure for depositing daily factory cash collections into the bank?",
+    "answer": "All cash collections must be counted, locked in the transit briefcase, and deposited into the authorized bank account by 3:00 PM daily."
+  },
+  {
+    "id": "finance-015",
+    "department": "Finance",
+    "question": "How do I get a copy of my annual tax deduction certificate (Form 149)?",
+    "answer": "Log into the payroll system after July 15th, or send a request email to corporate-tax@pel.com.pk to receive it via email."
+  },
+  {
+    "id": "finance-016",
+    "department": "Finance",
+    "question": "What should I do if a bank cheque issued to a vendor is reported lost?",
+    "answer": "Notify the Treasury Desk immediately to issue a formal 'Stop Payment' command to the bank before writing a replacement cheque."
+  },
+  {
+    "id": "finance-017",
+    "department": "Finance",
+    "question": "How are depreciation costs calculated for factory machinery?",
+    "answer": "Machinery depreciation is calculated automatically using the straight-line method based on the asset estimated useful lifecycle guidelines."
+  },
+  {
+    "id": "finance-018",
+    "department": "Finance",
+    "question": "Where do I submit a request for an urgent bank guarantee for a new tender?",
+    "answer": "Send the complete tender document details and the required guarantee text layout to the Treasury Head at least 3 days in advance."
+  },
+  {
+    "id": "finance-019",
+    "department": "Finance",
+    "question": "What happens if a department overspends its allocated quarterly budget?",
+    "answer": "The ERP system will automatically lock further purchase requisitions for that cost center until a budget transfer is approved."
+  },
+  {
+    "id": "finance-020",
+    "department": "Finance",
+    "question": "How do I clear an unapproved balance showing up on my corporate credit card?",
+    "answer": "Submit a complete expense claim form with matching business receipts to the Audit Desk before the monthly cycle closing date."
+  },
+  {
+    "id": "finance-021",
+    "department": "Finance",
+    "question": "What is the standard withholding tax rate on goods supplied by a non-filer vendor?",
+    "answer": "According to current national regulations, non-filer vendors face a significantly higher penalty tax rate which is deducted at source."
+  },
+  {
+    "id": "finance-022",
+    "department": "Finance",
+    "question": "How do I request a formal bank reconciliation statement for an audit query?",
+    "answer": "Submit a request ticket to the General Ledger team detailing the specific bank account number and the required date range."
+  },
+  {
+    "id": "finance-023",
+    "department": "Finance",
+    "question": "What documents do I need to attach for an international business travel expense claim?",
+    "answer": "You must attach your original boarding passes, hotel bills, visa fee receipts, and a approved travel authorization form."
+  },
+  {
+    "id": "finance-024",
+    "department": "Finance",
+    "question": "How do I register a new company bank account in our ERP system?",
+    "answer": "Send the official bank confirmation letter containing the IBAN and swift code to the master data team for system activation."
+  },
+  {
+    "id": "finance-025",
+    "department": "Finance",
+    "question": "What should I do if a customer requests a duplicate copy of a sales invoice?",
+    "answer": "Search the invoice number in the billing module, click 'Print Preview,' select the 'Duplicate Copy' watermark, and export it."
+  },
+  {
+    "id": "finance-026",
+    "department": "Finance",
+    "question": "Where can I find the official cost center codes for all PEL departments?",
+    "answer": "Open the shared Finance directory and download the spreadsheet titled 'PEL_Master_Cost_Centers_2026.xlsx'."
+  },
+  {
+    "id": "finance-027",
+    "department": "Finance",
+    "question": "How do I log a fixed asset disposal or sale in the accounting system?",
+    "answer": "Fill out the Asset Disposal Form with the final sale value, get it signed by the plant manager, and send it to the Fixed Assets desk."
+  },
+  {
+    "id": "finance-028",
+    "department": "Finance",
+    "question": "What is the timeline for submitting monthly payroll expenses to the bank?",
+    "answer": "All approved payroll sheets must be uploaded and finalized on the banking portal by the 26th of each month to ensure timely transfers."
+  },
+  {
+    "id": "finance-029",
+    "department": "Finance",
+    "question": "How can I verify if a specific distributor security deposit has cleared?",
+    "answer": "Open the Customer Sub-Ledger page in the ERP, input the distributor customer code, and check the 'Unutilized Deposits' balance."
+  },
+  {
+    "id": "finance-030",
+    "department": "Finance",
+    "question": "What should I do if an audit team flags a missing invoice in a historical batch?",
+    "answer": "Retrieve the original document duplicate from the physical finance archives or check if a digital copy is saved on the cloud server."
+  },
+  {
+    "id": "finance-031",
+    "department": "Finance",
+    "question": "How do I request a temporary cash advance for local factory purchases?",
+    "answer": "Fill out the Cash Advance Form, get your department head signature, and submit it to the Petty Cash desk 24 hours in advance."
+  },
+  {
+    "id": "finance-032",
+    "department": "Finance",
+    "question": "What is the deadline for submitting employee medical insurance claims to finance?",
+    "answer": "All medical invoices must be submitted to the HR benefits desk within 30 days of discharge, which are then batch-sent to Finance."
+  },
+  {
+    "id": "finance-033",
+    "department": "Finance",
+    "question": "How are foreign currency exchange rate fluctuations managed in our books?",
+    "answer": "All trade transactions are converted using the daily state bank spot rates, and variances are logged under foreign exchange gain/loss accounts."
+  },
+  {
+    "id": "finance-034",
+    "department": "Finance",
+    "question": "Where do I check the current interest rates for short-term corporate loans?",
+    "answer": "Contact the Treasury Desk or view the monthly updating 'Corporate Finance Dashboard' pinned on the internal portal."
+  },
+  {
+    "id": "finance-035",
+    "department": "Finance",
+    "question": "What should I do if a vendor changes their bank account details mid-contract?",
+    "answer": "Request a signed and stamped bank maintenance certificate from the vendor before updating their master profile in our database."
+  },
+  {
+    "id": "finance-036",
+    "department": "Finance",
+    "question": "How do I apply for a refund on a canceled tender security deposit?",
+    "answer": "Submit the original bank guarantee return letter received from the client to the Treasury team to officially close the balance."
+  },
+  {
+    "id": "finance-037",
+    "department": "Finance",
+    "question": "What is the financial year duration followed at PEL?",
+    "answer": "PEL follows the standard national financial year which begins on July 1st and concludes on June 30th of the following year."
+  },
+  {
+    "id": "finance-038",
+    "department": "Finance",
+    "question": "How do I allocate shipping freights to imported raw material inventory costs?",
+    "answer": "Log the freight invoice directly against the matching Purchase Order number using the 'Landed Cost Calculation' tool in the ERP."
+  },
+  {
+    "id": "finance-039",
+    "department": "Finance",
+    "question": "Where can I find the historical annual financial reports of PEL?",
+    "answer": "Public financial reports are available on the investor relations tab of the official PEL website or the corporate archive drive."
+  },
+  {
+    "id": "finance-040",
+    "department": "Finance",
+    "question": "What do I do if a system error prevents a vendor invoice from saving?",
+    "answer": "Take a screenshot of the error code and open an urgent support ticket under the 'ERP Finance Module Support' category."
+  },
+  {
+    "id": "finance-041",
+    "department": "Finance",
+    "question": "How do I claim a refund for an official online business subscription?",
+    "answer": "Submit the digital receipt and your credit card transaction statement through the standard general ledger reimbursement form."
+  },
+  {
+    "id": "finance-042",
+    "department": "Finance",
+    "question": "What is the retention period for physical accounting ledgers and vouchers?",
+    "answer": "All physical financial documents, vouchers, and invoice logs must be securely archived for a minimum duration of 10 years."
+  },
+  {
+    "id": "finance-043",
+    "department": "Finance",
+    "question": "How do I issue an urgent manual payment check in an absolute emergency?",
+    "answer": "Manual checks require executive director written sign-offs and are only written when the main electronic banking portal is down."
+  },
+  {
+    "id": "finance-044",
+    "department": "Finance",
+    "question": "Where can I see the breakdown of factory overhead costs for last month?",
+    "answer": "Open the Management Reporting tab on the BI portal and select the 'Factory Cost Analysis Report' for your specific plant location."
+  },
+  {
+    "id": "finance-045",
+    "department": "Finance",
+    "question": "What should I do if a customer check is returned due to technical signature mismatch?",
+    "answer": "Call the customer to inform them immediately, reverse the invoice credit entry in your ledger, and request a fresh check."
+  },
+  {
+    "id": "finance-046",
+    "department": "Finance",
+    "question": "How do I verify the validity of an online tax payment receipt (CPR)?",
+    "answer": "Log into the Federal Board of Revenue online tracking portal and verify the unique computerized payment receipt code."
+  },
+  {
+    "id": "finance-047",
+    "department": "Finance",
+    "question": "What is the process to adjust a wrong entry made in a cost center ledger?",
+    "answer": "Draft a General Ledger Correction Voucher specifying the correct accounts, attach an explanation note, and send it to the Audit Head."
+  },
+  {
+    "id": "finance-048",
+    "department": "Finance",
+    "question": "Where do I find the current insurance valuation policy for factory inventory?",
+    "answer": "Open the risk management folder on the shared network drive and look for the document titled 'PEL_Asset_Insurance_2026.pdf'."
+  },
+  {
+    "id": "finance-049",
+    "department": "Finance",
+    "question": "How do I check if an imported shipment customs duties have been paid?",
+    "answer": "Open the Customs Clearing tab in the logistics tracking module and check for the attached bank payment confirmation file."
+  },
+  {
+    "id": "finance-050",
+    "department": "Finance",
+    "question": "What do I do if a vendor refuses to accept a legal tax deduction at source?",
+    "answer": "Share the official tax exemption clause from the tax authorities. If they do not have a valid exemption certificate, the tax must be deducted."
+  },
+  {
+    "id": "finance-051",
+    "department": "Finance",
+    "question": "How do I apply for an expansion of my regional office petty cash vault limit?",
+    "answer": "Your regional head must write a formal business justification letter to the Corporate Comptroller for a credit review."
+  },
+  {
+    "id": "finance-052",
+    "department": "Finance",
+    "question": "Where can I check the list of authorized corporate credit card holders?",
+    "answer": "This confidential record is maintained strictly by the Treasury Desk and can only be accessed with executive HR approval."
+  },
+  {
+    "id": "finance-053",
+    "department": "Finance",
+    "question": "How do I book the monthly electricity and utility bills into the accounting system?",
+    "answer": "Scan the utility bills and log them under the 'Accrued Utility Liabilities' account code before the 10th of every month."
+  },
+  {
+    "id": "finance-054",
+    "department": "Finance",
+    "question": "What is the procedure if a vendor loses their payment advice slip?",
+    "answer": "Search the payment record in the accounts payable module, click 'Email Remittance Advice,' and resend the PDF directly to their email."
+  },
+  {
+    "id": "finance-055",
+    "department": "Finance",
+    "question": "How do I audit the employee mobile phone allowance expenses?",
+    "answer": "Run the monthly communication cost report from the network portal and cross-check it against the HR allowance structure bands."
+  },
+  {
+    "id": "finance-056",
+    "department": "Finance",
+    "question": "Where do I log the advance payments received from corporate institutional clients?",
+    "answer": "All initial payments must be booked into the 'Advance Received from Customers' liability account until the final invoice is billed."
+  },
+  {
+    "id": "finance-057",
+    "department": "Finance",
+    "question": "How do I request a duplicate copy of a bank statement from our partner banks?",
+    "answer": "Open an internal bank communication request ticket specifying the exact account number and the required statement calendar days."
+  },
+  {
+    "id": "finance-058",
+    "department": "Finance",
+    "question": "What should I do if a fixed asset physical location does not match the system registry?",
+    "answer": "Submit an Asset Relocation Notice to the Fixed Assets team so they can update the factory tag location in the database."
+  },
+  {
+    "id": "finance-059",
+    "department": "Finance",
+    "question": "How do I verify the authenticity of a bank guarantee submitted by a dealer?",
+    "answer": "Send a formal bank verification letter with a copy of the guarantee document straight to the issuing bank branch for validation."
+  },
+  {
+    "id": "finance-060",
+    "department": "Finance",
+    "question": "What is the process to close the accounting books at the end of the month?",
+    "answer": "All sub-ledgers must be finalized, outstanding expenses accrued, and bank reconciliations completed by midnight on the 3rd working day."
+  },
+  {
+    "id": "finance-061",
+    "department": "Finance",
+    "question": "Where can I check the active sales tax registration number (STRN) of PEL?",
+    "answer": "Our standard corporate sales tax registration numbers are printed clearly at the bottom footer of all official quote templates."
+  },
+  {
+    "id": "finance-062",
+    "department": "Finance",
+    "question": "How do I request an early retirement or cashout of an active security bond?",
+    "answer": "Submit a formal written request to the investment desk along with the original physical bond certificates for maturity processing."
+  },
+  {
+    "id": "finance-063",
+    "department": "Finance",
+    "question": "What should I do if a vendor invoice is missing a required purchase order number?",
+    "answer": "Reject the invoice document and notify the procurement officer to link a valid purchase order code before you can accept it."
+  },
+  {
+    "id": "finance-064",
+    "department": "Finance",
+    "question": "How are the monthly fuel allowances for the sales team calculated and released?",
+    "answer": "Fuel costs are evaluated based on approved route tracking logs and released directly as an added component in the next payroll cycle."
+  },
+  {
+    "id": "finance-065",
+    "department": "Finance",
+    "question": "Where do I register a legal tax notice received from the provincial revenue authority?",
+    "answer": "Scan the official document immediately and email it to tax-notices@pel.com.pk to alert the corporate legal tax team."
+  },
+  {
+    "id": "finance-066",
+    "department": "Finance",
+    "question": "What is the penalty if an employee submits a travel expense claim after the deadline?",
+    "answer": "Claims submitted past the standard 30-day window are rejected automatically unless backed by a director exceptional waiver note."
+  },
+  {
+    "id": "finance-067",
+    "department": "Finance",
+    "question": "How do I verify the available balance in our corporate welfare fund?",
+    "answer": "Open the general ledger view on the finance dashboard and filter the account display using the specific Employee Welfare string."
+  },
+  {
+    "id": "finance-068",
+    "department": "Finance",
+    "question": "What do I do if an online customer payment does not show up in the daily bank statement?",
+    "answer": "Wait for 24 clearing hours; if it still does not reflect, contact the bank helpline to check for any pending settlement blocks."
+  },
+  {
+    "id": "finance-069",
+    "department": "Finance",
+    "question": "How do I track the amortized cost of prepaid software licenses?",
+    "answer": "Prepaid expenses are logged under current assets and shifted to operational costs monthly over the software active lifecycle duration."
+  },
+  {
+    "id": "finance-070",
+    "department": "Finance",
+    "question": "Where can I find the standard guidelines for managing scrap metal sales?",
+    "answer": "Open the factory asset manual and refer to the chapter titled 'Commercial Auction and Scrap Management Standard Operating Procedures.'"
+  },
+  {
+    "id": "finance-071",
+    "department": "Finance",
+    "question": "How do I adjust a dealer credit limit after they clear an old outstanding debt?",
+    "answer": "Once the cash reflects in the ledger, the system will clear the block. For a permanent limit change, apply to Credit Control."
+  },
+  {
+    "id": "finance-072",
+    "department": "Finance",
+    "question": "What should I do if a system update alters historical financial data balances?",
+    "answer": "Immediately restrict further entries to that module and alert the ERP Database Admin team to restore data integrity configurations."
+  },
+  {
+    "id": "finance-073",
+    "department": "Finance",
+    "question": "How do I log a donation made to a charitable organization from company funds?",
+    "answer": "All charitable contributions must be logged under the 'CSR Expense Account' and require board-level written approval documentation."
+  },
+  {
+    "id": "finance-074",
+    "department": "Finance",
+    "question": "Where can I access the current pricing matrix for raw copper imports?",
+    "answer": "Check the commodity feed link pinned on the procurement intranet tab or look up the daily London Metal Exchange market sheets."
+  },
+  {
+    "id": "finance-075",
+    "department": "Finance",
+    "question": "How do I verify if a vendor has been blacklisted from payments?",
+    "answer": "Search the vendor unique name or system code in the blocked suppliers directory located on the central purchasing dashboard."
+  },
+  {
+    "id": "finance-076",
+    "department": "Finance",
+    "question": "What is the procedure to clear an old outstanding vendor liability that has expired?",
+    "answer": "Unclaimed vendor debts older than three years are evaluated by the legal desk before being written back into company profit accounts."
+  },
+  {
+    "id": "finance-077",
+    "department": "Finance",
+    "question": "How do I log the import custom duty refunds received from the government?",
+    "answer": "Book the incoming refund check into the 'Customs Duty Drawback Accounts' to lower the respective imported shipment cost balance."
+  },
+  {
+    "id": "finance-078",
+    "department": "Finance",
+    "question": "Where do I find the official corporate credit rating of PEL?",
+    "answer": "Our active PACRA credit rating profiles are updated annually and are accessible via the investor panel link on our website."
+  },
+  {
+    "id": "finance-079",
+    "department": "Finance",
+    "question": "How do I request financial approval to buy a replacement desktop computer for my team?",
+    "answer": "Open an IT asset purchase ticket on the employee portal; the budget verification phase will route to Finance automatically."
+  },
+  {
+    "id": "finance-080",
+    "department": "Finance",
+    "question": "What do I do if a client pays us in foreign currency instead of local currency?",
+    "answer": "Log the transaction into our matching foreign currency bank ledger and account for any exchange rate differences immediately."
+  },
+  {
+    "id": "finance-081",
+    "department": "Finance",
+    "question": "How do I track payments made under active manufacturing licensing agreements?",
+    "answer": "All international royalty payments are tracked under the 'Licensing & Royalty' sub-ledger managed directly by the Corporate Controller."
+  },
+  {
+    "id": "finance-082",
+    "department": "Finance",
+    "question": "Where can I check the total amount spent on marketing ads last quarter?",
+    "answer": "Open the Marketing cost center analytical dashboard on the BI system and select the previous quarter view."
+  },
+  {
+    "id": "finance-083",
+    "department": "Finance",
+    "question": "What should I do if an expense receipt is printed in a foreign language?",
+    "answer": "Attach an English translated breakdown note signed by the regional manager alongside the original receipt copy."
+  },
+  {
+    "id": "finance-084",
+    "department": "Finance",
+    "question": "How do I request a printout of the entire corporate ledger for the previous year?",
+    "answer": "To save paper, ledger data is kept digital; you can export the full yearly ledger to a secure encrypted Excel file on your drive."
+  },
+  {
+    "id": "finance-085",
+    "department": "Finance",
+    "question": "What is the maximum timeline allowed to clear a temporary cash advance?",
+    "answer": "All cash advances must be settled with valid purchase receipts at the finance desk within 7 working days of receiving the cash."
+  },
+  {
+    "id": "finance-086",
+    "department": "Finance",
+    "question": "How do I verify if an employee fuel card has been blocked due to safety reasons?",
+    "answer": "Contact the Corporate Fleet Desk or log into the partner fuel provider portal to check the active card status tag."
+  },
+  {
+    "id": "finance-087",
+    "department": "Finance",
+    "question": "Where do I find the standard templates for calculating employee overtime pay values?",
+    "answer": "Open the shared HR and Payroll folder and download the sheet titled 'PEL_Overtime_Standard_Calculations.xlsx'."
+  },
+  {
+    "id": "finance-088",
+    "department": "Finance",
+    "question": "What should I do if a customer requests a payment extension due to market conditions?",
+    "answer": "Forward their official written request to the Credit Committee desk; no sales executive can extend credit days on their own."
+  },
+  {
+    "id": "finance-089",
+    "department": "Finance",
+    "question": "How do I log the purchase of fresh testing equipment for the factory lab?",
+    "answer": "Register the purchase item under the 'Capital Work-in-Progress (CWIP)' account string until the machine is fully setup and running."
+  },
+  {
+    "id": "finance-090",
+    "department": "Finance",
+    "question": "Where do I submit my final department audit answers at the end of the year?",
+    "answer": "Upload your formal response letters along with all requested ledger proofs to the secure Central Audit Portal folder."
+  },
+  {
+    "id": "finance-091",
+    "department": "Finance",
+    "question": "What is the standard credit term allowed for local scrap metal auctions?",
+    "answer": "Scrap buyers must deposit 100% of the bid amount via a certified bank call deposit before pulling any material from the factory yard."
+  },
+  {
+    "id": "finance-092",
+    "department": "Finance",
+    "question": "How do we differentiate between PRA and FBR withholding tax during payments?",
+    "answer": "Services provided within Punjab are taxed under Punjab Revenue Authority (PRA) rules, while manufacturing goods fall under Federal Board of Revenue (FBR) regulations."
+  },
+  {
+    "id": "finance-093",
+    "department": "Finance",
+    "question": "What is the maximum usance period allowed for raw material import LCs?",
+    "answer": "The standard usance or deferral period allowed for import Letters of Credit is 90 to 180 days, subject to State Bank guidelines."
+  },
+  {
+    "id": "finance-094",
+    "department": "Finance",
+    "question": "How do I check if a bank guarantee for a WAPDA tender has expired?",
+    "answer": "Open the Treasury monitoring sheet on the shared network drive and look under the column labeled 'Tender Validity Expiry Date.'"
+  },
+  {
+    "id": "finance-095",
+    "department": "Finance",
+    "question": "What is the process to clear an exchange rate loss on a finalized import shipment?",
+    "answer": "Submit the final bank debit advice showing the actual clearing rate to the imports desk to log the variance under the exchange loss account."
+  },
+  {
+    "id": "finance-096",
+    "department": "Finance",
+    "question": "Who approves a vendor payment if the invoice amount exceeds the original purchase order?",
+    "answer": "Any variance over the purchase order limit requires formal written budget re-approval from both the Procurement Head and the Finance Director."
+  },
+  {
+    "id": "finance-097",
+    "department": "Finance",
+    "question": "Where do I submit the provincial sales tax return files for monthly audit verification?",
+    "answer": "Upload the digital returns portal receipt to the Tax Compliance folder on SharePoint before the 18th of every month."
+  },
+  {
+    "id": "finance-098",
+    "department": "Finance",
+    "question": "What should I do if a bank returns a customer cheque due to insufficient funds?",
+    "answer": "Notify the sales recovery team instantly to halt current deliveries and reverse the payment entry in the dealer's active ledger account."
+  },
+  {
+    "id": "finance-099",
+    "department": "Finance",
+    "question": "How is the annual worker profit participation fund (WPPF) allocation managed?",
+    "answer": "According to local labor laws, a set percentage of company industrial profits is kept aside annually and transferred to the worker welfare fund ledger."
+  },
+  {
+    "id": "finance-100",
+    "department": "Finance",
+    "question": "Where can I find the active cost center code for the factory engineering lab?",
+    "answer": "Download the master directory file from the Finance portal and look up the cost center string assigned to the Plant Quality and Testing department."
+  },
+  {
+    "id": "cs-002",
+    "department": "Customer Support",
+    "question": "How can I track the delivery status of my ordered home appliance?",
+    "answer": "You can track your delivery by entering your Order Reference Number on the tracking portal or contacting our helpline with your CNIC."
+  },
+  {
+    "id": "cs-003",
+    "department": "Customer Support",
+    "question": "What is the standard warranty period for a PEL refrigerator compressor?",
+    "answer": "PEL offers a 10-year warranty on refrigerator compressors, while regular electrical parts carry a 1-year warranty coverage."
+  },
+  {
+    "id": "cs-004",
+    "department": "Customer Support",
+    "question": "How do I lodge a complaint for a non-cooling air conditioner?",
+    "answer": "Call our central customer care helpline at 111-00-1956 or register a complaint through the official PEL customer support mobile app."
+  },
+  {
+    "id": "cs-005",
+    "department": "Customer Support",
+    "question": "What documents do I need to present to claim a product warranty?",
+    "answer": "You must present the original stamped warranty card along with a valid copy of the purchase invoice from an authorized dealer."
+  },
+  {
+    "id": "cs-006",
+    "department": "Customer Support",
+    "question": "Where can I find a list of official PEL service centers in Lahore?",
+    "answer": "The complete list of physical workshops and contact numbers is available under the 'Service Centers' tab on our official portal."
+  },
+  {
+    "id": "cs-007",
+    "department": "Customer Support",
+    "question": "How long does it take for a technician to visit my home after lodging a complaint?",
+    "answer": "Standard home service complaints are attended to within 24 to 48 working hours from the time the ticket is officially logged."
+  },
+  {
+    "id": "cs-008",
+    "department": "Customer Support",
+    "question": "Is the installation of a new PEL split air conditioner free of charge?",
+    "answer": "Standard installation is free if purchased during specific promotional windows; otherwise, standard company technician charges apply."
+  },
+  {
+    "id": "cs-009",
+    "department": "Customer Support",
+    "question": "What should I do if my deep freezer is forming excessive ice inside?",
+    "answer": "Ensure the door gasket is sealing tightly and check that the thermostat setting is not set to maximum for prolonged periods."
+  },
+  {
+    "id": "cs-010",
+    "department": "Customer Support",
+    "question": "Can I extend my product warranty after the standard period expires?",
+    "answer": "Yes, PEL offers extended warranty packages for select refrigerator and air conditioner models within the first year of purchase."
+  },
+  {
+    "id": "cs-011",
+    "department": "Customer Support",
+    "question": "Who do I contact if my appliance arrives with cosmetic physical damages?",
+    "answer": "Report any transport or cosmetic damage to the delivering dealer or our support team within 24 hours of delivery for a replacement."
+  },
+  {
+    "id": "cs-012",
+    "department": "Customer Support",
+    "question": "What is the procedure to cancel a service request ticket?",
+    "answer": "Call our helpline and provide your active complaint ticket number to the agent, requesting them to mark it as canceled."
+  },
+  {
+    "id": "cs-013",
+    "department": "Customer Support",
+    "question": "Why is my refrigerator making a loud buzzing or vibrating sound?",
+    "answer": "Check if the appliance is leveled properly on the floor and ensure it has at least 6 inches of clearance from the back wall."
+  },
+  {
+    "id": "cs-014",
+    "department": "Customer Support",
+    "question": "Are plastic accessories like egg trays and bottle shelves covered under warranty?",
+    "answer": "No, internal plastic accessories, glass shelves, and external body cosmetic parts are not covered under the standard warranty policy."
+  },
+  {
+    "id": "cs-015",
+    "department": "Customer Support",
+    "question": "How do I change the registered phone number on my active complaint ticket?",
+    "answer": "Call the support desk, verify your complaint ticket ID along with your CNIC, and ask the agent to update your contact field."
+  },
+  {
+    "id": "cs-016",
+    "department": "Customer Support",
+    "question": "What should I do if my water dispenser is leaking from the bottom?",
+    "answer": "Turn off the unit, empty the internal water tank, check the back drain plug alignment, and ensure the bottle is not cracked."
+  },
+  {
+    "id": "cs-017",
+    "department": "Customer Support",
+    "question": "How can I verify if a retail shop is an authorized PEL dealer?",
+    "answer": "Search the retail store name on our online 'Locate a Dealer' interactive map tool to confirm their official authorization status."
+  },
+  {
+    "id": "cs-018",
+    "department": "Customer Support",
+    "question": "What is the recommended temperature setting for a PEL refrigerator during summer?",
+    "answer": "It is highly recommended to set the thermostat dial between 4 and 6 during extreme summer peak temperatures for optimal cooling."
+  },
+  {
+    "id": "cs-019",
+    "department": "Customer Support",
+    "question": "Can I get a refund if I am unsatisfied with my appliance performance?",
+    "answer": "Refund policies are governed by the specific terms of the purchasing dealer; PEL only offers repair or component replacements under warranty."
+  },
+  {
+    "id": "cs-020",
+    "department": "Customer Support",
+    "question": "How do I reset the Wi-Fi connectivity on my smart PEL air conditioner?",
+    "answer": "Press and hold the Eco/Wi-Fi button on your remote control for 5 consecutive seconds until the indoor display panel flashes."
+  },
+  {
+    "id": "cs-021",
+    "department": "Customer Support",
+    "question": "What are the operational hours for the PEL customer care helpline?",
+    "answer": "Our central telephone helpline is fully active from 9:00 AM to 6:00 PM, Monday through Saturday, excluding official public holidays."
+  },
+  {
+    "id": "cs-022",
+    "department": "Customer Support",
+    "question": "Why is my microwave oven turning on but not heating the food?",
+    "answer": "This usually points to a faulty internal high-voltage magnetron; please disconnect the power and lodge a technical repair request."
+  },
+  {
+    "id": "cs-023",
+    "department": "Customer Support",
+    "question": "Does PEL charge a visit fee if my product is still under active warranty?",
+    "answer": "No, technician inspection visits and labor charges are completely free of cost for products covered under an active warranty."
+  },
+  {
+    "id": "cs-024",
+    "department": "Customer Support",
+    "question": "How can I obtain an electronic copy of my appliance user manual?",
+    "answer": "Visit our website product page, navigate to your specific model number, and click the 'Download User Manual' PDF link."
+  },
+  {
+    "id": "cs-025",
+    "department": "Customer Support",
+    "question": "What happens if a technician replaces a part in my appliance?",
+    "answer": "The faulty component is collected by the company, and the new genuine part inherits the remaining duration of your original warranty."
+  },
+  {
+    "id": "cs-026",
+    "department": "Customer Support",
+    "question": "Can I book a repair service if I live in a remote rural area?",
+    "answer": "Yes, our mobile service vans cover major rural districts weekly; contact support to schedule the next available regional transit date."
+  },
+  {
+    "id": "cs-027",
+    "department": "Customer Support",
+    "question": "How can I clean the air filters of my inverter split AC?",
+    "answer": "Gently pop open the front plastic hood, slide out the mesh filters, rinse them under running tap water, dry them completely, and reinsert."
+  },
+  {
+    "id": "cs-028",
+    "department": "Customer Support",
+    "question": "What causes the water dispenser child lock to jam or get stuck?",
+    "answer": "This is often due to sugary liquid spills; wipe the button surround gently with a damp microfiber cloth to remove sticky residues."
+  },
+  {
+    "id": "cs-029",
+    "department": "Customer Support",
+    "question": "How do I escalate a complaint if it is not resolved within 48 hours?",
+    "answer": "Email your active ticket number directly to service-escalations@pel.com.pk for immediate review by the regional service manager."
+  },
+  {
+    "id": "cs-030",
+    "department": "Customer Support",
+    "question": "Can I use an external voltage stabilizer with my PEL inverter refrigerator?",
+    "answer": "PEL inverter models have built-in wide voltage stabilizers (140V-260V), making an external stabilizer unnecessary unless grid drops are severe."
+  },
+  {
+    "id": "cs-031",
+    "department": "Customer Support",
+    "question": "What should I do if the refrigerator light bulb stops working?",
+    "answer": "Unplug the appliance from the mains and submit a quick replacement ticket for a genuine LED light assembly module swap."
+  },
+  {
+    "id": "cs-032",
+    "department": "Customer Support",
+    "question": "How do I clean the condenser coils at the back of my refrigerator?",
+    "answer": "Unplug the power cord and use a soft bristle brush or a vacuum cleaner attachment to remove accumulated dust every six months."
+  },
+  {
+    "id": "cs-033",
+    "department": "Customer Support",
+    "question": "What do I do if my air conditioner displays an 'E5' error code?",
+    "answer": "An E5 code indicates an indoor/outdoor communication error; turn off the main breaker for 5 minutes to reset before restarting."
+  },
+  {
+    "id": "cs-034",
+    "department": "Customer Support",
+    "question": "Can I request a specific technician for my product repair service?",
+    "answer": "You can mention your preference to the helpline agent, and the system will try to assign them if they manage your local route."
+  },
+  {
+    "id": "cs-035",
+    "department": "Customer Support",
+    "question": "What is the cost of a replacement remote control for a PEL AC?",
+    "answer": "Original replacement remotes can be purchased directly from any authorized regional service workshop center at standard retail prices."
+  },
+  {
+    "id": "cs-036",
+    "department": "Customer Support",
+    "question": "Why is water dripping from the indoor unit of my split AC?",
+    "answer": "This occurs when the condensed water drainage pipe is blocked by dirt or kinked; a technician must flush the drain line."
+  },
+  {
+    "id": "cs-037",
+    "department": "Customer Support",
+    "question": "Is there a digital tracking portal for active workshop repairs?",
+    "answer": "Yes, go to support.pel.com.pk and type your job card number to view real-time workshop repair benchmarks and status updates."
+  },
+  {
+    "id": "cs-038",
+    "department": "Customer Support",
+    "question": "What parameters determine if a product is unrepairable and needs a replacement?",
+    "answer": "If a core structural defect is found within the warranty period that cannot be resolved safely, the technical board authorizes a swap."
+  },
+  {
+    "id": "cs-039",
+    "department": "Customer Support",
+    "question": "How do I lodge a complaint regarding rude behavior by a visiting technician?",
+    "answer": "Please call our corporate feedback desk directly or email customer-care@pel.com.pk with your original service ticket ID."
+  },
+  {
+    "id": "cs-040",
+    "department": "Customer Support",
+    "question": "What is the maximum weight capacity for refrigerator tempered glass shelves?",
+    "answer": "PEL tempered glass shelves are structural heavy-duty components rated to hold up to 100 kg of evenly distributed weight safely."
+  },
+  {
+    "id": "cs-041",
+    "department": "Customer Support",
+    "question": "How can I stop my deep freezer lid from vacuum-locking after closing?",
+    "answer": "This is normal physics due to rapid air cooling; wait 30 to 60 seconds for the internal pressure to equalize before opening again."
+  },
+  {
+    "id": "cs-042",
+    "department": "Customer Support",
+    "question": "Are gas charging costs covered under the compressor warranty phase?",
+    "answer": "Gas charging is free during the initial comprehensive 1-year product warranty; it is charged separately in subsequent years."
+  },
+  {
+    "id": "cs-043",
+    "department": "Customer Support",
+    "question": "What should I do if my automatic washing machine does not drain water?",
+    "answer": "Check the drain pump filter at the bottom front of the machine for lint or coin obstructions and clear it carefully."
+  },
+  {
+    "id": "cs-044",
+    "department": "Customer Support",
+    "question": "How do I register my product for warranty online?",
+    "answer": "Scan the QR code printed on the physical warranty booklet or fill out the registration form on the PEL portal within 15 days of purchase."
+  },
+  {
+    "id": "cs-045",
+    "department": "Customer Support",
+    "question": "Can a PEL commercial deep freezer be converted into a regular refrigerator?",
+    "answer": "Dual-topology models feature a selectable thermostat switch allowing you to alternate between cooling and freezing modes instantly."
+  },
+  {
+    "id": "cs-046",
+    "department": "Customer Support",
+    "question": "What is the power consumption rating of a PEL 1.5 Ton Inverter AC?",
+    "answer": "PEL 1.5 Ton Inverter models operate efficiently, drawing between 300 to 1500 watts depending on the room load and settings."
+  },
+  {
+    "id": "cs-047",
+    "department": "Customer Support",
+    "question": "How do I remove persistent food odors from my microwave oven?",
+    "answer": "Place a bowl of water mixed with lemon slices inside, run it on high for 3 minutes, then wipe the interior walls clean."
+  },
+  {
+    "id": "cs-048",
+    "department": "Customer Support",
+    "question": "What constitutes voiding a product official factory warranty?",
+    "answer": "Warranty is voided by unauthorized third-party repairs, physical drops, water logging, or connecting to improper voltage lines."
+  },
+  {
+    "id": "cs-049",
+    "department": "Customer Support",
+    "question": "Where can I buy genuine spare parts for my PEL refrigerator?",
+    "answer": "Genuine parts are sold exclusively through official PEL regional warehouses and authorized corporate service centers."
+  },
+  {
+    "id": "cs-050",
+    "department": "Customer Support",
+    "question": "Why is my washing machine spinning unevenly and hitting the sides?",
+    "answer": "The laundry load is unbalanced or the machine legs are uneven; redistribute the clothes evenly and level the adjustable feet."
+  },
+  {
+    "id": "cs-051",
+    "department": "Customer Support",
+    "question": "Does PEL offer maintenance packages for industrial air conditioning systems?",
+    "answer": "Yes, our B2B engineering services division provides tailored annual maintenance contracts (AMC) for commercial HVAC setups."
+  },
+  {
+    "id": "cs-052",
+    "department": "Customer Support",
+    "question": "What should I do if my water dispenser stops cooling the water?",
+    "answer": "Ensure the cooling switch on the rear panel is turned on and that the unit has proper airflow ventilation on all sides."
+  },
+  {
+    "id": "cs-053",
+    "department": "Customer Support",
+    "question": "How do I clean the interior liner walls of my deep freezer?",
+    "answer": "Defrost the unit completely, wash the inner plastic walls with a mild dish soap solution, rinse with clean water, and dry."
+  },
+  {
+    "id": "cs-054",
+    "department": "Customer Support",
+    "question": "What is the function of the 'Turbo' button on my PEL AC remote?",
+    "answer": "The Turbo function forces the compressor and indoor fan to operate at maximum speed to cool down a hot room instantly."
+  },
+  {
+    "id": "cs-055",
+    "department": "Customer Support",
+    "question": "How can I track old service histories for an appliance I own?",
+    "answer": "Provide your phone number or the product serial number to a helpline operator to retrieve past closed maintenance logs."
+  },
+  {
+    "id": "cs-056",
+    "department": "Customer Support",
+    "question": "Why does my new refrigerator smell like burning plastic when first turned on?",
+    "answer": "A slight initial smell is normal as new heating elements settle; if it persists past 24 hours, contact customer support."
+  },
+  {
+    "id": "cs-057",
+    "department": "Customer Support",
+    "question": "What should I do if the washing machine control panel buttons are unresponsive?",
+    "answer": "Check if the Child Lock feature is active; hold down the designated dual-button combo for 3 seconds to unlock the interface."
+  },
+  {
+    "id": "cs-058",
+    "department": "Customer Support",
+    "question": "Can I hire a PEL technician to uninstall my AC for relocation purposes?",
+    "answer": "Yes, you can schedule a paid de-installation service ticket via our helpline to ensure safe handling of the refrigerant gas."
+  },
+  {
+    "id": "cs-059",
+    "department": "Customer Support",
+    "question": "What is the standard lifetime of an air conditioner indoor air filter?",
+    "answer": "The mesh filters are permanent and do not need replacement; they simply require routine washing every two weeks."
+  },
+  {
+    "id": "cs-060",
+    "department": "Customer Support",
+    "question": "How do I know if my deep freezer requires an urgent refrigerant top-up?",
+    "answer": "If the compressor runs continuously without cycling off and the cooling blocks are bare or patchy, a leak test is required."
+  },
+  {
+    "id": "cs-061",
+    "department": "Customer Support",
+    "question": "Can I plug my heavy-duty microwave oven into a standard light plug adapter?",
+    "answer": "No, always connect your microwave directly to an independent 15-Amp power socket to prevent electrical overheating risks."
+  },
+  {
+    "id": "cs-062",
+    "department": "Customer Support",
+    "question": "What should I do if a technician fails to arrive at the scheduled time?",
+    "answer": "Call the helpline with your ticket ID; the system will locate the technician via GPS tracking and provide an ETA."
+  },
+  {
+    "id": "cs-063",
+    "department": "Customer Support",
+    "question": "How do I activate the 'Eco' energy-saving profile on my appliance?",
+    "answer": "Press the Eco button on your remote control to optimize the inverter frequency algorithm for reduced power draw."
+  },
+  {
+    "id": "cs-064",
+    "department": "Customer Support",
+    "question": "Are transport charges covered by PEL if an appliance must go to a workshop?",
+    "answer": "If the product is within its first year of comprehensive warranty, transport to and from the workshop is completely free."
+  },
+  {
+    "id": "cs-065",
+    "department": "Customer Support",
+    "question": "Why does my water dispenser taste metallic or strange during first use?",
+    "answer": "Flush the internal system by draining at least two full gallons of water from both taps before consuming water for the first time."
+  },
+  {
+    "id": "cs-066",
+    "department": "Customer Support",
+    "question": "How do I check if my refrigerator door magnetic gasket is working perfectly?",
+    "answer": "Place a paper note between the door and frame; if it falls out easily without resistance, your magnetic gasket needs replacement."
+  },
+  {
+    "id": "cs-067",
+    "department": "Customer Support",
+    "question": "What is the turnaround time for a compressor replacement service?",
+    "answer": "Compressor replacements require technical bench testing and are typically finalized within 3 to 5 working days at the local workshop."
+  },
+  {
+    "id": "cs-068",
+    "department": "Customer Support",
+    "question": "How can I get a replacement copy of a lost stamped warranty card?",
+    "answer": "Submit a request to corporate support containing your original purchase invoice copy and the exact product chassis serial number."
+  },
+  {
+    "id": "cs-069",
+    "department": "Customer Support",
+    "question": "Why is the outer body frame of my refrigerator warm to the touch?",
+    "answer": "This is completely normal; modern refrigerators use hot gas condenser tubes inside the side walls to eliminate exterior moisture."
+  },
+  {
+    "id": "cs-070",
+    "department": "Customer Support",
+    "question": "How do I update my residential address in the corporate customer registry?",
+    "answer": "Submit an address modification request on our mobile app or communicate the change to the customer care support desk agent."
+  },
+  {
+    "id": "cs-071",
+    "department": "Customer Support",
+    "question": "What precautions should I take during a severe thunderstorm or voltage surge?",
+    "answer": "It is highly advised to unplug all heavy appliances completely from the wall outlets to protect internal electronic cards."
+  },
+  {
+    "id": "cs-072",
+    "department": "Customer Support",
+    "question": "Does PEL provide doorstep repair services on Sundays or public holidays?",
+    "answer": "Sunday operations are strictly reserved for emergency breakdown tickets in selected major metropolitan service hubs."
+  },
+  {
+    "id": "cs-073",
+    "department": "Customer Support",
+    "question": "How do I clean the lint filter inside my washing machine drum?",
+    "answer": "Unclip the plastic cartridge from the drum wall, empty the trapped fibers, rinse it under water, and snap it back into position."
+  },
+  {
+    "id": "cs-074",
+    "department": "Customer Support",
+    "question": "Why does my AC remote screen go completely blank intermittently?",
+    "answer": "Replace the AAA batteries with fresh alkaline cells and ensure the battery contact springs are clean and free of corrosion."
+  },
+  {
+    "id": "cs-075",
+    "department": "Customer Support",
+    "question": "What is the procedure for an out-of-warranty corporate product batch repair?",
+    "answer": "Corporate account managers handle volume servicing; contact b2b-support@pel.com.pk to receive a custom commercial quotation."
+  },
+  {
+    "id": "cs-076",
+    "department": "Customer Support",
+    "question": "How can I reduce the energy bill footprint of my deep freezer?",
+    "answer": "Avoid keeping the lid open for extended periods, do not load hot food, and ensure the unit is kept away from direct sunlight."
+  },
+  {
+    "id": "cs-077",
+    "department": "Customer Support",
+    "question": "What should I do if my water dispenser heating element is not activating?",
+    "answer": "Verify that the separate red heating power switch located on the back panel of the dispenser frame is pushed to the ON position."
+  },
+  {
+    "id": "cs-078",
+    "department": "Customer Support",
+    "question": "How do I locate the exact model and serial numbers on my refrigerator?",
+    "answer": "The serial plate sticker is located inside the refrigerator compartment on the side wall or attached to the back metal frame."
+  },
+  {
+    "id": "cs-079",
+    "department": "Customer Support",
+    "question": "Can I change my booked delivery schedule slot after confirmation?",
+    "answer": "Yes, call our delivery logistics hotline at least 12 hours before your scheduled slot to select a new delivery timeline."
+  },
+  {
+    "id": "cs-080",
+    "department": "Customer Support",
+    "question": "Why is my automatic washing machine filling water very slowly?",
+    "answer": "Inspect the inlet water pipe filter screen connected to your tap; it likely has sand blockages that need a quick rinse."
+  },
+  {
+    "id": "cs-081",
+    "department": "Customer Support",
+    "question": "What happens if a technician diagnoses a problem but the part is out of stock?",
+    "answer": "The ticket status shifts to 'Part Pending,' and the component is sourced from our central factory warehouse on an expedited timeline."
+  },
+  {
+    "id": "cs-082",
+    "department": "Customer Support",
+    "question": "Can I use a regular extension cord to power my split air conditioner?",
+    "answer": "No, never use extension loops; AC units require a dedicated high-gauge wire connection directly to an independent circuit breaker."
+  },
+  {
+    "id": "cs-083",
+    "department": "Customer Support",
+    "question": "How do I know if my refrigerator is operating in its automatic defrost cycle?",
+    "answer": "During defrosting, cooling stops entirely for 20-30 minutes, and you may hear gentle water dripping sounds into the rear drain pan."
+  },
+  {
+    "id": "cs-084",
+    "department": "Customer Support",
+    "question": "What should I do if the digital display on my AC indoor unit turns off?",
+    "answer": "Press the 'LED' or 'Display' button on your remote control to toggle the unit integrated panel backlight setting back on."
+  },
+  {
+    "id": "cs-085",
+    "department": "Customer Support",
+    "question": "Does PEL offer demo and briefing services for complex appliances?",
+    "answer": "Yes, you can request a home demonstration visit for automatic washing machines and smart AC units upon initial product setup."
+  },
+  {
+    "id": "cs-086",
+    "department": "Customer Support",
+    "question": "Why does my microwave glass turntable plate jerk or stutter while spinning?",
+    "answer": "Remove the glass plate and inspect the plastic roller ring base underneath for food particles or misalignments."
+  },
+  {
+    "id": "cs-087",
+    "department": "Customer Support",
+    "question": "How do I file an official claim under a corporate institutional order contract?",
+    "answer": "Forward your claim notice with the corporate contract reference ID to our institutional support email hub."
+  },
+  {
+    "id": "cs-088",
+    "department": "Customer Support",
+    "question": "What should I do if my deep freezer locks up and the key is lost?",
+    "answer": "Contact our parts center to order a universal replacement key matching your specific deep freezer handle model generation."
+  },
+  {
+    "id": "cs-089",
+    "department": "Customer Support",
+    "question": "Can I install my split AC outdoor unit inside a closed balcony space?",
+    "answer": "No, outdoor units require a continuous supply of fresh ambient air to discard heat; installing it in a closed space will cause overheating."
+  },
+  {
+    "id": "cs-090",
+    "department": "Customer Support",
+    "question": "Why is my refrigerator freezing food items placed on the lower shelves?",
+    "answer": "Check if the food items are blocking the main air discharge vents, or adjust the thermostat control knob to a slightly warmer setting."
+  },
+  {
+    "id": "cs-091",
+    "department": "Customer Support",
+    "question": "How do I clear a pending technician visit fee from an out-of-warranty job?",
+    "answer": "You can pay the technician directly in cash against an official printed digital receipt or settle via mobile wallet apps."
+  },
+  {
+    "id": "cs-092",
+    "department": "Customer Support",
+    "question": "What is the process to return a wrong item delivered from the online store?",
+    "answer": "Keep the product packaging completely sealed and initiate a return request on our web portal within 3 days for correction."
+  },
+  {
+    "id": "cs-093",
+    "department": "Customer Support",
+    "question": "Why does my washing machine cycle pause and flash an error code mid-wash?",
+    "answer": "This is typically due to an open lid during spinning or a drainage constraint; check the error code chart in your user manual."
+  },
+  {
+    "id": "cs-094",
+    "department": "Customer Support",
+    "question": "How can I protect my outdoor AC unit frame from rusting during monsoons?",
+    "answer": "PEL outdoor units feature powder-coated anti-rust steel casings, but annual cleanings prevent debris buildup from trapping moisture."
+  },
+  {
+    "id": "cs-095",
+    "department": "Customer Support",
+    "question": "What should I do if my water dispenser cold water tap leaks continuously?",
+    "answer": "The internal silicone valve spring may be misaligned; submit a call ticket for a standard tap assembly restoration."
+  },
+  {
+    "id": "cs-096",
+    "department": "Customer Support",
+    "question": "Can I run my PEL inverter AC safely on a domestic solar system?",
+    "answer": "Yes, as long as your solar inverter configuration can handle the starting current and has a stable pure sine wave output curve."
+  },
+  {
+    "id": "cs-097",
+    "department": "Customer Support",
+    "question": "How do I register a formal suggestion for a product design improvement?",
+    "answer": "We value input! Please fill out the customer feedback survey link found on the bottom footer of our support website."
+  },
+  {
+    "id": "cs-098",
+    "department": "Customer Support",
+    "question": "Why is my microwave interior sparking when I try to heat food?",
+    "answer": "Ensure you are not using metal containers, gold-rimmed plates, or aluminum foil, which generate electrical arcs in microwaves."
+  },
+  {
+    "id": "cs-099",
+    "department": "Customer Support",
+    "question": "How do I schedule an annual professional deep cleaning for my split AC?",
+    "answer": "Submit an 'AC General Service' ticket via the app or helpline before the summer season begins to book an optimization visit."
+  },
+  {
+    "id": "cs-100",
+    "department": "Customer Support",
+    "question": "What should I do if my deep freezer interior lining gets punctured by a sharp tool?",
+    "answer": "Turn off the unit immediately; never use knives to scrape ice. A technician must evaluate if the internal gas tubes are safe."
+  },
+  {
+    "id": "cs-101",
+    "department": "Customer Support",
+    "question": "How do I check if my support ticket has been assigned to a workshop?",
+    "answer": "You will receive an automated SMS containing the technician name, contact number, and assigned workshop identifier upon dispatch."
+  },
+  {
+    "id": "cs-102",
+    "department": "Customer Support",
+    "question": "Where do I submit a certificate of tax exemption for a corporate repair invoice?",
+    "answer": "Email your valid corporate tax exemption documentation to billing-support@pel.com.pk before the service order is finalized."
+  },
+  {
+    "id": "cs-103",
+    "department": "Customer Support",
+    "question": "Why is my washing machine vibrating excessively during the initial spin cycle?",
+    "answer": "Ensure that the transit bolts located at the rear of the machine chassis were completely removed during the initial installation."
+  },
+  {
+    "id": "cs-104",
+    "department": "Customer Support",
+    "question": "What should I do if the refrigerator freezer section cools but the lower cabinet is warm?",
+    "answer": "This indicates a failure in the air damper control system or an iced-up vent channel; a service technician must inspect it."
+  },
+  {
+    "id": "cs-105",
+    "department": "Customer Support",
+    "question": "Can I change the position of my split AC indoor unit after installation?",
+    "answer": "Yes, this requires a complete relocation service ticket to safely pump down the gas, move the brackets, and rerun lines."
+  },
+  {
+    "id": "cs-106",
+    "department": "Customer Support",
+    "question": "What is the standard response time for queries dropped on our social channels?",
+    "answer": "Social media help desk agents monitor channels and respond to text inquiries within 1 to 2 hours during normal business shifts."
+  },
+  {
+    "id": "cs-107",
+    "department": "Customer Support",
+    "question": "Why does my microwave oven light stay on even after the timer ends?",
+    "answer": "If the door is left slightly ajar for ventilation, the light remains active on certain models; closing the door firmly turns it off."
+  },
+  {
+    "id": "cs-108",
+    "department": "Customer Support",
+    "question": "How do I clean the exterior metallic surface of my glass-door refrigerator?",
+    "answer": "Wipe the exterior surface gently using a soft cloth dampened with a mild glass cleaner; avoid abrasive scrubbing pads."
+  },
+  {
+    "id": "cs-109",
+    "department": "Customer Support",
+    "question": "What should I do if my automatic washing machine displays an 'unbalanced load' alert?",
+    "answer": "Open the top lid, manually spread out the bunched-up clothes evenly across the basket basin, and hit the Start button again."
+  },
+  {
+    "id": "cs-110",
+    "department": "Customer Support",
+    "question": "How can I check if a replacement part used during a repair is genuine?",
+    "answer": "Every genuine PEL replacement part features an official serialized holographic validation sticker trackable in our ERP system."
+  },
+  {
+    "id": "cs-111",
+    "department": "Customer Support",
+    "question": "Why does my air conditioner emit a stale or musty odor upon startup?",
+    "answer": "This happens when moisture stays inside the indoor unit; clean your filters and run the AC in 'Fan Mode' for 15 minutes to dry it out."
+  },
+  {
+    "id": "cs-112",
+    "department": "Customer Support",
+    "question": "What should I do if my water dispenser cooling basin overflows completely?",
+    "answer": "Verify that your water bottle does not have a hairline crack, which destroys the vacuum sealing and causes continuous basin filling."
+  },
+  {
+    "id": "cs-113",
+    "department": "Customer Support",
+    "question": "How do I register an international warranty extension for exported products?",
+    "answer": "Exported units follow international distributor service parameters; contact our global trade helpdesk for region-specific keys."
+  },
+  {
+    "id": "cs-114",
+    "department": "Customer Support",
+    "question": "Why does my refrigerator make a cracking sound every few hours?",
+    "answer": "This is normal thermal contraction and expansion of the internal plastic liners as temperatures change throughout the day."
+  },
+  {
+    "id": "cs-115",
+    "department": "Customer Support",
+    "question": "Can I request an invoice modification after the product has shipped?",
+    "answer": "No system billing adjustments can be made after warehouse gate passes are issued; ensure all details are verified before paying."
+  },
+  {
+    "id": "cs-116",
+    "department": "Customer Support",
+    "question": "What should I do if the AC outdoor fan is rotating but the compressor is off?",
+    "answer": "The compressor may be in its 3-minute safety delay loop or tripped due to high grid voltage; wait a few minutes for it to cycle."
+  },
+  {
+    "id": "cs-117",
+    "department": "Customer Support",
+    "question": "How do I enroll my retail outlet as a localized service drop-off point?",
+    "answer": "Submit a business franchise application to our network distribution department for geographical territory review."
+  },
+  {
+    "id": "cs-118",
+    "department": "Customer Support",
+    "question": "Why does my deep freezer take a long time to freeze food items completely?",
+    "answer": "Ensure the freezer is not overloaded past its volumetric capacity limit, allowing cold air currents to cycle efficiently."
+  },
+  {
+    "id": "cs-119",
+    "department": "Customer Support",
+    "question": "What should I do if a technician requests an extra payment not noted on my bill?",
+    "answer": "Refuse any off-book payments and report the technician tracking ID immediately to our Central Compliance Helpline desk."
+  },
+  {
+    "id": "cs-120",
+    "department": "Customer Support",
+    "question": "How do I track the status of an ongoing product replacement claim process?",
+    "answer": "Your claim assignment supervisor will update you via your case ID; you can also call support for updates."
+  },
+  {
+    "id": "cs-121",
+    "department": "Customer Support",
+    "question": "Where can I drop off my small appliances for a walk-in repair service?",
+    "answer": "You can bring smaller household appliances directly to any of our regional city workshop centers for immediate front-counter booking."
+  },
+  {
+    "id": "cs-122",
+    "department": "Customer Support",
+    "question": "What immediate safety precautions should I take if I suspect an active refrigerant gas leak?",
+    "answer": "Evacuate the room immediately, open all windows for ventilation, do not switch any electrical appliances on or off, and call our emergency service desk."
+  },
+  {
+    "id": "cs-123",
+    "department": "Customer Support",
+    "question": "Does PEL offer an official trade-in or exchange program for old, legacy appliances?",
+    "answer": "Yes, during specific seasonal exchange campaigns, customers can trade in old working or non-working appliances for discounts on new PEL products."
+  },
+  {
+    "id": "cs-124",
+    "department": "Customer Support",
+    "question": "What is the standard turnaround time for executing a bulk AC installation of 50+ units for a corporate client?",
+    "answer": "Bulk institutional installations are managed by a dedicated project team and are typically completed within 5 to 7 business days depending on site readiness."
+  },
+  {
+    "id": "cs-125",
+    "department": "Customer Support",
+    "question": "How do I request an official fitness certificate for an appliance used in a commercial kitchen setup?",
+    "answer": "Submit a formal request through our B2B portal; a senior industrial technician will visit to inspect the unit and issue a certified evaluation report."
+  },
+  {
+    "id": "cs-126",
+    "department": "Customer Support",
+    "question": "Why does my smart refrigerator display a 'Door Ajar' notification on my mobile app when the door is closed?",
+    "answer": "The physical door sensor switch may be misaligned or blocked by an internal shelf item; ensure nothing prevents the door from pressing fully against the frame."
+  },
+  {
+    "id": "cs-127",
+    "department": "Customer Support",
+    "question": "Are damages caused by localized rodent or insect infestations covered under the standard product warranty?",
+    "answer": "No, damages resulting from external biological factors, such as short circuits caused by rodents or pests, are strictly excluded from warranty coverage."
+  },
+  {
+    "id": "cs-128",
+    "department": "Customer Support",
+    "question": "How can I verify the current real-time load shedding protection status of my inverter refrigerator?",
+    "answer": "Our modern inverter models feature automatic low-voltage startup modules that safely delay compressor ignition for 3 minutes during sudden power oscillations."
+  },
+  {
+    "id": "cs-129",
+    "department": "Customer Support",
+    "question": "What should I do if the water dispenser child lock button is physically broken or snapped off?",
+    "answer": "Do not attempt to glue it; log a component replacement ticket on our customer support application to have a technician replace the front facia assembly."
+  },
+  {
+    "id": "cs-130",
+    "department": "Customer Support",
+    "question": "Can I request a specialized anti-bacterial deep cleaning service for my washing machine drum?",
+    "answer": "Yes, you can schedule a premium 'Drum Descaling and Disinfection Service' through our helpline to clear mold and detergent scale buildup safely."
+  },
+  {
+    "id": "cs-131",
+    "department": "Customer Support",
+    "question": "What parameters determine if a compressor replacement requires a full outdoor unit swap for an air conditioner?",
+    "answer": "A full outdoor unit swap is only authorized if a factory-level manufacturing defect is found in the condenser coils that cannot be sealed safely on-site."
+  },
+  {
+    "id": "cs-132",
+    "department": "Customer Support",
+    "question": "How do I lodge an official claim if an appliance is missing a small accessory right out of the box?",
+    "answer": "Notify our customer care desk within 48 hours of delivery with pictures of the unboxed unit and your serial number to receive the missing component free."
+  },
+  {
+    "id": "cs-133",
+    "department": "Customer Support",
+    "question": "Why does my microwave oven make a loud rattling sound only when the grill function is activated?",
+    "answer": "This occurs if the internal metallic grilling rack is slightly unseated or touching the interior chamber walls; ensure it is centered perfectly on its mounts."
+  },
+  {
+    "id": "cs-134",
+    "department": "Customer Support",
+    "question": "What is the procedure to transfer product warranty ownership if I sell my appliance to another user?",
+    "answer": "Provide the new owner with the original stamped warranty card and purchase invoice; the remaining warranty balance transfers automatically to the new owner."
+  },
+  {
+    "id": "cs-135",
+    "department": "Customer Support",
+    "question": "Can a domestic split air conditioner be safely installed in a high-corrosion coastal geographic environment?",
+    "answer": "Standard units can operate, but for highly corrosive areas, we recommend requesting our specialized 'Blue Fin' or 'Gold Fin' anti-corrosion coating treatments."
+  },
+  {
+    "id": "cs-136",
+    "department": "Customer Support",
+    "question": "How do I resolve a persistent 'Filter Clean' alert light on my automatic washing machine control panel?",
+    "answer": "Once you physically clean the lint and drain pump filters, press and hold the 'Water Level' and 'Preset' buttons together for 3 seconds to clear the system alert."
+  },
+  {
+    "id": "cs-137",
+    "department": "Customer Support",
+    "question": "Does PEL offer temporary replacement or standby appliances while mine is undergoing prolonged workshop repairs?",
+    "answer": "Standby appliances are provided exclusively for critical medical refrigeration requirements or under select corporate premium service contracts."
+  },
+  {
+    "id": "cs-138",
+    "department": "Customer Support",
+    "question": "What should I do if my smart AC loses its cloud connection whenever the home router reboots?",
+    "answer": "Access your router settings to ensure the 2.4GHz band is broadcasting independently, as our smart home appliance modules communicate exclusively over 2.4GHz frequencies."
+  },
+  {
+    "id": "cs-139",
+    "department": "Customer Support",
+    "question": "Are paint peeling issues on the outer body cabinet covered under the comprehensive warranty package?",
+    "answer": "Paint or cosmetic body degradation is covered for 1 year against factory rust defects, provided the unit was not exposed to chemical spills or direct rain."
+  },
+  {
+    "id": "cs-140",
+    "department": "Customer Support",
+    "question": "How can I safely clean grease stains off the touch-sensitive control panel of my premium glass refrigerator?",
+    "answer": "Spray a tiny amount of isopropyl alcohol onto a dry microfiber cloth and wipe the panel gently; never spray liquids directly onto the electronic interface."
+  },
+  {
+    "id": "cs-141",
+    "department": "Customer Support",
+    "question": "What happens if a technician diagnoses a faulty PCB but the specific circuit design version has been discontinued?",
+    "answer": "Our central engineering lab will either source an authorized backward-compatible updated module or provide a fair upgrade valuation for a new model swap."
+  },
+  {
+    "id": "cs-142",
+    "department": "Customer Support",
+    "question": "Can I manually override the automatic defrost timer on my commercial deep freezer unit?",
+    "answer": "Yes, select commercial variants feature a manual defrost activation switch on the main temperature control module to facilitate rapid cleaning schedules."
+  },
+  {
+    "id": "cs-143",
+    "department": "Customer Support",
+    "question": "What is the maximum distance allowed between the indoor and outdoor units of a 1.0 Ton split AC without losing cooling efficiency?",
+    "answer": "The maximum recommended piping length for a 1.0 Ton split AC is 15 feet; exceeding this length requires a calculated additional refrigerant top-up charge."
+  },
+  {
+    "id": "cs-144",
+    "department": "Customer Support",
+    "question": "How do I register a formal complaint regarding a delay in receiving a ordered spare part from the warehouse?",
+    "answer": "Email your open job card number to parts-tracking@pel.com.pk, and our central supply chain manager will immediately track and prioritize the shipment."
+  },
+  {
+    "id": "cs-145",
+    "department": "Customer Support",
+    "question": "Why does my automatic washing machine display an 'E3' code during the spin-dry processing cycle?",
+    "answer": "An E3 code signifies that the top safety lid was opened during a active high-speed spin cycle; closing the lid securely will resume operation instantly."
+  },
+  {
+    "id": "cs-146",
+    "department": "Customer Support",
+    "question": "Is it safe to run a PEL inverter split air conditioner on a modified sine wave backup UPS system?",
+    "answer": "No, modified sine wave UPS outputs can damage the sensitive electronics inside the inverter power module; always use a pure sine wave power supply."
+  },
+  {
+    "id": "cs-147",
+    "department": "Customer Support",
+    "question": "What should I do if the interior light of my microwave oven stops turning on when the door opens?",
+    "answer": "The internal bulb replacement requires opening the main protective casing; contact our service desk to prevent accidental high-voltage exposure."
+  },
+  {
+    "id": "cs-148",
+    "department": "Customer Support",
+    "question": "How do I download the configuration logs from my smart appliance to send to the software engineering desk?",
+    "answer": "Open the official PEL Smart App, go to Device Settings, select 'Diagnostics,' and click 'Export System Log' to share it with technical support."
+  },
+  {
+    "id": "cs-149",
+    "department": "Customer Support",
+    "question": "What is the policy for processing service requests for appliances purchased through unofficial grey-market channels?",
+    "answer": "PEL only honors warranties for units verified via our authorized national dealer registry; grey-market units are treated strictly as paid, out-of-warranty repairs."
+  },
+  {
+    "id": "cs-150",
+    "department": "Customer Support",
+    "question": "Why is my water dispenser hot water temperature lower than usual during continuous multi-cup usage?",
+    "answer": "The internal hot water tank holds a specific capacity; drawing large amounts of water sequentially requires a 5-minute window for the heating element to recover."
+  },
+  {
+    "id": "cs-151",
+    "department": "Customer Support",
+    "question": "Where can I find the exact manufacturer certification labels regarding the eco-friendly foaming insulation used in PEL units?",
+    "answer": "All eco-certification tags, confirming the use of 100% CFC-free insulation materials, are permanently affixed to the rear lower chassis layout plate."
+  },
+  {
+    "id": "cs-eval-001",
+    "department": "Customer Support",
+    "question": "How do I track my order?",
+    "answer": "Log in to your account, go to 'My Orders', and click 'Track' next to the relevant order. You'll see real-time status updates and an estimated delivery date. A tracking link is also sent to your email once the order ships."
+  },
+  {
+    "id": "cs-eval-002",
+    "department": "Customer Support",
+    "question": "What is the return policy?",
+    "answer": "Items can be returned within 30 days of delivery in their original condition and packaging. Refunds are processed within 5-7 business days after we receive the returned item. Some items, such as personalized products, are non-returnable."
+  },
+  {
+    "id": "cs-eval-003",
+    "department": "Customer Support",
+    "question": "How can I cancel my order?",
+    "answer": "Orders can be cancelled within 1 hour of placement from the 'My Orders' page by clicking 'Cancel Order'. After this window, the order may have entered processing and cannot be cancelled, but you can return it once delivered."
+  },
+  {
+    "id": "it-eval-001",
+    "department": "IT",
+    "question": "How do I reset my company email password?",
+    "answer": "Go to the self-service portal at portal.company.com, click 'Forgot Password', and follow the verification steps sent to your registered phone number. If you're locked out, contact the IT helpdesk at ext. 4357."
+  },
+  {
+    "id": "it-eval-002",
+    "department": "IT",
+    "question": "How do I connect to the company VPN?",
+    "answer": "Install the company VPN client from the software portal, open it, and log in with your network credentials. Select the nearest gateway and click 'Connect'. For setup issues, raise a ticket on the IT helpdesk."
+  },
+  {
+    "id": "sales-eval-001",
+    "department": "Sales",
+    "question": "How can I request a product demo?",
+    "answer": "Visit company.com/demo and fill out the request form, or contact your account representative directly. A sales engineer will schedule a personalized demo within 2 business days."
+  },
+  {
+    "id": "sales-eval-005",
+    "department": "Sales",
+    "question": "Is there a free trial available?",
+    "answer": "Yes, we offer a 14-day free trial of the Professional plan with no credit card required. Sign up at company.com/trial to get started immediately."
+  },
+  {
+    "id": "hr-eval-002",
+    "department": "HR",
+    "question": "How do I apply for leave?",
+    "answer": "Log in to the HR portal, go to 'Leave Management', select the leave type and dates, and submit for approval. Your manager will be notified automatically and you'll receive an email once it's approved."
+  },
+  {
+    "id": "hr-eval-005",
+    "department": "HR",
+    "question": "What is the parental leave policy?",
+    "answer": "Primary caregivers are entitled to 16 weeks of paid parental leave, and secondary caregivers to 4 weeks. Requests should be submitted at least 8 weeks before the expected start date via the HR portal."
+  },
+  {
+    "id": "fin-eval-001",
+    "department": "Finance",
+    "question": "How do I submit an expense reimbursement claim?",
+    "answer": "Log in to the finance portal, go to 'Expense Claims', upload your receipts, categorize each expense, and submit for approval. Approved claims are reimbursed in the next payroll cycle."
+  },
+  {
+    "id": "fin-eval-002",
+    "department": "Finance",
+    "question": "When are salaries paid each month?",
+    "answer": "Salaries are paid on the last working day of each month. If that day falls on a weekend or public holiday, payment is made on the preceding business day."
+  }
+]
