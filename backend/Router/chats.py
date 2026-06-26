@@ -18,7 +18,7 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 async def chat(message: Message, db: Session = Depends(get_db)):
     user_message = message.text
 
-    # STEP 1: Database mein exact match dhoondein
+    # STEP 1: Check for exact match in database
     exact_match = db.execute(text("""
         SELECT f.question, f.answer, d.name as department
         FROM faqs f
@@ -28,39 +28,35 @@ async def chat(message: Message, db: Session = Depends(get_db)):
     """), {"query": user_message}).fetchone()
 
     if exact_match:
-        # Exact match mil gaya — seedha wahi answer bhej den, Groq call nahi karni
         dept = db.query(models.Department).filter(
             models.Department.name == exact_match.department
         ).first()
-
         log = models.Query(
             user_query=user_message,
             department_id=dept.department_id if dept else None
         )
         db.add(log)
         db.commit()
-
         return {
             "response": exact_match.answer,
             "department": exact_match.department or "General"
         }
 
-    # STEP 2: Exact match nahi mila — seedha Groq ko bhej do
+    # STEP 2: No exact match — send to Groq
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         max_tokens=500,
         messages=[
             {
                 "role": "system",
-                "content": """Tum ek helpful FAQ bot ho jo company ke employees aur customers ke sawalon ka jawab deta hai.
-
+                "content": """You are a helpful FAQ bot that answers questions for company employees and customers of PEL (Pak Elektron Limited).
 Rules:
-1. User ke sawal ka apne general knowledge se direct aur helpful jawab do.
-2. Department detect karo in se: HR, IT, Finance, Sales, Customer Support. Agar koi specific department match na ho to "General" likho.
-
-Apna jawab hamesha is exact format mein do:
-DEPARTMENT: [naam]
-ANSWER: [jawab]"""
+1. Answer the user's question directly and helpfully in English.
+2. Detect the department from: HR, IT, Finance, Sales, Customer Support. If no specific department matches, write "General".
+3. Always respond in English regardless of the language the user writes in.
+Always respond in this exact format:
+DEPARTMENT: [name]
+ANSWER: [answer]"""
             },
             {
                 "role": "user",
