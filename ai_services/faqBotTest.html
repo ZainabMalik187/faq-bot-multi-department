@@ -140,9 +140,18 @@
     <small>Connects to your local FastAPI backend</small>
   </div>
 
+  <!-- ── DEPT VALIDATION: frontend department vs question department ─── -->
   <div class="settings">
     Backend URL:
     <input id="apiUrl" value="http://127.0.0.1:8000/chat">
+    Department:
+    <select id="deptSelect">
+      <option value="HR">HR</option>
+      <option value="IT">IT</option>
+      <option value="Sales">Sales</option>
+      <option value="Finance">Finance</option>
+      <option value="Customer Support" selected>Customer Support</option>
+    </select>
   </div>
 
   <div class="messages" id="messages">
@@ -206,7 +215,9 @@
     sendBtn.disabled = true;
     addTyping();
 
-    const payload = { query: query };
+    // ── DEPT VALIDATION: frontend department vs question department ───
+    const deptEl = document.getElementById('deptSelect');
+    const payload = { department: deptEl.value, text: query };
     if (currentSessionId) {
       payload.session_id = currentSessionId;
     }
