@@ -22,8 +22,8 @@ services:
 
   backend:
     build:
-      context: ./backend
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: backend/Dockerfile
     container_name: faq-bot-backend
     environment:
       DATABASE_URL: postgresql://admin:secret@postgres:5432/faqbot

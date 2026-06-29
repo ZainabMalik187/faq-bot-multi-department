@@ -1,16 +1,15 @@
 FROM python:3.11-slim as builder
-
 WORKDIR /app
-COPY requirements.txt .
+COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+COPY ai_services/requirements.txt ai_services_requirements.txt
+RUN pip install --no-cache-dir -r ai_services_requirements.txt
 
 FROM python:3.11-slim
-
 WORKDIR /app
 COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
 COPY --from=builder /usr/local/bin /usr/local/bin
-COPY . .
-
+COPY backend/ .
+COPY ai_services/ ./ai_services/
 EXPOSE 8000
-
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
