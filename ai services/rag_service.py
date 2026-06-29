@@ -156,6 +156,45 @@ DEPT_DESCRIPTIONS = {
     "Finance": "expense claims, salaries, payroll, payslips, travel expenses, invoices, tax deductions, vendor payments, fuel allowances, travel reimbursement, mileage claims, petty cash."
 }
 
+# ── DEPT VALIDATION: frontend department vs question department ───
+DEPT_CLASSIFIER_PROMPT = """
+Classify this question into one of these departments:
+HR, IT, Sales, Finance, Customer Support
+
+Department scope guidelines:
+- Sales: dealer management, client visits, product demos, quotes, pricing, inventory/stock, production schedules, factory visits, sales targets, showroom displays
+- Finance: expense claims, payroll, payslips, vendor payments, tax compliance, audits, ledger entries, scrap metal guidelines, budgets, bank reconciliation, ERP finance module
+- HR: leave policies, employee benefits, performance reviews, workplace safety/HSE, employee transport, annual increments, employee profiles
+- IT: password resets, VPN, software, hardware, phishing, network, printers, system admin
+- Customer Support: order tracking, returns, appliance servicing, repairs, product usage/cleaning, warranty, delivery
+
+Reply with ONLY the department name, nothing else.
+
+Examples:
+"how do I apply for leave"          → HR
+"my laptop is not working"          → IT
+"how do I track my order"           → Customer Support
+"what is the sales target"          → Sales
+"how do I get my payslip"           → Finance
+"how do I check factory stock levels" → Sales
+"how many units are available in warehouse inventory" → Sales
+"what is the dealer commission structure" → Sales
+"where do I find the active GST and tax breakdown for appliance invoices" → Sales
+"how do I check the tax rates on quotes or invoice breakdowns" → Sales
+"what do I do if a system error prevents a vendor invoice from saving" → Finance
+"my invoice is failing to save due to an ERP system glitch" → Finance
+"how do I request safety equipment for a client factory visit" → Sales
+"where can I find guidelines for managing scrap metal sales" → Finance
+"where can I view the production schedule for the appliance factory" → Sales
+"how are annual increments calculated" → HR
+"how do I report a workplace safety or HSE violation" → HR
+
+Question: {query}
+"""
+
+# ── DEPT VALIDATION: frontend department vs question department ───
+dept_query_engines: dict[str, Any] = {}   # "HR" → query_engine for HR index
+
 
 # ╔══════════════════════════════════════════════════════════════════════════╗
 # ║ Helper: keyword extraction (Improvement #5)                              ║
@@ -266,9 +305,11 @@ def update_llm_api_keys(new_key: str) -> None:
     """Update the API key globally in Settings.llm and reset its client."""
     if hasattr(Settings, "llm") and Settings.llm is not None:
         try:
-            Settings.llm.api_key = new_key
-            Settings.llm._client = None
-            Settings.llm._aclient = None
+            from llama_index.llms.groq import Groq
+            if isinstance(Settings.llm, Groq):
+                Settings.llm.api_key = new_key
+                Settings.llm._client = None
+                Settings.llm._aclient = None
         except Exception as e:
             print(f"[WARN] Failed to update Settings.llm api_key: {e}", flush=True)
 
@@ -376,6 +417,10 @@ def build_engine() -> dict[str, Any]:
     query_engines: dict[str, Any] = {}  # dept -> stateless query engine
     retrievers: dict[str, Any] = {}  # dept -> retriever (Improvement #4 / Fallback)
 
+    # ── DEPT VALIDATION: frontend department vs question department ───
+    global dept_query_engines
+    dept_query_engines = {}   # Reset on each build
+
     for dept, entries in grouped.items():
         # Create enriched LlamaIndex Documents (Improvement #5)
         documents = _make_documents(entries)
@@ -421,11 +466,19 @@ def build_engine() -> dict[str, Any]:
 
         # Lightweight query engine for the ROUTER to select the right department
         query_engine = index.as_query_engine(
-            similarity_top_k=5,
+            similarity_top_k=1,
             text_qa_template=qa_template,
             filters=dept_filters,
         )
         query_engines[dept] = query_engine
+
+        # ── DEPT VALIDATION: frontend department vs question department ───
+        # Per-department query engine with similarity_top_k=1 for direct dept search
+        dept_query_engines[dept] = index.as_query_engine(
+            similarity_top_k=1,
+            text_qa_template=qa_template,
+            filters=dept_filters,
+        )
 
         # MEMORY — ChatMemoryBuffer wraps a chat engine per department (Improvement #3)
         memory = ChatMemoryBuffer.from_defaults(token_limit=4000)
@@ -433,7 +486,7 @@ def build_engine() -> dict[str, Any]:
             chat_mode="context",
             memory=memory,
             system_prompt=dept_prompt,
-            similarity_top_k=5,
+            similarity_top_k=1,
             filters=dept_filters,
         )
         chat_engines[dept] = chat_engine
@@ -471,6 +524,8 @@ def build_engine() -> dict[str, Any]:
         "chat_engines": chat_engines,
         "query_engines": query_engines,
         "retrievers": retrievers,
+        # ── DEPT VALIDATION: frontend department vs question department ───
+        "dept_query_engines": dept_query_engines,
     }
 
 
@@ -655,7 +710,7 @@ def classify_query(user_query: str, engine_bundle: dict[str, Any] = None) -> str
     
     def run_classifier():
         client = Groq(
-            model="llama-3.3-70b-versatile",
+            model="llama-3.1-8b-instant",
             api_key=config.GROQ_API_KEY,
             max_retries=0,
             timeout=15.0,
@@ -793,36 +848,53 @@ def get_faq_response(engine_bundle: dict[str, Any], user_query: str, session_id:
         "sources": sources,
     }
 
-def query(*args, **kwargs) -> dict:
+# ── DEPT VALIDATION: frontend department vs question department ───
+def _classify_department(user_query: str) -> str:
+    """Detect the ACTUAL department of the question using Groq Llama 3.3.
+
+    Returns one of: HR, IT, Sales, Finance, Customer Support
+    """
+    prompt = DEPT_CLASSIFIER_PROMPT.format(query=user_query)
+
+    def run_dept_classifier():
+        client = Groq(
+            model="llama-3.1-8b-instant",
+            api_key=config.GROQ_API_KEY,
+            max_retries=0,
+            timeout=15.0,
+            temperature=0.0,
+        )
+        return client.complete(prompt).text.strip()
+
+    try:
+        result = execute_with_retry(run_dept_classifier)
+        # Normalise: the LLM may return e.g. "Customer Support" or "customer support"
+        # Map to canonical names
+        canonical = {
+            "hr": "HR",
+            "it": "IT",
+            "sales": "Sales",
+            "finance": "Finance",
+            "customer support": "Customer Support",
+        }
+        return canonical.get(result.lower(), result)
+    except Exception as e:
+        print(f"[WARN] Department classification failed: {e}. Defaulting to General", flush=True)
+        return "General"
+
+
+def query(user_query: str, department: str, session_id: str = None,
+          engine_bundle: dict[str, Any] = None, **kwargs) -> dict:
     """
     Main query routing entry point.
-    Supports signature query(engine_bundle, user_query, session_id) and query(user_query, session_id).
-    Generates session_id with uuid4() if not provided.
+    # ── DEPT VALIDATION: frontend department vs question department ───
+    Accepts:
+      user_query    — the user's message text
+      department    — the department selected by the frontend UI
+      session_id    — optional session identifier
+      engine_bundle — the pre-built engine bundle (router, chat_engines, etc.)
     Always returns {answer, department, mode, session_id, sources}.
     """
-    engine_bundle = None
-    user_query = None
-    session_id = None
-
-    if len(args) >= 1 and isinstance(args[0], dict):
-        engine_bundle = args[0]
-        user_query = args[1] if len(args) > 1 else None
-        session_id = args[2] if len(args) > 2 else None
-    else:
-        user_query = args[0] if len(args) > 0 else None
-        session_id = args[1] if len(args) > 1 else None
-        engine_bundle = args[2] if len(args) > 2 else None
-
-    # Handle keyword arguments override
-    if "user_query" in kwargs:
-        user_query = kwargs["user_query"]
-    if "query" in kwargs:
-        user_query = kwargs["query"]
-    if "session_id" in kwargs:
-        session_id = kwargs["session_id"]
-    if "engine_bundle" in kwargs:
-        engine_bundle = kwargs["engine_bundle"]
-
     import uuid
     if not session_id or session_id == "default":
         session_id = str(uuid.uuid4())
@@ -830,7 +902,7 @@ def query(*args, **kwargs) -> dict:
     query_lower = user_query.lower().strip()
 
     # Pre-check: Out of scope checks
-    is_out_of_scope = any(word in query_lower for word in ["ceo", "oil", "price", "stock", "who is"])
+    is_out_of_scope = any(word in query_lower for word in ["ceo", "oil", "stock price", "who is"])
     if is_out_of_scope:
         if "pel" in query_lower:
             return {
@@ -855,7 +927,7 @@ def query(*args, **kwargs) -> dict:
                 "sources":    []
             }
 
-    # Call classifier
+    # Step 1 — conversational check (existing)
     mode = classify_query(user_query, engine_bundle)
 
     # ── SCOPE FIX: out-of-scope rejection ────────────────────────────
@@ -865,6 +937,7 @@ def query(*args, **kwargs) -> dict:
         "Customer Support topics."
     )
 
+    # Step 2 — out of scope check (existing)
     if mode == "OUTOFSCOPE":
         return {
             "answer":     OUT_OF_SCOPE_MESSAGE,
@@ -874,23 +947,149 @@ def query(*args, **kwargs) -> dict:
             "sources":    []
         }
 
+    # Conversational — no department validation needed for greetings/small talk
     if mode == "CONVERSATIONAL":
         result = get_conversational_response(user_query, session_id)
-    else:
-        result = get_faq_response(engine_bundle, user_query, session_id)
-        if session_id not in conversational_memories:
-            conversational_memories[session_id] = ChatMemoryBuffer.from_defaults(token_limit=4000)
-        from llama_index.core.llms import ChatMessage
-        conversational_memories[session_id].put(ChatMessage(role="user", content=user_query))
-        conversational_memories[session_id].put(ChatMessage(role="assistant", content=result["answer"]))
+        return {
+            "answer": result["answer"],
+            "department": result["department"],
+            "mode": result["mode"],
+            "session_id": session_id,
+            "sources": result.get("sources", [])
+        }
 
-    return {
-        "answer": result["answer"],
-        "department": result["department"],
-        "mode": result["mode"],
-        "session_id": session_id,
-        "sources": result.get("sources", [])
-    }
+    # ── DEPT VALIDATION: frontend department vs question department ───
+    # Step 3 — FAQ question: validate department match
+    if not engine_bundle:
+        global _engine_bundle
+        if _engine_bundle is None:
+            _engine_bundle = build_engine()
+        engine_bundle = _engine_bundle
+
+    retrievers = engine_bundle.get("retrievers", {})
+    detected_dept = None
+    best_retrieval_score = -1.0
+
+    for dept, retriever in retrievers.items():
+        try:
+            nodes = retriever.retrieve(user_query)
+            if nodes:
+                max_score = max(
+                    (node.score for node in nodes if node.score is not None),
+                    default=-1.0,
+                )
+                if max_score > best_retrieval_score:
+                    best_retrieval_score = max_score
+                    detected_dept = dept
+        except Exception as e:
+            print(f"[WARN] Local check failed during dept detection for {dept}: {e}", flush=True)
+
+    # If we found a high-confidence match in the database, use its department!
+    if detected_dept and best_retrieval_score >= config.SIMILARITY_THRESHOLD:
+        pass
+    else:
+        # Fall back to LLM classifier
+        detected_dept = _classify_department(user_query)
+
+    frontend_dept = department
+
+    # ── DEPT VALIDATION: IT Support and IT are same ───
+    def norm_dept(d: str) -> str:
+        val = d.lower().strip()
+        if val in ["it", "it support"]:
+            return "it"
+        return val
+
+    # b. Compare detected department with frontend department
+    if norm_dept(frontend_dept) == norm_dept(detected_dept):
+        # ── DEPT VALIDATION: departments match — search that department's FAQ index ───
+        target_dept = frontend_dept
+        if target_dept not in dept_query_engines:
+            if norm_dept(target_dept) == "it":
+                target_dept = "IT Support" if "IT Support" in dept_query_engines else "IT"
+
+        if target_dept in dept_query_engines:
+            try:
+                def run_dept_query():
+                    return dept_query_engines[target_dept].query(user_query)
+
+                result = execute_with_retry(run_dept_query)
+
+                # Similarity threshold check (existing)
+                if not result.source_nodes or \
+                   result.source_nodes[0].score < config.SIMILARITY_THRESHOLD:
+                    return {
+                        "answer":     GENERIC_FALLBACK_MESSAGE,
+                        "department": frontend_dept,
+                        "mode":       "faq",
+                        "session_id": session_id,
+                        "sources":    []
+                    }
+
+                # Collect source FAQ IDs for transparency
+                sources = [
+                    node.metadata.get("id", "unknown")
+                    for node in result.source_nodes
+                ]
+
+                # Sync to conversational memory
+                if session_id not in conversational_memories:
+                    conversational_memories[session_id] = ChatMemoryBuffer.from_defaults(token_limit=4000)
+                from llama_index.core.llms import ChatMessage
+                conversational_memories[session_id].put(ChatMessage(role="user", content=user_query))
+                conversational_memories[session_id].put(ChatMessage(role="assistant", content=str(result)))
+
+                return {
+                    "answer":     str(result),
+                    "department": frontend_dept,
+                    "mode":       "faq",
+                    "session_id": session_id,
+                    "sources":    sources
+                }
+            except Exception as e:
+                import traceback
+                print(f"[ERROR] Dept query engine failed for {frontend_dept}: {e}", flush=True)
+                traceback.print_exc()
+                # Fall back to the existing get_faq_response
+                result = get_faq_response(engine_bundle, user_query, session_id)
+                return {
+                    "answer": result["answer"],
+                    "department": result["department"],
+                    "mode": result["mode"],
+                    "session_id": session_id,
+                    "sources": result.get("sources", [])
+                }
+        else:
+            # Department not found in dept_query_engines — fall back to router
+            result = get_faq_response(engine_bundle, user_query, session_id)
+            if session_id not in conversational_memories:
+                conversational_memories[session_id] = ChatMemoryBuffer.from_defaults(token_limit=4000)
+            from llama_index.core.llms import ChatMessage
+            conversational_memories[session_id].put(ChatMessage(role="user", content=user_query))
+            conversational_memories[session_id].put(ChatMessage(role="assistant", content=result["answer"]))
+            return {
+                "answer": result["answer"],
+                "department": result["department"],
+                "mode": result["mode"],
+                "session_id": session_id,
+                "sources": result.get("sources", [])
+            }
+    else:
+        # ── DEPT VALIDATION: departments do NOT match ───
+        # Tell user to go to the correct department
+        return {
+            "answer": (
+                f"Your question seems to be related to the "
+                f"{detected_dept} department, but you are "
+                f"currently in the {frontend_dept} section. "
+                f"Please switch to the {detected_dept} department "
+                f"to get the right answer."
+            ),
+            "department": detected_dept,
+            "mode":       "mismatch",
+            "session_id": session_id,
+            "sources":    []
+        }
 
 
 # ╔══════════════════════════════════════════════════════════════════════════╗

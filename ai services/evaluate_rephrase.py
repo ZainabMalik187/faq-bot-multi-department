@@ -157,13 +157,11 @@ def judge_answer(original_answer: str, bot_answer: str) -> tuple[bool, str]:
     return False, "Judge API error after retries"
 
 
-# ---------------------------------------------------------------------------
-# Bot API call
-# ---------------------------------------------------------------------------
-def ask_bot(query: str) -> dict | None:
+# ── DEPT VALIDATION: frontend department vs question department ───
+def ask_bot(query: str, department: str) -> dict | None:
     """Send a query to the FAQ bot and return the response dict."""
     try:
-        resp = requests.post(API_URL, json={"query": query}, timeout=60)
+        resp = requests.post(API_URL, json={"department": department, "text": query}, timeout=60)
         resp.raise_for_status()
         return resp.json()
     except Exception as e:
@@ -180,13 +178,14 @@ def test_grounding_strictness() -> bool:
     or follows grounding instructions strictly.
     """
     print("Running test_grounding_strictness...")
-    payload = {"query": "do you know about hr of pel", "session_id": "test_grounding_session"}
+    # ── DEPT VALIDATION: frontend department vs question department ───
+    payload = {"department": "HR", "text": "do you know about hr of pel", "session_id": "test_grounding_session"}
     try:
         resp = requests.post(API_URL, json=payload, timeout=60)
         resp.raise_for_status()
         data = resp.json()
         answer = data.get("answer", "").lower()
-        print(f"  Query : {payload['query']}")
+        print(f"  Query : {payload['text']}")
         print(f"  Answer: {data.get('answer')}")
         
         # Check for forbidden generic phrases
@@ -233,8 +232,9 @@ def test_memory_isolation() -> bool:
     # Turn 1: HR specific query about pursuing higher education
     q1 = "Can I pursue higher education while working at PEL?"
     print(f"  Turn 1 Query: {q1}")
+    # ── DEPT VALIDATION: frontend department vs question department ───
     try:
-        resp1 = requests.post(API_URL, json={"query": q1, "session_id": session_id}, timeout=60)
+        resp1 = requests.post(API_URL, json={"department": "HR", "text": q1, "session_id": session_id}, timeout=60)
         resp1.raise_for_status()
         data1 = resp1.json()
         print(f"  Turn 1 Ans  : {data1.get('answer')}")
@@ -247,8 +247,9 @@ def test_memory_isolation() -> bool:
     # Turn 2: Query an unrelated department/topic to trigger memory check/reset (IT support)
     q2 = "how do I reset my password?"
     print(f"  Turn 2 Query: {q2}")
+    # ── DEPT VALIDATION: frontend department vs question department ───
     try:
-        resp2 = requests.post(API_URL, json={"query": q2, "session_id": session_id}, timeout=60)
+        resp2 = requests.post(API_URL, json={"department": "IT", "text": q2, "session_id": session_id}, timeout=60)
         resp2.raise_for_status()
         data2 = resp2.json()
         print(f"  Turn 2 Ans  : {data2.get('answer')}")
@@ -261,8 +262,9 @@ def test_memory_isolation() -> bool:
     # Turn 3: Ask a general query about HR that shouldn't leak Turn 1
     q3 = "do you know about hr of pel"
     print(f"  Turn 3 Query: {q3}")
+    # ── DEPT VALIDATION: frontend department vs question department ───
     try:
-        resp3 = requests.post(API_URL, json={"query": q3, "session_id": session_id}, timeout=60)
+        resp3 = requests.post(API_URL, json={"department": "HR", "text": q3, "session_id": session_id}, timeout=60)
         resp3.raise_for_status()
         data3 = resp3.json()
         ans3 = data3.get("answer", "")
@@ -290,14 +292,15 @@ def test_out_of_scope_and_formatting() -> bool:
     as a trailing duplicated word.
     """
     print("Running test_out_of_scope_and_formatting...")
-    payload = {"query": "who is the CEO of PEL", "session_id": "test_out_of_scope_session"}
+    # ── DEPT VALIDATION: frontend department vs question department ───
+    payload = {"department": "HR", "text": "who is the CEO of PEL", "session_id": "test_out_of_scope_session"}
     try:
         resp = requests.post(API_URL, json=payload, timeout=60)
         resp.raise_for_status()
         data = resp.json()
         answer = data.get("answer", "")
         dept = data.get("department", "")
-        print(f"  Query : {payload['query']}")
+        print(f"  Query : {payload['text']}")
         print(f"  Answer: {answer}")
         print(f"  Dept  : {dept}")
         
@@ -319,13 +322,14 @@ def test_out_of_scope_and_formatting() -> bool:
         print("  [PASS] Out-of-scope check passed.")
         
         # Now test a valid query to ensure no duplicate trailing department word
-        payload_valid = {"query": "how do I connect to the corporate wifi?", "session_id": "test_out_of_scope_session"}
+        # ── DEPT VALIDATION: frontend department vs question department ───
+        payload_valid = {"department": "IT", "text": "how do I connect to the corporate wifi?", "session_id": "test_out_of_scope_session"}
         resp_valid = requests.post(API_URL, json=payload_valid, timeout=60)
         resp_valid.raise_for_status()
         data_valid = resp_valid.json()
         ans_valid = data_valid.get("answer", "").strip()
         dept_valid = data_valid.get("department", "").strip()
-        print(f"  Valid Query : {payload_valid['query']}")
+        print(f"  Valid Query : {payload_valid['text']}")
         print(f"  Valid Answer: {ans_valid}")
         print(f"  Valid Dept  : {dept_valid}")
         
@@ -417,8 +421,9 @@ def main():
         print(f"  Rephrased Q: {rephrased_q}")
         time.sleep(DELAY_BETWEEN_CALLS)
 
-        # Step 2 — Ask the bot
-        bot_response = ask_bot(rephrased_q)
+        # ── DEPT VALIDATION: frontend department vs question department ───
+        # Step 2 — Ask the bot (passing the actual department)
+        bot_response = ask_bot(rephrased_q, department)
         if bot_response is None:
             results.append({
                 "faq_id": faq_id,
@@ -441,8 +446,20 @@ def main():
         print(f"  Bot Dept   : {bot_dept}")
         time.sleep(DELAY_BETWEEN_CALLS)
 
-        # Step 3 — Judge
-        passed, reason = judge_answer(original_a, bot_answer)
+        # ── DEPT VALIDATION: frontend department vs question department ───
+        # Step 3 — Judge / Compare predicted department with actual
+        if bot_dept.lower() == department.lower():
+            # Both are same -> Answer it
+            passed, reason = judge_answer(original_a, bot_answer)
+        else:
+            # Different -> AI should give mismatch answer telling user to switch to correct department
+            expected_mismatch = f"switch to the {bot_dept} department"
+            if bot_response.get("mode") == "mismatch" and (expected_mismatch.lower() in bot_answer.lower() or "please switch to" in bot_answer.lower()):
+                passed = True
+                reason = f"Detected department mismatch redirection to {bot_dept}."
+            else:
+                passed = False
+                reason = f"Expected mismatch redirection to {bot_dept}, but got: {bot_answer}"
         time.sleep(DELAY_BETWEEN_CALLS)
 
         results.append({

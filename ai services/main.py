@@ -2,7 +2,8 @@
 main.py — FastAPI app serving the multi-department FAQ bot.
 
 Endpoints:
-  POST /chat  { "query": "..." }  ->  { "answer": "...", "department": "...", "sources": [...] }
+  POST /chat  { "department": "HR", "text": "...", "session_id": "..." }
+           -> { "answer": "...", "department": "...", "mode": "...", "session_id": "..." }
 
 CORS is enabled for all origins so faqBotTest.html can call the API
 directly when opened from the local filesystem.
@@ -60,10 +61,12 @@ app.add_middleware(
 
 # ---------------------------------------------------------------------------
 # Schemas
+# ── DEPT VALIDATION: frontend department vs question department ───
 # ---------------------------------------------------------------------------
 
 class ChatRequest(BaseModel):
-    query: str
+    department: str
+    text: str
     session_id: str | None = None
 
 
@@ -79,17 +82,24 @@ class ChatResponse(BaseModel):
 # Routes
 # ---------------------------------------------------------------------------
 
+# ── DEPT VALIDATION: frontend department vs question department ───
 @app.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
     """
-    Accept a user question, route it to the correct department index,
+    Accept a user question with a frontend-selected department,
+    validate the department matches the question topic,
     retrieve relevant FAQ chunks, and generate an LLM answer.
     """
-    if not request.query.strip():
+    if not request.text.strip():
         raise HTTPException(status_code=400, detail="Query cannot be empty.")
 
     try:
-        result = rag_service.query(_engine_bundle, request.query, request.session_id)
+        result = rag_service.query(
+            user_query   = request.text,
+            department   = request.department,
+            session_id   = request.session_id,
+            engine_bundle = _engine_bundle,
+        )
         return ChatResponse(**result)
     except Exception as e:
         import traceback
