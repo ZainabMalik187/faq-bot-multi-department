@@ -15,7 +15,7 @@ services:
     networks:
       - faq-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U admin -d faqbot"]
+      test: ["CMD-SHELL", "pg_isready -U admin"]
       interval: 10s
       timeout: 5s
       retries: 5
