@@ -1,16 +1,7 @@
-huggingface-hub==0.23.0
-sentence-transformers==2.7.0
-
-# Force CPU torch (IMPORTANT)
-torch --index-url https://download.pytorch.org/whl/cpu
-
-llama-index-core==0.10.68
-llama-index-llms-groq==0.1.4
-llama-index-embeddings-huggingface==0.2.2
-llama-index-vector-stores-postgres==0.1.14
-
-psycopg[binary]==3.1.20
-fastapi==0.115.0
-uvicorn[standard]==0.34.0
-groq==0.9.0
-python-dotenv==1.0.0
+fastapi==0.137.0
+uvicorn==0.49.0
+groq==1.4.0
+SQLAlchemy==2.0.51
+psycopg2-binary==2.9.12
+python-dotenv==1.2.2
+pydantic==2.13.4
