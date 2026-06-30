@@ -1,55 +1,25 @@
-"""
-main.py — FastAPI app serving the multi-department FAQ bot.
-
-Endpoints:
-  POST /chat  { "department": "HR", "text": "...", "session_id": "..." }
-           -> { "answer": "...", "department": "...", "mode": "...", "session_id": "..." }
-
-CORS is enabled for all origins so faqBotTest.html can call the API
-directly when opened from the local filesystem.
-
-Start with:
-  python -m uvicorn main:app --reload
-"""
-
 from contextlib import asynccontextmanager
-
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 import rag_service
 
-# ---------------------------------------------------------------------------
-# Lifespan — build the RAG engine once at startup
-# ---------------------------------------------------------------------------
-
-_engine_bundle = None  # Module-level handle for the engine bundle
+_engine_bundle = None
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Build the vector indices + router engine on startup."""
-    global _engine_bundle
-    print("[...] Building RAG engine (first run downloads the embedding model)...")
-    _engine_bundle = rag_service.build_engine()
-    print("[OK]  RAG engine ready.")
+    print("[OK] FastAPI started (lazy RAG loading enabled)")
     yield
-    # Shutdown — nothing to clean up
 
-
-# ---------------------------------------------------------------------------
-# App
-# ---------------------------------------------------------------------------
 
 app = FastAPI(
     title="FAQ Bot API",
-    description="Multi-department FAQ chatbot powered by LlamaIndex + Groq",
     version="2.0.0",
     lifespan=lifespan,
 )
 
-# CORS — allow all origins for local testing with faqBotTest.html
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -58,11 +28,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-# ---------------------------------------------------------------------------
-# Schemas
-# ── DEPT VALIDATION: frontend department vs question department ───
-# ---------------------------------------------------------------------------
 
 class ChatRequest(BaseModel):
     department: str
@@ -78,29 +43,33 @@ class ChatResponse(BaseModel):
     sources: list[str] = []
 
 
-# ---------------------------------------------------------------------------
-# Routes
-# ---------------------------------------------------------------------------
+@app.get("/")
+def root():
+    return {"status": "API is running"}
 
-# ── DEPT VALIDATION: frontend department vs question department ───
+
 @app.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
-    """
-    Accept a user question with a frontend-selected department,
-    validate the department matches the question topic,
-    retrieve relevant FAQ chunks, and generate an LLM answer.
-    """
+    global _engine_bundle
+
     if not request.text.strip():
         raise HTTPException(status_code=400, detail="Query cannot be empty.")
 
     try:
+        # ✅ Lazy load engine here instead of startup
+        if _engine_bundle is None:
+            print("[...] Building RAG engine (first request)...")
+            _engine_bundle = rag_service.build_engine()
+            print("[OK] RAG engine ready.")
+
         result = rag_service.query(
-            user_query   = request.text,
-            department   = request.department,
-            session_id   = request.session_id,
-            engine_bundle = _engine_bundle,
+            user_query=request.text,
+            department=request.department,
+            session_id=request.session_id,
+            engine_bundle=_engine_bundle,
         )
         return ChatResponse(**result)
+
     except Exception as e:
         import traceback
         traceback.print_exc()
@@ -109,7 +78,6 @@ async def chat(request: ChatRequest):
 
 @app.post("/rebuild")
 async def rebuild():
-    """Wipe ChromaDB and rebuild all indices from faq.json."""
     global _engine_bundle
     _engine_bundle = rag_service.rebuild_index(_engine_bundle)
     return {"status": "ok", "message": "Index rebuilt successfully."}

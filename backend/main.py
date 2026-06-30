@@ -1,41 +1,19 @@
 from dotenv import load_dotenv
-load_dotenv()  # backend/.env load karo
+load_dotenv()
 
-import os
-import sys
-from pathlib import Path
-from contextlib import asynccontextmanager
-
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from groq import Groq
+from sqlalchemy import text
+from sqlalchemy.orm import Session
+import os
 
-# ai service folder ko import path mein add karo, taake "import rag_service" chal sake
+from database_connection.database import get_db
+from database_connection import models
 
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+app = FastAPI()
 
-from ai_services import rag_service  # Colleague ka RAG engine (database se FAQs leta hai ab)
-
-# ---------------------------------------------------------------------------
-# Lifespan — server start hote waqt RAG engine ek dafa build karo
-# ---------------------------------------------------------------------------
-
-_engine_bundle = None  # Module-level handle, taake har request pe rebuild na ho
-
-
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    global _engine_bundle
-    print("[...] Building RAG engine (pehli baar embedding model download hoga)...")
-    _engine_bundle = rag_service.build_engine()
-    print("[OK]  RAG engine ready.")
-    yield
-    # Shutdown pe abhi kuch cleanup nahi chahiye
-
-
-app = FastAPI(lifespan=lifespan)
-
-# Frontend se connect karne k liye
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -43,49 +21,81 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-# ---------------------------------------------------------------------------
-# Schemas
-# ---------------------------------------------------------------------------
+class Message(BaseModel):
+    text: str
+    department: str | None = None
 
-class ChatRequest(BaseModel):
-    query: str
-    session_id: str | None = None
+@app.post("/chat")
+async def chat(message: Message, db: Session = Depends(get_db)):
+    user_message = message.text
+    dept = message.department or "General"
 
+    exact_match = db.execute(text("""
+        SELECT f.question, f.answer, d.name as department
+        FROM faqs f
+        LEFT JOIN departments d ON f.department_id = d.department_id
+        WHERE LOWER(f.question) = LOWER(:query)
+        LIMIT 1
+    """), {"query": user_message}).fetchone()
 
-class ChatResponse(BaseModel):
-    answer: str
-    department: str
-    mode: str
-    session_id: str
-    sources: list[str] = []
+    if exact_match:
+        department_obj = db.query(models.Department).filter(
+            models.Department.name == exact_match.department
+        ).first()
+        log = models.Query(
+            user_query=user_message,
+            department_id=department_obj.department_id if department_obj else None
+        )
+        db.add(log)
+        db.commit()
+        return {
+            "response": exact_match.answer,
+            "department": exact_match.department or "General"
+        }
 
+    response = client.chat.completions.create(
+        model="llama-3.3-70b-versatile",
+        max_tokens=500,
+        messages=[
+            {
+                "role": "system",
+                "content": f"""You are a helpful FAQ bot for the {dept} department of PEL (Pak Elektron Limited), a Pakistani home appliances company.
+Rules:
+1. ONLY answer questions related to the {dept} department of PEL.
+2. If the question is not related to {dept}, respond with: "I can only answer {dept}-related questions."
+3. Always respond in English.
+Always respond in this exact format:
+DEPARTMENT: {dept}
+ANSWER: [answer]"""
+            },
+            {
+                "role": "user",
+                "content": user_message
+            }
+        ]
+    )
 
-# ---------------------------------------------------------------------------
-# Routes
-# ---------------------------------------------------------------------------
+    full_reply = response.choices[0].message.content
+    department_name = dept
+    answer = full_reply
 
-@app.post("/chat", response_model=ChatResponse)
-async def chat(request: ChatRequest):
-    """
-    User ka sawal le kar, colleague ke RAG engine ko bhejta hai
-    (classify -> retrieve -> generate), aur jawab return karta hai.
-    """
-    if not request.query.strip():
-        raise HTTPException(status_code=400, detail="Query cannot be empty.")
+    for line in full_reply.split("\n"):
+        if line.startswith("DEPARTMENT:"):
+            department_name = line.replace("DEPARTMENT:", "").strip()
+        if line.startswith("ANSWER:"):
+            answer = line.replace("ANSWER:", "").strip()
 
-    try:
-        result = rag_service.query(_engine_bundle, request.query, request.session_id)
-        return ChatResponse(**result)
-    except Exception as e:
-        import traceback
-        traceback.print_exc()
-        raise HTTPException(status_code=500, detail=str(e))
+    department_obj = db.query(models.Department).filter(
+        models.Department.name.ilike(department_name)
+    ).first()
 
+    log = models.Query(
+        user_query=user_message,
+        department_id=department_obj.department_id if department_obj else None
+    )
+    db.add(log)
+    db.commit()
 
-@app.post("/rebuild")
-async def rebuild():
-    """FAQs table se dobara saare vector indexes rebuild karo."""
-    global _engine_bundle
-    _engine_bundle = rag_service.rebuild_index(_engine_bundle)
-    return {"status": "ok", "message": "Index rebuilt successfully."}
+    return {"response": answer, "department": department_name}

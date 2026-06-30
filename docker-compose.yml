@@ -19,7 +19,6 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-
   backend:
     build:
       context: .
@@ -36,7 +35,6 @@ services:
     networks:
       - faq-network
     restart: unless-stopped
-
   frontend:
     build:
       context: ./frontend
@@ -49,10 +47,8 @@ services:
     networks:
       - faq-network
     restart: unless-stopped
-
 volumes:
   postgres_data:
-
 networks:
   faq-network:
     driver: bridge

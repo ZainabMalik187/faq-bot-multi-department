@@ -47,7 +47,7 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.llms.groq import Groq
 from llama_index.vector_stores.postgres import PGVectorStore
 
-import config  # Centralised credentials & settings
+from . import config # Centralised credentials & settings
 
 # ---------------------------------------------------------------------------
 # Paths (from config.py)
