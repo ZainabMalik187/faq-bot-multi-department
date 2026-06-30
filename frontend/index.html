@@ -152,6 +152,38 @@ footer{
 .accordion-button:focus{
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
+
+#authTabs .nav-link{
+
+    color:#000;
+
+    border-radius:25px;
+
+    transition:.3s;
+
+}
+
+#authTabs .nav-link.active{
+
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+
+    color:white;
+
+}
+.glass-card{
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.3);
+
+border-radius:20px;
+
+box-shadow:0 8px 40px rgba(0,0,0,.2);
+
+}
+
 </style>
 </head>
 <body>
@@ -174,12 +206,21 @@ footer{
 <li class="nav-item"><a class="nav-link" href="#departments"><b>Departments</b></a></li>
 <li class="nav-item"><a class="nav-link" href="#faqs"><b>FAQs</b></a></li>
 <li class="nav-item"><a class="nav-link" href="#about"><b>About Us</b></a></li>
+<li class="nav-item">
+    <a class="nav-link"
+       href="#"
+       data-bs-toggle="modal"
+       data-bs-target="#authModal">
+       <b>Login / Signup</b>
+    </a>
+</li>
 
 </div>
 </div>
 </nav>
 
 <!-- Home Section -->
+ <div id="userHome">
 <section id="home" class="hero" color= #041a29>
 <div class="container text-center">
 <h1>PEL - Pak Elektron Limited</h1>
@@ -319,14 +360,14 @@ View FAQs
     border-radius:12px;
     box-shadow: 0 20px 50px rgba(6,30,85,0.12);
     z-index:1050;
-    transition: transform .28s cubic-bezier(.2,.9,.2,1), opacity .2s;
-    @media (max-width: 768px) {
+    transition: transform .28s cubic-bezier(.2,.9,.2,1), opacity .2s;  
+}
+@media (max-width: 768px) {
   .dept-panel {
     width: 95vw;
     right: 10px;
     left: 10px;
   }
-}
 }
 .dept-panel.d-none{ display:none; }
 .dept-header h5{ color:var(--primary); }
@@ -531,7 +572,9 @@ footer {
   font-size: 0.85rem;
 }
 </style>
- <footer>
+</div>
+
+ <footer id="mainFooter">
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
@@ -564,14 +607,243 @@ footer {
   </footer>
 
 
+<!-- ADMIN DASHBOARD -->
+<div id="adminDashboard" style="display:none;">
+    <div class="container py-5">
+
+        <h2 class="section-title text-center">Admin Dashboard</h2>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4">
+                <div class="card shadow border-0 rounded-4">
+                    <div class="card-body text-center">
+                        <h6>Total FAQs</h6>
+                        <h2 id="totalFaqs">0</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow border-0 rounded-4">
+                    <div class="card-body text-center">
+                        <h6>Total Departments</h6>
+                        <h2 id="totalDepartments">0</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow border-0 rounded-4">
+                    <div class="card-body text-center">
+                        <h6>Total Queries</h6>
+                        <h2 id="totalQueries">0</h2>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- FAQ MANAGEMENT -->
+        <div class="mt-5">
+            <h3 class="section-title">Manage FAQs</h3>
+            <div id="adminFaqAccordion"></div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Authentication Modal -->
+
+<div class="modal fade"
+id="authModal"
+tabindex="-1">
+
+<div class="modal-dialog modal-dialog-centered">
+
+<div class="modal-content glass-card">
+
+<div class="modal-header border-0 pb-0">
+
+    <h3 class="modal-title fw-bold w-100 text-center">
+        Welcome
+    </h3>
+
+    <button
+        type="button"
+        class="btn-close position-absolute end-0 me-3"
+        data-bs-dismiss="modal">
+    </button>
+
+</div>
+
+<div class="modal-body">
+
+    <!-- Tabs -->
+    <ul class="nav nav-pills nav-justified mb-4" id="authTabs">
+
+        <li class="nav-item">
+            <button
+                class="nav-link active"
+                id="loginTab"
+                type="button">
+                Login
+            </button>
+        </li>
+
+        <li class="nav-item">
+            <button
+                class="nav-link"
+                id="signupTab"
+                type="button">
+                Signup
+            </button>
+        </li>
+
+    </ul>
+
+    <!-- LOGIN FORM -->
+
+    <div id="loginForm">
+
+        <div class="mb-3">
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                id="loginEmail"
+                class="form-control">
+
+        </div>
+
+        <div class="mb-3">
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                id="loginPassword"
+                class="form-control">
+
+        </div>
+
+        <div class="mb-3">
+
+            <label>Login As</label>
+
+            <select
+                class="form-select"
+                id="loginRole">
+
+                <option value="user">User</option>
+
+                <option value="admin">Admin</option>
+
+            </select>
+
+        </div>
+
+        <button
+            class="btn btn-primary w-100"
+            id="loginBtn">
+
+            Login
+
+        </button>
+        <div class="mb-3">
+    <label>Admin Code (only for admin login)</label>
+    <input type="password" id="adminCode" class="form-control">
+</div>
+
+    </div>
+
+    <!-- SIGNUP FORM -->
+
+    <div id="signupForm" style="display:none;">
+
+        <div class="mb-3">
+
+            <label>Full Name</label>
+
+            <input
+                type="text"
+                id="signupName"
+                class="form-control">
+
+        </div>
+
+        <div class="mb-3">
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                id="signupEmail"
+                class="form-control">
+
+        </div>
+
+        <div class="mb-3">
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                id="signupPassword"
+                class="form-control">
+
+        </div>
+
+        <div class="mb-3">
+
+            <label>Confirm Password</label>
+
+            <input
+                type="password"
+                id="confirmPassword"
+                class="form-control">
+
+        </div>
+
+        <div class="mb-3">
+
+            <label>Register As</label>
+
+            <select
+                class="form-select"
+                id="signupRole">
+
+                <option value="user">User</option>
+
+                <option value="admin">Admin</option>
+
+            </select>
+
+        </div>
+
+        <button
+            class="btn btn-success w-100"
+            id="signupBtn">
+
+            Create Account
+
+        </button>
+
+    </div>
+
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Department panel & chatbot Javascript -->
 <script>
 
-const API_BASE_URL = "https://faq-bot-multi-department-production.up.railway.app";
+const API_BASE_URL = "http://localhost:8000";
+const ADMIN_SECRET_CODE = "PEL-ADMIN-2026";
 
-const faqData = {
+let faqData = {
     hr: [
         {q: "How can I apply for a job?", a: "Visit our Careers page or email hr@pel.example to submit your application."},
         {q: "What are employee leave policies?", a: "Employees are entitled to annual leave, sick leave and public holidays. Contact HR for details."},
@@ -598,32 +870,13 @@ const faqData = {
         {q: "Who should I contact for technical issues?", a: "Email it@pel.example or open a ticket on the IT portal."}
     ]
 };
-
-
-async function getAnswer(dept, message) {
-
-    try {
-        const res = await fetch(`${API_BASE_URL}/chat`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-           body: JSON.stringify({
-             department: dept,
-             text: message
-            })
-        });
-
-        if (!res.ok) throw new Error("Backend error");
-
-        return await res.json();
-
-    } catch (err) {
-        return {
-             response: "System unavailable. Please try later."
-            };
-    }
+    
+const savedFaqs = JSON.parse(localStorage.getItem("faqData"));
+if (savedFaqs) {
+    faqData = savedFaqs;
 }
+
+
 
 
 function openDeptPanel(dept){
@@ -656,19 +909,86 @@ function closeDeptPanel(){
     panel.classList.add('d-none');
     panel.setAttribute('aria-hidden','true');
 }
+async function getAnswer(dept, message){
+
+    const localAnswer = botReply(dept, message);
+
+    if(localAnswer){
+        return {
+            response: localAnswer
+        };
+    }
+
+    try{
+
+        const res = await fetch(`${API_BASE_URL}/chat`,{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                department:dept,
+                text:message
+            })
+        });
+
+        if(!res.ok) throw new Error();
+
+        return await res.json();
+
+    }catch(e){
+
+        return {
+            response:"System unavailable."
+        };
+
+    }
+
+}
 
 function botReply(dept, message){
+
     const msgs = faqData[dept];
-    if(!msgs) return 'Sorry, I don\'t have information on that.';
-    const text = message.toLowerCase();
-   
+    if(!msgs) return null;
+
+    const text = message.toLowerCase().trim();
+
+    let bestMatch = null;
+    let bestScore = 0;
+
     for(const item of msgs){
-        if(item.q.toLowerCase().includes(text) || text.split(' ').some(w=> item.q.toLowerCase().includes(w) && w.length>3)){
+
+        const question = item.q.toLowerCase();
+
+        let score = 0;
+
+    
+        if(question === text){
             return item.a;
         }
+
+        
+        if(question.includes(text)){
+            score += 3;
+        }
+
+        if(text.includes(question)){
+            score += 3;
+        }
+
+        const words = text.split(" ");
+        for(const w of words){
+            if(w.length > 3 && question.includes(w)){
+                score += 1;
+            }
+        }
+
+        if(score > bestScore){
+            bestScore = score;
+            bestMatch = item.a;
+        }
     }
-    
-    return 'I couldn\'t find an exact match. Here\'s a helpful item: ' + msgs[0].a;
+    return bestScore > 0 ? bestMatch : null;
 }
 
 
@@ -693,10 +1013,14 @@ document.addEventListener('click', async function(e){
         const userDiv = document.createElement('div'); userDiv.className='user p-2'; userDiv.textContent = text;
         chat.appendChild(userDiv);
        const result = await getAnswer(dept, text);
-
+console.log("RESULT FROM getAnswer:", result);
 const botDiv = document.createElement('div');
+
 botDiv.className = 'bot p-2';
-botDiv.textContent = result.response;
+botDiv.textContent =
+    result?.response ||
+    result?.message ||
+    result;
 chat.appendChild(botDiv);
         chat.parentElement.scrollTop = chat.parentElement.scrollHeight;
     }
@@ -713,9 +1037,13 @@ document.getElementById('chatSend').addEventListener('click', async ()=>{
     chat.appendChild(userDiv);
     const result = await getAnswer(dept, text);
 
+    console.log("RESULT FROM getAnswer:", result);
 const botDiv = document.createElement('div');
 botDiv.className = 'bot p-2';
-botDiv.textContent = result.response;
+botDiv.textContent =
+    result?.response ||
+    result?.message ||
+    result;
 chat.appendChild(botDiv);
     input.value='';
 
@@ -730,8 +1058,8 @@ document.getElementById('chatInput').addEventListener('keydown', function(e){
         document.getElementById('chatSend').click();
     }
 });
-</script>
-<script>
+
+
 const chatInput = document.getElementById("chatInput");
 const micBtn = document.getElementById("micBtn");
 const micStatus = document.getElementById("micStatus");
@@ -795,6 +1123,257 @@ function resetMic() {
     micBtn.innerText = "🎤";
     micStatus.innerText = "";
 }
+
+const loginTab = document.getElementById("loginTab");
+const signupTab = document.getElementById("signupTab");
+
+const loginForm = document.getElementById("loginForm");
+const signupForm = document.getElementById("signupForm");
+
+loginTab.onclick = function(){
+
+    loginTab.classList.add("active");
+    signupTab.classList.remove("active");
+
+    loginForm.style.display="block";
+    signupForm.style.display="none";
+
+}
+
+signupTab.onclick = function(){
+
+    signupTab.classList.add("active");
+    loginTab.classList.remove("active");
+
+    signupForm.style.display="block";
+    loginForm.style.display="none";
+
+}
+
+document.getElementById("signupBtn").addEventListener("click",function(){
+
+    const name=document.getElementById("signupName").value.trim();
+
+    const email=document.getElementById("signupEmail").value.trim();
+
+    const password=document.getElementById("signupPassword").value;
+
+    const confirm=document.getElementById("confirmPassword").value;
+
+    const role=document.getElementById("signupRole").value;
+
+    if(name=="" || email=="" || password==""){
+
+        alert("Please fill all fields.");
+
+        return;
+
+    }
+
+    if(password!==confirm){
+
+        alert("Passwords do not match.");
+
+        return;
+
+    }
+
+    let users=JSON.parse(localStorage.getItem("users")) || [];
+
+    const exists=users.find(user=>user.email===email);
+
+    if(exists){
+
+        alert("Email already registered.");
+
+        return;
+
+    }
+
+    users.push({
+
+        name:name,
+
+        email:email,
+
+        password:password,
+
+        role:role
+
+    });
+
+    localStorage.setItem("users",JSON.stringify(users));
+
+    alert("Account Created Successfully!");
+
+    const authModal = bootstrap.Modal.getInstance(document.getElementById("authModal"));
+    authModal.hide();
+
+
+    signupTab.classList.remove("active");
+    loginTab.classList.add("active");
+
+    signupForm.style.display="none";
+    loginForm.style.display="block";
+
+});
+document.getElementById("loginBtn").addEventListener("click", function () {
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
+    const role = document.getElementById("loginRole").value;
+    const adminCode = document.getElementById("adminCode").value;
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    const user = users.find(u =>
+        u.email == email &&
+        u.password == password &&
+        u.role == role
+    );
+
+    if (!user) {
+        alert("Invalid credentials");
+        return;
+    }
+
+    if (role === "admin") {
+        if (adminCode !== ADMIN_SECRET_CODE) {
+            alert("Invalid admin code!");
+            return;
+        }
+    }
+
+    localStorage.setItem("currentUser", JSON.stringify(user));
+    const authModal = bootstrap.Modal.getInstance(document.getElementById("authModal"));
+    authModal.hide();
+    
+    checkRole();
+});
+function checkRole(){
+    const user = JSON.parse(localStorage.getItem("currentUser"));
+
+    if(!user) return;
+
+    if(user.role === "admin"){
+        showAdminDashboard();
+    } else {
+        showUserHomepage();
+    }
+}
+
+function showUserHomepage(){
+    document.getElementById("userHome").style.display = "block";
+    document.getElementById("mainFooter").style.display = "block";
+    document.getElementById("adminDashboard").style.display = "none";
+}
+
+function showAdminDashboard(){
+    document.getElementById("userHome").style.display = "none";
+    document.getElementById("mainFooter").style.display = "none";
+    document.getElementById("adminDashboard").style.display = "block";
+    loadDashboard();
+    loadAdminFaqs();
+}
+
+function loadDashboard(){
+
+    document.getElementById("totalFaqs").innerText = 500;
+    document.getElementById("totalDepartments").innerText = 5;
+    document.getElementById("totalQueries").innerText = 15;
+
+}
+
+function loadAdminFaqs(){
+
+const container = document.getElementById("adminFaqAccordion");
+container.innerHTML = "";
+
+Object.keys(faqData).forEach((dept, index) => {
+
+let html = `
+<div class="accordion mb-3">
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+<button class="accordion-button collapsed"
+data-bs-toggle="collapse"
+data-bs-target="#dept${index}">
+${dept.toUpperCase()}
+</button>
+</h2>
+
+<div id="dept${index}" class="accordion-collapse collapse">
+<div class="accordion-body">
+`;
+
+faqData[dept].forEach((faq, i) => {
+
+html += `
+<div class="border rounded p-3 mb-3">
+<h6>${faq.q}</h6>
+<p>${faq.a}</p>
+
+<button class="btn btn-warning btn-sm"
+onclick="editFaq('${dept}',${i})">Edit</button>
+
+<button class="btn btn-danger btn-sm ms-2"
+onclick="deleteFaq('${dept}',${i})">Delete</button>
+</div>
+`;
+});
+
+html += `
+<button class="btn btn-success"
+onclick="addFaq('${dept}')">Add FAQ</button>
+</div>
+</div>
+</div>
+</div>
+`;
+
+container.innerHTML += html;
+});
+}
+
+function deleteFaq(dept,index){
+    if(confirm("Delete FAQ?")){
+        faqData[dept].splice(index,1);
+
+        localStorage.setItem("faqData", JSON.stringify(faqData)); 
+
+        loadAdminFaqs();
+    }
+}
+
+function addFaq(dept){
+    const q = prompt("Enter question:");
+    const a = prompt("Enter answer:");
+
+    if(!q || !a) return;
+
+    faqData[dept].push({ q, a });
+
+    localStorage.setItem("faqData", JSON.stringify(faqData)); 
+
+    loadAdminFaqs();
+}
+
+function editFaq(dept, index){
+    const item = faqData[dept][index];
+
+    const newQ = prompt("Edit question:", item.q);
+    const newA = prompt("Edit answer:", item.a);
+
+    if(!newQ || !newA) return;
+
+    faqData[dept][index] = { q: newQ, a: newA };
+
+    localStorage.setItem("faqData", JSON.stringify(faqData)); 
+
+    loadAdminFaqs();
+}
+
+
 </script>
 </body>
 </html>
