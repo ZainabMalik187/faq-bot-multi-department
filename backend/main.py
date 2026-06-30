@@ -37,32 +37,26 @@ class FaqUpdate(BaseModel):
 
 
 @app.post("/chat")
-async def chat(message: Message, db: Session = Depends(get_db)):
-    user_message = message.text
-    dept = message.department or "General"
-
-    # STEP 1: CHECK FAQ MATCH (exact match against DB)
-    exact_match = db.execute(text("""
-        SELECT f.question, f.answer, d.name as department
-        FROM faqs f
-        LEFT JOIN departments d ON f.department_id = d.department_id
-        WHERE LOWER(f.question) = LOWER(:query)
-        LIMIT 1
-    """), {"query": user_message}).fetchone()
-
-    if exact_match:
-        department_obj = db.query(models.Department).filter(
-            models.Department.name == exact_match.department
-        ).first()
-        log = models.Query(
-            user_query=user_message,
-            department_id=department_obj.department_id if department_obj else None
+async def chat(message: Message):
+    try:
+        response = client.chat.completions.create(
+            model="llama3-8b-8192",
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "user", "content": message.text}
+            ]
         )
-        db.add(log)
-        db.commit()
+
         return {
-            "response": exact_match.answer,
-            "department": exact_match.department or "General"
+            "response": response.choices[0].message.content,
+            "department": message.department
+        }
+
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        return {
+            "error": str(e)
         }
 
     # STEP 2: GROQ AI CALL
