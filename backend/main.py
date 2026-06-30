@@ -39,56 +39,41 @@ class FaqUpdate(BaseModel):
 @app.post("/chat")
 async def chat(message: Message):
     try:
-        response = client.chat.completions.create(
-            model="llama3-8b-8192",
-            messages=[
-                {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": message.text}
-            ]
-        )
+    response = client.chat.completions.create(
+        model="llama3-70b-8192",
+        max_tokens=500,
+        messages=[
+            {
+                "role": "system",
+                "content": f"""You are a helpful FAQ bot for the {dept} department of PEL (Pak Elektron Limited), a Pakistani home appliances company.
 
-        return {
-            "response": response.choices[0].message.content,
-            "department": message.department
-        }
-
-    except Exception as e:
-        import traceback
-        traceback.print_exc()
-        return {
-            "error": str(e)
-        }
-
-    # STEP 2: GROQ AI CALL
-    try:
-        response = client.chat.completions.create(
-            model="llama3-70b-8192",
-            max_tokens=500,
-            messages=[
-                {
-                    "role": "system",
-                    "content": f"""You are a helpful FAQ bot for the {dept} department of PEL (Pak Elektron Limited), a Pakistani home appliances company.
 Rules:
 1. ONLY answer questions related to the {dept} department of PEL.
 2. If the question is not related to {dept}, respond with: "I can only answer {dept}-related questions."
 3. Always respond in English.
+
 Always respond in this exact format:
 DEPARTMENT: {dept}
 ANSWER: [answer]"""
-                },
-                {
-                    "role": "user",
-                    "content": user_message
-                }
-            ]
-        )
-        full_reply = response.choices[0].message.content
-    except Exception as e:
-        print("GROQ ERROR:", str(e))
-        return {
-            "response": f"AI error: {str(e)}",
-            "department": dept
-        }
+            },
+            {
+                "role": "user",
+                "content": user_message
+            }
+        ]
+    )
+
+    full_reply = response.choices[0].message.content
+
+    if not full_reply or "ANSWER:" not in full_reply:
+        full_reply = f"DEPARTMENT: {dept}\nANSWER: Sorry, I couldn't process that properly."
+
+except Exception as e:
+    print("GROQ ERROR:", str(e))
+    return {
+        "response": "System temporarily unavailable. Please try again later.",
+        "department": dept
+    }
 
     # STEP 3: PARSE RESPONSE
     department_name = dept
