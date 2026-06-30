@@ -37,42 +37,75 @@ class FaqUpdate(BaseModel):
 
 
 @app.post("/chat")
-async def chat(message: Message):
+async def chat(message: Message, db: Session = Depends(get_db)):
+    dept = message.department or "General"
+    user_message = message.text
+
     try:
-    response = client.chat.completions.create(
-        model="llama3-70b-8192",
-        max_tokens=500,
-        messages=[
-            {
-                "role": "system",
-                "content": f"""You are a helpful FAQ bot for the {dept} department of PEL (Pak Elektron Limited), a Pakistani home appliances company.
+        response = client.chat.completions.create(
+            model="mixtral-8x7b-32768",  # ✅ FIXED MODEL
+            max_tokens=300,
+            messages=[
+                {
+                    "role": "system",
+                    "content": f"""You are a helpful FAQ bot for the {dept} department of PEL.
 
 Rules:
-1. ONLY answer questions related to the {dept} department of PEL.
-2. If the question is not related to {dept}, respond with: "I can only answer {dept}-related questions."
-3. Always respond in English.
+1. ONLY answer questions related to the {dept} department.
+2. If not related, say: "I can only answer {dept}-related questions."
+3. Respond in English.
 
-Always respond in this exact format:
+Format:
 DEPARTMENT: {dept}
 ANSWER: [answer]"""
-            },
-            {
-                "role": "user",
-                "content": user_message
-            }
-        ]
-    )
+                },
+                {
+                    "role": "user",
+                    "content": user_message
+                }
+            ]
+        )
 
-    full_reply = response.choices[0].message.content
+        full_reply = response.choices[0].message.content
 
-    if not full_reply or "ANSWER:" not in full_reply:
-        full_reply = f"DEPARTMENT: {dept}\nANSWER: Sorry, I couldn't process that properly."
+        if not full_reply or "ANSWER:" not in full_reply:
+            full_reply = f"DEPARTMENT: {dept}\nANSWER: Sorry, I couldn't process that."
 
-except Exception as e:
-    print("GROQ ERROR:", str(e))
+    except Exception as e:
+        print("GROQ ERROR:", str(e))
+        return {
+            "response": "System temporarily unavailable. Please try again.",
+            "department": dept
+        }
+
+    # ✅ PARSE RESPONSE
+    department_name = dept
+    answer = full_reply
+
+    for line in full_reply.split("\n"):
+        if line.startswith("DEPARTMENT:"):
+            department_name = line.replace("DEPARTMENT:", "").strip()
+        if line.startswith("ANSWER:"):
+            answer = line.replace("ANSWER:", "").strip()
+
+    # ✅ SAVE QUERY
+    try:
+        department_obj = db.query(models.Department).filter(
+            models.Department.name.ilike(department_name)
+        ).first()
+
+        log = models.Query(
+            user_query=user_message,
+            department_id=department_obj.department_id if department_obj else None
+        )
+        db.add(log)
+        db.commit()
+    except Exception as e:
+        print("DB ERROR:", str(e))
+
     return {
-        "response": "System temporarily unavailable. Please try again later.",
-        "department": dept
+        "response": answer,
+        "department": department_name
     }
 
     # STEP 3: PARSE RESPONSE
